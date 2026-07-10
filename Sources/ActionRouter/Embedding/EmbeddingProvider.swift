@@ -76,18 +76,25 @@ public struct SemanticConfiguration: Sendable {
     /// Cap on per-action example embeddings.
     public var maxExampleEmbeddings: Int
 
+    /// Persistence of action-metadata embeddings between launches (see
+    /// ``EmbeddingDiskCachePolicy``). Defaults to `.automatic`, which makes
+    /// re-registering an unchanged catalog on later launches near-instant.
+    public var diskCache: EmbeddingDiskCachePolicy
+
     public init(
         similarityFloor: Double = 0.55,
         similarityCeiling: Double = 0.95,
         agreementBonus: Double = 0.15,
         embedExamples: Bool = true,
-        maxExampleEmbeddings: Int = 8
+        maxExampleEmbeddings: Int = 8,
+        diskCache: EmbeddingDiskCachePolicy = .automatic
     ) {
         self.similarityFloor = similarityFloor
         self.similarityCeiling = similarityCeiling
         self.agreementBonus = agreementBonus
         self.embedExamples = embedExamples
         self.maxExampleEmbeddings = maxExampleEmbeddings
+        self.diskCache = diskCache
     }
 
     public static let `default` = SemanticConfiguration()

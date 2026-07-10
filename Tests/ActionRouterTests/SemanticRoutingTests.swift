@@ -61,9 +61,12 @@ private let crossLingualVocabulary: [String: Int] = [
 ]
 
 private func makeSemanticRouter(
-    provider: MockEmbeddingProvider
+    provider: MockEmbeddingProvider,
+    diskCache: EmbeddingDiskCachePolicy = .disabled
 ) async -> ActionRouter {
-    let router = ActionRouter(embeddingProvider: provider)
+    var configuration = RouterConfiguration.default
+    configuration.semantic.diskCache = diskCache
+    let router = ActionRouter(configuration: configuration, embeddingProvider: provider)
     await router.register([
         Action(
             id: "remove-background",
@@ -173,6 +176,28 @@ private func makeSemanticRouter(
     }
 }
 
+// A second router pointed at the same cache directory must find every
+// document embedding on disk and never call the provider for them.
+@Test func diskCachePersistsEmbeddingsAcrossRouters() async throws {
+    let directory = FileManager.default.temporaryDirectory
+        .appendingPathComponent("actionrouter-test-\(UUID().uuidString)", isDirectory: true)
+    defer { try? FileManager.default.removeItem(at: directory) }
+
+    let first = MockEmbeddingProvider(vocabulary: crossLingualVocabulary)
+    _ = await makeSemanticRouter(provider: first, diskCache: .directory(directory))
+    let firstCount = await first.embeddedTextCount
+    #expect(firstCount > 0)
+
+    let second = MockEmbeddingProvider(vocabulary: crossLingualVocabulary)
+    let router = await makeSemanticRouter(provider: second, diskCache: .directory(directory))
+    let secondCount = await second.embeddedTextCount
+    #expect(secondCount == 0, "all document embeddings should come from disk")
+
+    // And the cached vectors actually route.
+    let result = try await router.route("treu el fons de la foto")
+    #expect(result.match?.action.id == "remove-background")
+}
+
 // MARK: - Real Apple NLContextualEmbedding integration
 //
 // These run only when the OS embedding assets are already installed, so CI
@@ -180,7 +205,10 @@ private func makeSemanticRouter(
 
 @Test(.enabled(if: NaturalLanguageEmbeddingProvider.hasInstalledAssets()))
 func appleProviderRoutesCrossLingualQueries() async throws {
+    var configuration = RouterConfiguration.default
+    configuration.semantic.diskCache = .disabled
     let router = ActionRouter(
+        configuration: configuration,
         embeddingProvider: NaturalLanguageEmbeddingProvider()
     )
     await router.register([

@@ -79,6 +79,7 @@ func coreMLProviderRoutesCrossLingualQueries() async throws {
     let provider = try makeProvider()
     var configuration = RouterConfiguration.default
     configuration.semantic = .e5
+    configuration.semantic.diskCache = .disabled
 
     let router = ActionRouter(configuration: configuration, embeddingProvider: provider)
     await router.register([

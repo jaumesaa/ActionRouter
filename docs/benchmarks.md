@@ -94,6 +94,13 @@ suites and holds all episode records; a real app loads one model once.
 Single-model steady-state footprint is on the order of the model size.
 Registration embeds serially (~10 ms/text); batching is a roadmap item.
 
+Compute placement, verified with `MLComputePlan`: the converted model runs
+on CPU/GPU, **not** the Neural Engine (ANE compilation rejects the
+enumerated-shape graph — the E5RT load-time warning). Fixed shapes still
+bought a 4× warm-latency win over flexible shapes. An ANE-compatible graph
+restructuring is on the roadmap; at ~9 ms/query the current path already
+exceeds interactive requirements.
+
 ## Calibration
 
 Confidence = sigmoid over (fused score, top-2 margin), fitted per routing

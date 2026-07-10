@@ -193,7 +193,8 @@ final class PlaygroundModel: ObservableObject {
             id: "trim-audio", name: "Trim audio",
             description: "Cuts a section out of an audio file.",
             keywords: ["trim", "cut", "audio", "clip"],
-            examples: ["cut the first 10 seconds", "trim this song"]
+            examples: ["cut the first 10 seconds", "trim this song", "cut this mp3"],
+            metadata: ["inputFormats": "mp3 wav aac flac ogg m4a"]
         ),
         Action(
             id: "compress-video", name: "Compress video",

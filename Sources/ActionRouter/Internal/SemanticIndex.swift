@@ -40,20 +40,3 @@ struct SemanticEntry {
     }
 }
 
-/// Session-scoped embedding cache so re-registering unchanged actions does
-/// not re-embed them. Keyed by provider, purpose and exact text.
-struct EmbeddingCache {
-    private var storage: [String: [Float]] = [:]
-
-    mutating func vector(
-        provider: String, purpose: EmbeddingPurpose, text: String
-    ) -> [Float]? {
-        storage["\(provider)|\(purpose.rawValue)|\(text)"]
-    }
-
-    mutating func store(
-        _ vector: [Float], provider: String, purpose: EmbeddingPurpose, text: String
-    ) {
-        storage["\(provider)|\(purpose.rawValue)|\(text)"] = vector
-    }
-}

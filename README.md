@@ -54,8 +54,31 @@ The public API may still change before `0.1.0`.
 Swift Package Manager, macOS 14+ / iOS 17+:
 
 ```swift
-.package(url: "https://github.com/jaumesaa/ActionRouter.git", branch: "main")
+.package(url: "https://github.com/jaumesaa/ActionRouter.git", from: "0.1.0")
 ```
+
+For the recommended multilingual semantic tier, fetch the converted model
+(113 MB + 21 MB tokenizer; MIT, converted from
+[intfloat/multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small)):
+
+```sh
+swift run actionrouter fetch-model --to path/to/model-dir
+```
+
+or convert it yourself, reproducibly, with `tools/convert/convert_e5.py`
+(numerical parity against the reference model is verified during
+conversion). Without a model, routing is lexical-only but fully
+functional.
+
+## Documentation
+
+- [Integration guide](docs/integration-guide.md) — API, modeling actions
+  well, context, abstention tuning
+- [Benchmarks](docs/benchmarks.md) — frozen-test results, methodology
+- [Architecture decision record](docs/architecture-decision.md) — what was
+  measured, what was chosen, what was rejected
+- [Privacy & security](docs/privacy.md) · [Roadmap](docs/roadmap.md) ·
+  [Contributing](CONTRIBUTING.md) · [Changelog](CHANGELOG.md)
 
 ## CLI
 

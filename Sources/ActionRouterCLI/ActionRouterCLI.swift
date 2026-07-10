@@ -8,8 +8,8 @@ struct ActionRouterCommand: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "actionrouter",
         abstract: "On-device dynamic intent routing: match a natural-language request to the best action.",
-        version: "0.1.0-dev",
-        subcommands: [Route.self, Eval.self],
+        version: "0.1.0",
+        subcommands: [Route.self, Eval.self, FetchModel.self],
         defaultSubcommand: Route.self
     )
 }

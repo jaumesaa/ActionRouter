@@ -3,64 +3,157 @@
     "id": "audio-to-wav",
     "name": "Convert audio to WAV",
     "description": "Converts audio files to the WAV format.",
-    "keywords": ["wav", "audio", "convert", "format"],
-    "examples": ["convert this song to wav", "make this file a wav"],
-    "metadata": { "inputFormats": "mp3 aac flac ogg m4a", "category": "audio" }
+    "keywords": [
+      "wav",
+      "audio",
+      "convert",
+      "format"
+    ],
+    "examples": [
+      "convert this song to wav",
+      "make this file a wav"
+    ],
+    "metadata": {
+      "inputFormats": "mp3 aac flac ogg m4a",
+      "category": "audio"
+    }
   },
   {
     "id": "audio-to-mp3",
     "name": "Convert audio to MP3",
     "description": "Converts audio files to the MP3 format.",
-    "keywords": ["mp3", "audio", "convert", "format"],
-    "examples": ["convert to mp3", "make this an mp3"],
-    "metadata": { "inputFormats": "wav aac flac ogg m4a", "category": "audio" }
+    "keywords": [
+      "mp3",
+      "audio",
+      "convert",
+      "format"
+    ],
+    "examples": [
+      "convert to mp3",
+      "make this an mp3"
+    ],
+    "metadata": {
+      "inputFormats": "wav aac flac ogg m4a",
+      "category": "audio"
+    }
   },
   {
     "id": "trim-audio",
     "name": "Trim audio",
     "description": "Cuts a section out of an audio file.",
-    "keywords": ["trim", "cut", "audio", "clip"],
-    "examples": ["cut the first 10 seconds", "trim this song"],
-    "metadata": { "category": "audio" }
+    "keywords": [
+      "trim",
+      "cut",
+      "audio",
+      "clip"
+    ],
+    "examples": [
+      "cut the first 10 seconds",
+      "trim this song",
+      "cut this mp3",
+      "shorten the wav file"
+    ],
+    "metadata": {
+      "inputFormats": "mp3 wav aac flac ogg m4a",
+      "category": "audio"
+    }
   },
   {
     "id": "compress-video",
     "name": "Compress video",
     "description": "Reduces the file size of a video.",
-    "keywords": ["video", "compress", "smaller", "size"],
-    "examples": ["make this video smaller", "shrink the video"],
-    "metadata": { "inputFormats": "mp4 mov avi mkv", "category": "video" }
+    "keywords": [
+      "video",
+      "compress",
+      "smaller",
+      "size"
+    ],
+    "examples": [
+      "make this video smaller",
+      "shrink the video"
+    ],
+    "metadata": {
+      "inputFormats": "mp4 mov avi mkv",
+      "category": "video"
+    }
   },
   {
     "id": "extract-frames",
     "name": "Extract video frames",
     "description": "Saves individual frames of a video as images.",
-    "keywords": ["frames", "screenshot", "video", "extract", "still"],
-    "examples": ["get a frame from this video", "extract images from video"],
-    "metadata": { "category": "video" }
+    "keywords": [
+      "frames",
+      "screenshot",
+      "video",
+      "extract",
+      "still"
+    ],
+    "examples": [
+      "get a frame from this video",
+      "extract images from video"
+    ],
+    "metadata": {
+      "inputFormats": "mp4 mov avi mkv",
+      "category": "video"
+    }
   },
   {
     "id": "remove-background",
     "name": "Remove image background",
     "description": "Removes the background from a picture.",
-    "keywords": ["background", "image", "transparent", "png"],
-    "examples": ["remove the background from this photo", "make background transparent"],
-    "metadata": { "inputFormats": "png jpg heic", "category": "image" }
+    "keywords": [
+      "background",
+      "image",
+      "transparent",
+      "png"
+    ],
+    "examples": [
+      "remove the background from this photo",
+      "make background transparent",
+      "cut out the subject of this jpg"
+    ],
+    "metadata": {
+      "inputFormats": "png jpg heic",
+      "category": "image"
+    }
   },
   {
     "id": "resize-image",
     "name": "Resize image",
     "description": "Changes the dimensions of an image.",
-    "keywords": ["resize", "scale", "image", "dimensions"],
-    "examples": ["make this image 1024 pixels wide", "scale down this photo"],
-    "metadata": { "category": "image" }
+    "keywords": [
+      "resize",
+      "scale",
+      "image",
+      "dimensions"
+    ],
+    "examples": [
+      "make this image 1024 pixels wide",
+      "scale down this photo",
+      "make the png smaller in dimensions"
+    ],
+    "metadata": {
+      "inputFormats": "png jpg jpeg heic webp",
+      "category": "image"
+    }
   },
   {
     "id": "merge-pdf",
     "name": "Merge PDF documents",
     "description": "Combines several PDF files into one.",
-    "keywords": ["pdf", "merge", "combine", "join"],
-    "examples": ["combine these pdfs", "join pdf files"],
-    "metadata": { "category": "pdf" }
+    "keywords": [
+      "pdf",
+      "merge",
+      "combine",
+      "join"
+    ],
+    "examples": [
+      "combine these pdfs",
+      "join pdf files"
+    ],
+    "metadata": {
+      "inputFormats": "pdf",
+      "category": "pdf"
+    }
   }
 ]

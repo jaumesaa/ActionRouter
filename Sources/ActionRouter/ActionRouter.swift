@@ -34,7 +34,7 @@ public actor ActionRouter {
     private var corpus = CorpusStatistics(indexed: [])
 
     private var semanticEntries: [String: SemanticEntry] = [:]
-    private var embeddingCache = EmbeddingCache()
+    private var vectorCache: EmbeddingVectorCache?
     private var status: SemanticTierStatus
 
     public init(
@@ -44,6 +44,11 @@ public actor ActionRouter {
         self.configuration = configuration
         self.provider = embeddingProvider
         self.status = embeddingProvider == nil ? .disabled : .notPrepared
+        self.vectorCache = embeddingProvider.map {
+            EmbeddingVectorCache(
+                providerID: $0.identifier, policy: configuration.semantic.diskCache
+            )
+        }
     }
 
     // MARK: - Action management
@@ -106,7 +111,14 @@ public actor ActionRouter {
     /// the content-keyed embedding cache makes unchanged texts free, so
     /// this is cheap enough for live tuning UIs.
     public func updateConfiguration(_ newConfiguration: RouterConfiguration) async {
+        let previousCachePolicy = configuration.semantic.diskCache
         configuration = newConfiguration
+        if let provider, previousCachePolicy != newConfiguration.semantic.diskCache {
+            vectorCache = EmbeddingVectorCache(
+                providerID: provider.identifier,
+                policy: newConfiguration.semantic.diskCache
+            )
+        }
         let actions = registeredActions
         for action in actions {
             indexed[action.id] = IndexedAction(
@@ -283,9 +295,7 @@ public actor ActionRouter {
                 vectors.reserveCapacity(texts.count)
                 var pending: [String] = []
                 for text in texts {
-                    if let cached = embeddingCache.vector(
-                        provider: provider.identifier, purpose: .document, text: text
-                    ) {
+                    if let cached = vectorCache?.vector(purpose: .document, text: text) {
                         vectors.append(cached)
                     } else {
                         pending.append(text)
@@ -295,15 +305,13 @@ public actor ActionRouter {
                     let embedded = try await provider.embed(pending, purpose: .document)
                     for (text, raw) in zip(pending, embedded) {
                         guard let vector = VectorMath.normalized(raw) else { continue }
-                        embeddingCache.store(
-                            vector, provider: provider.identifier,
-                            purpose: .document, text: text
-                        )
+                        vectorCache?.store(vector, purpose: .document, text: text)
                         vectors.append(vector)
                     }
                 }
                 semanticEntries[action.id] = SemanticEntry(vectors: vectors)
             }
+            vectorCache?.persistIfNeeded()
             status = .ready
         } catch {
             markSemanticUnavailable(error)

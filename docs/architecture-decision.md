@@ -76,11 +76,16 @@ budget is acceptable.
 ## Key engineering choices
 
 - **Fixed enumerated input shapes (32/64/128 tokens)** for the Core ML
-  model: flexible shapes are rejected by the Neural Engine. Measured warm
-  routing p50 dropped 35.8 ms → 9.1 ms and registration 10.3 s → 4.4 s.
-  The attention mask is computed inside the model (`input_ids != pad`) so
-  there is a single enumerated input, which Core ML requires below
-  macOS 15 deployment targets.
+  model. Measured warm routing p50 dropped 35.8 ms → 9.1 ms and
+  registration 10.3 s → 4.4 s. The attention mask is computed inside the
+  model (`input_ids != pad`) so there is a single enumerated input, which
+  Core ML requires below macOS 15 deployment targets.
+  **Honest status**: `MLComputePlan` shows the model still does NOT compile
+  for the Neural Engine (the E5RT "data-dependent shapes" load warning);
+  the speedup comes from a better CPU/GPU path. At ~9 ms/query this is an
+  order of magnitude inside the interactive budget; an ANE port
+  (ane_transformers-style graph restructuring, mainly a power win) is a
+  roadmap item.
 - **Exact cosine over all candidate actions** (no vector index): at the
   target scale (up to a few hundred actions) exact scoring is faster than any ANN
   structure and adds zero dependencies. Scaling suite shows graceful
