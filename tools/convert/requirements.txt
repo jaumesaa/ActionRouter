@@ -1,0 +1,5 @@
+torch>=2.3
+transformers>=4.44
+coremltools>=8.0
+sentencepiece
+protobuf

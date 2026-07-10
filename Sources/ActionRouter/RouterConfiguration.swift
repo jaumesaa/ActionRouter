@@ -84,14 +84,20 @@ public struct RouterConfiguration: Sendable {
     /// Lexical tier tuning.
     public var lexical: LexicalConfiguration
 
+    /// Semantic tier tuning (only used when the router is created with an
+    /// ``EmbeddingProvider``).
+    public var semantic: SemanticConfiguration
+
     public init(
         abstention: AbstentionPolicy = .default,
         maxCandidates: Int = 5,
-        lexical: LexicalConfiguration = .default
+        lexical: LexicalConfiguration = .default,
+        semantic: SemanticConfiguration = .default
     ) {
         self.abstention = abstention
         self.maxCandidates = maxCandidates
         self.lexical = lexical
+        self.semantic = semantic
     }
 
     public static let `default` = RouterConfiguration()

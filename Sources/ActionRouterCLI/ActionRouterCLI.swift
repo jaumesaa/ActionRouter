@@ -1,4 +1,5 @@
 import ActionRouter
+import ActionRouterCoreML
 import ArgumentParser
 import Foundation
 
@@ -28,6 +29,16 @@ struct RouteOptions: ParsableArguments {
 
     @Flag(name: .long, help: "Show the full per-signal score breakdown.")
     var explain = false
+
+    @Flag(name: .long, help: "Enable the semantic tier (Apple NLContextualEmbedding).")
+    var semantic = false
+
+    @Option(name: .long, help: """
+    Enable the semantic tier with a converted E5 Core ML model. Pass the \
+    directory produced by tools/convert/convert_e5.py (contains \
+    MultilingualE5Small.mlpackage and tokenizer/).
+    """)
+    var e5Dir: String?
 }
 
 struct Route: AsyncParsableCommand {
@@ -47,8 +58,33 @@ struct Route: AsyncParsableCommand {
 
         var configuration = RouterConfiguration.default
         configuration.maxCandidates = options.top
-        let router = ActionRouter(configuration: configuration)
+
+        let provider: (any EmbeddingProvider)?
+        if let e5Dir = options.e5Dir {
+            let directory = URL(fileURLWithPath: e5Dir, isDirectory: true)
+            configuration.semantic = .e5
+            provider = CoreMLEmbeddingProvider(
+                modelURL: directory.appendingPathComponent("MultilingualE5Small.mlpackage"),
+                tokenizerDirectory: directory.appendingPathComponent("tokenizer")
+            )
+        } else if options.semantic {
+            configuration.semantic = .appleNaturalLanguage
+            provider = NaturalLanguageEmbeddingProvider()
+        } else {
+            provider = nil
+        }
+
+        let router = ActionRouter(configuration: configuration, embeddingProvider: provider)
         await router.register(actions)
+
+        if provider != nil {
+            let status = await router.semanticStatus
+            if case .unavailable(let reason) = status {
+                FileHandle.standardError.write(Data(
+                    "WARNING: semantic tier unavailable (\(reason)); lexical-only.\n".utf8
+                ))
+            }
+        }
 
         let routingContext = options.context.isEmpty
             ? nil

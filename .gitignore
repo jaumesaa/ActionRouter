@@ -1,5 +1,7 @@
 .DS_Store
 /.build
+tools/convert/.venv/
+tools/convert/build/
 /Packages
 xcuserdata/
 DerivedData/

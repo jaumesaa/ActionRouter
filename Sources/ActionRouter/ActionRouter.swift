@@ -1,10 +1,11 @@
 import Foundation
+import os
 
 /// Routes short natural-language requests to the most appropriate action
 /// from a dynamic set, entirely on device.
 ///
 /// ```swift
-/// let router = ActionRouter()
+/// let router = ActionRouter(embeddingProvider: NaturalLanguageEmbeddingProvider())
 /// await router.register([
 ///     Action(id: "wav", name: "Convert audio to WAV"),
 ///     Action(id: "bg", name: "Remove image background"),
@@ -18,20 +19,39 @@ import Foundation
 /// Actions can be registered and removed at any time; no training or
 /// preparation step is required. The router abstains (see
 /// ``AbstentionReason``) rather than returning a poor match.
+///
+/// Routing always includes the lexical tier. When an ``EmbeddingProvider``
+/// is supplied, a semantic tier handles paraphrases and cross-language
+/// requests; if the provider fails (e.g. missing OS assets), the router
+/// degrades to lexical-only and records why in ``semanticStatus``.
 public actor ActionRouter {
     private let configuration: RouterConfiguration
+    private let provider: (any EmbeddingProvider)?
+    private let logger = Logger(subsystem: "dev.actionrouter", category: "router")
+
     private var indexed: [String: IndexedAction] = [:]
     private var insertionOrder: [String] = []
     private var corpus = CorpusStatistics(indexed: [])
 
-    public init(configuration: RouterConfiguration = .default) {
+    private var semanticEntries: [String: SemanticEntry] = [:]
+    private var embeddingCache = EmbeddingCache()
+    private var status: SemanticTierStatus
+
+    public init(
+        configuration: RouterConfiguration = .default,
+        embeddingProvider: (any EmbeddingProvider)? = nil
+    ) {
         self.configuration = configuration
+        self.provider = embeddingProvider
+        self.status = embeddingProvider == nil ? .disabled : .notPrepared
     }
 
     // MARK: - Action management
 
-    /// Registers actions, replacing any with the same `id`.
-    public func register(_ actions: [Action]) {
+    /// Registers actions, replacing any with the same `id`. New actions are
+    /// routable immediately; when a semantic provider is configured their
+    /// embeddings are computed here (cached, so unchanged texts are free).
+    public func register(_ actions: [Action]) async {
         for action in actions {
             if indexed[action.id] == nil {
                 insertionOrder.append(action.id)
@@ -41,11 +61,12 @@ public actor ActionRouter {
             )
         }
         rebuildCorpus()
+        await embedActions(actions)
     }
 
     /// Registers a single action, replacing any with the same `id`.
-    public func register(_ action: Action) {
-        register([action])
+    public func register(_ action: Action) async {
+        await register([action])
     }
 
     /// Removes the actions with the given identifiers.
@@ -54,6 +75,7 @@ public actor ActionRouter {
         guard !removed.isEmpty else { return }
         for id in removed {
             indexed.removeValue(forKey: id)
+            semanticEntries.removeValue(forKey: id)
         }
         insertionOrder.removeAll { removed.contains($0) }
         rebuildCorpus()
@@ -62,6 +84,7 @@ public actor ActionRouter {
     /// Removes all registered actions.
     public func removeAll() {
         indexed.removeAll()
+        semanticEntries.removeAll()
         insertionOrder.removeAll()
         rebuildCorpus()
     }
@@ -69,6 +92,20 @@ public actor ActionRouter {
     /// The currently registered actions, in registration order.
     public var registeredActions: [Action] {
         insertionOrder.compactMap { indexed[$0]?.action }
+    }
+
+    /// Availability of the semantic tier (see ``SemanticTierStatus``).
+    public var semanticStatus: SemanticTierStatus {
+        status
+    }
+
+    /// Retries loading a previously failed embedding provider (e.g. after
+    /// network became available for the one-time OS asset download) and
+    /// re-embeds registered actions on success.
+    public func retrySemanticPreparation() async {
+        guard provider != nil, case .unavailable = status else { return }
+        status = .notPrepared
+        await embedActions(registeredActions)
     }
 
     // MARK: - Routing
@@ -84,7 +121,7 @@ public actor ActionRouter {
     public func route(
         _ query: String,
         context: RoutingContext? = nil
-    ) throws -> RoutingResult {
+    ) async throws -> RoutingResult {
         let clock = ContinuousClock()
         let start = clock.now
 
@@ -105,18 +142,30 @@ public actor ActionRouter {
             return finish(.abstained(.emptyQuery), candidates: [])
         }
 
+        let queryVector = try await embedQueryIfPossible(query)
+        try Task.checkCancellation()
+
         var scored: [(fused: Double, signals: [RoutingSignal: Double], action: Action)] = []
         scored.reserveCapacity(indexed.count)
         for id in insertionOrder {
             guard let document = indexed[id] else { continue }
-            try Task.checkCancellation()
-            let signals = LexicalScorer.signals(
+            var signals = LexicalScorer.signals(
                 query: parsedQuery,
                 action: document,
                 corpus: corpus,
                 configuration: configuration.lexical
             )
-            let fused = LexicalScorer.fuse(signals, configuration: configuration.lexical)
+            let lexical = LexicalScorer.fuse(signals, configuration: configuration.lexical)
+
+            var semantic = 0.0
+            if let queryVector, let entry = semanticEntries[id] {
+                let cosine = entry.bestSimilarity(to: queryVector)
+                semantic = mapSimilarity(cosine)
+                signals[.semanticCosine] = cosine
+                signals[.semanticSimilarity] = semantic
+            }
+
+            let fused = combine(lexical: lexical, semantic: semantic)
             scored.append((fused, signals, document.action))
         }
         scored.sort { $0.fused > $1.fused }
@@ -133,9 +182,7 @@ public actor ActionRouter {
                 action: $0.action,
                 confidence: Confidence.estimate(
                     fusedScore: $0.fused,
-                    margin: $0.action.id == scored[0].action.id
-                        ? margin
-                        : Swift.max(0, $0.fused - scored[0].fused)
+                    margin: $0.action.id == scored[0].action.id ? margin : 0
                 ),
                 fusedScore: $0.fused,
                 signals: $0.signals
@@ -161,6 +208,94 @@ public actor ActionRouter {
         return finish(.matched(best), candidates: candidates)
     }
 
+    // MARK: - Semantic tier
+
+    /// Combines lexical and semantic evidence. Either signal alone can
+    /// carry a match (cross-language queries have no lexical overlap;
+    /// format abbreviations may have no semantic weight), and agreement
+    /// between the two earns a bounded bonus.
+    private func combine(lexical: Double, semantic: Double) -> Double {
+        let stronger = Swift.max(lexical, semantic)
+        let weaker = Swift.min(lexical, semantic)
+        let bonus = configuration.semantic.agreementBonus * weaker * (1 - stronger)
+        return Swift.min(1, stronger + bonus)
+    }
+
+    /// Affine remap of raw cosine similarity into [0, 1] (see
+    /// ``SemanticConfiguration/similarityFloor``).
+    private func mapSimilarity(_ cosine: Double) -> Double {
+        let floor = configuration.semantic.similarityFloor
+        let ceiling = configuration.semantic.similarityCeiling
+        guard ceiling > floor else { return 0 }
+        return Swift.min(1, Swift.max(0, (cosine - floor) / (ceiling - floor)))
+    }
+
+    private func embedQueryIfPossible(_ query: String) async throws -> [Float]? {
+        guard let provider else { return nil }
+        if case .unavailable = status { return nil }
+        do {
+            let raw = try await provider.embed([query], purpose: .query)
+            guard let vector = raw.first.flatMap(VectorMath.normalized) else {
+                throw EmbeddingError.emptyResult
+            }
+            status = .ready
+            return vector
+        } catch is CancellationError {
+            throw CancellationError()
+        } catch {
+            markSemanticUnavailable(error)
+            return nil
+        }
+    }
+
+    private func embedActions(_ actions: [Action]) async {
+        guard let provider else { return }
+        if case .unavailable = status { return }
+        do {
+            try await provider.prepare()
+            for action in actions {
+                let texts = SemanticText.documentTexts(
+                    for: action, configuration: configuration.semantic
+                )
+                var vectors: [[Float]] = []
+                vectors.reserveCapacity(texts.count)
+                var pending: [String] = []
+                for text in texts {
+                    if let cached = embeddingCache.vector(
+                        provider: provider.identifier, purpose: .document, text: text
+                    ) {
+                        vectors.append(cached)
+                    } else {
+                        pending.append(text)
+                    }
+                }
+                if !pending.isEmpty {
+                    let embedded = try await provider.embed(pending, purpose: .document)
+                    for (text, raw) in zip(pending, embedded) {
+                        guard let vector = VectorMath.normalized(raw) else { continue }
+                        embeddingCache.store(
+                            vector, provider: provider.identifier,
+                            purpose: .document, text: text
+                        )
+                        vectors.append(vector)
+                    }
+                }
+                semanticEntries[action.id] = SemanticEntry(vectors: vectors)
+            }
+            status = .ready
+        } catch {
+            markSemanticUnavailable(error)
+        }
+    }
+
+    private func markSemanticUnavailable(_ error: Error) {
+        let reason = String(describing: error)
+        status = .unavailable(reason)
+        logger.warning(
+            "Semantic tier unavailable, degrading to lexical routing: \(reason, privacy: .public)"
+        )
+    }
+
     // MARK: - Private
 
     private func rebuildCorpus() {
@@ -170,9 +305,9 @@ public actor ActionRouter {
 
 /// Maps fused score and top-2 margin to a confidence value.
 ///
-/// This is an explicit, documented heuristic for the pre-release lexical
-/// tier: monotone in the fused score, discounted when the runner-up is
-/// close. It is replaced by benchmark-fitted calibration in a later phase.
+/// This is an explicit, documented heuristic for the pre-release router:
+/// monotone in the fused score, discounted when the runner-up is close. It
+/// is replaced by benchmark-fitted calibration in a later phase.
 enum Confidence {
     static func estimate(fusedScore: Double, margin: Double) -> Double {
         let marginFactor = 0.75 + 0.25 * Swift.min(1, Swift.max(0, margin) / 0.2)

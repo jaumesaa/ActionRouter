@@ -9,25 +9,46 @@ let package = Package(
     ],
     products: [
         .library(name: "ActionRouter", targets: ["ActionRouter"]),
+        .library(name: "ActionRouterCoreML", targets: ["ActionRouterCoreML"]),
         .executable(name: "actionrouter", targets: ["ActionRouterCLI"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.5.0"),
+        .package(url: "https://github.com/huggingface/swift-transformers.git", from: "1.3.0"),
     ],
     targets: [
+        // Core: no dependencies beyond the OS. Lexical tier + semantic tier
+        // driven by any EmbeddingProvider (Apple NLContextualEmbedding ships
+        // built in).
         .target(
             name: "ActionRouter"
+        ),
+        // Optional: Core ML embedding provider for converted sentence
+        // embedding models (e.g. multilingual-e5-small; see tools/convert).
+        // Separate target so core integrations stay dependency-free.
+        .target(
+            name: "ActionRouterCoreML",
+            dependencies: [
+                "ActionRouter",
+                .product(name: "Tokenizers", package: "swift-transformers"),
+            ]
         ),
         .executableTarget(
             name: "ActionRouterCLI",
             dependencies: [
                 "ActionRouter",
+                "ActionRouterCoreML",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
         ),
         .testTarget(
             name: "ActionRouterTests",
             dependencies: ["ActionRouter"]
+        ),
+        .testTarget(
+            name: "ActionRouterCoreMLTests",
+            dependencies: ["ActionRouterCoreML"],
+            resources: [.copy("Fixtures")]
         ),
     ],
     swiftLanguageModes: [.v6]
