@@ -10,3 +10,4 @@ DerivedData/
 .netrc
 *.xcodeproj
 .vscode/
+Benchmarks/reports/

@@ -41,10 +41,10 @@ Pre-release, under active development. Current state:
 | --- | --- |
 | Core API (`Action`, `ActionRouter`, abstention, context) | Implemented |
 | Lexical tier (exact / prefix / fuzzy / BM25 / keywords) | Implemented |
-| Semantic tier: Apple `NLContextualEmbedding` provider (zero download) | Implemented — weak discrimination, see `docs/experiments/` |
-| Semantic tier: Core ML `multilingual-e5-small` provider + conversion tooling | Implemented (`ActionRouterCoreML`, `tools/convert`) |
+| Semantic tier: Core ML `multilingual-e5-small` provider + conversion tooling | Implemented — recommended (int8, 113 MB; `ActionRouterCoreML`, `tools/convert`) |
+| Semantic tier: Apple `NLContextualEmbedding` provider (zero download) | Implemented — measured too weak for production, see `docs/architecture-decision.md` |
 | Reproducible benchmark harness (5,350 episodes from CLINC-150 / Banking77 / MASSIVE) | Implemented (`Benchmarks/`, `actionrouter eval`) |
-| Calibrated confidence | Planned (current values are a documented heuristic) |
+| Calibrated confidence (logistic fit on dev suites; ECE ≤ 0.033) | Implemented (`docs/benchmarks.md`) |
 | Playground app (live decision visualization) | Planned |
 
 The public API may still change before `0.1.0`.

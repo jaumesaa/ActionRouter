@@ -5,6 +5,13 @@ import NaturalLanguage
 /// (macOS 14+ / iOS 17+): a multilingual transformer shipped with the OS,
 /// so it adds nothing to the app bundle.
 ///
+/// - Warning: Benchmarks show this provider's sentence-level similarity is
+///   weakly discriminative — on the project's dev suites it *lowered*
+///   ranking accuracy versus lexical-only routing and made abstention
+///   unreliable (see `docs/architecture-decision.md`). It exists for
+///   zero-download experimentation; for production use the Core ML
+///   E5 provider from the `ActionRouterCoreML` module.
+///
 /// Notes:
 /// - Models are per-*script* (the default `.latin` model covers English,
 ///   Spanish, Catalan, French, German, Portuguese, Italian, …). Vectors

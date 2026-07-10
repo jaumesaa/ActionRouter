@@ -45,5 +45,11 @@ struct EvalRecord: Encodable {
     /// 1-based rank of gold among candidates; nil if gold absent or unranked.
     let goldRank: Int?
     let bestConfidence: Double
+    /// Fused (pre-confidence) score of the top candidate, and its margin
+    /// over the runner-up — the features confidence calibration is fit on.
+    let bestFusedScore: Double
+    let fusedMargin: Double
+    /// Raw semantic cosine of the top candidate, when a provider ran.
+    let bestSemanticCosine: Double?
     let durationMilliseconds: Double
 }

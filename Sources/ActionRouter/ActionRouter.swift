@@ -185,7 +185,8 @@ public actor ActionRouter {
                 action: $0.action,
                 confidence: Confidence.estimate(
                     fusedScore: $0.fused,
-                    margin: $0.action.id == scored[0].action.id ? margin : 0
+                    margin: $0.action.id == scored[0].action.id ? margin : 0,
+                    semanticTierActive: queryVector != nil
                 ),
                 fusedScore: $0.fused,
                 signals: $0.signals
@@ -306,14 +307,33 @@ public actor ActionRouter {
     }
 }
 
-/// Maps fused score and top-2 margin to a confidence value.
+/// Maps fused score and top-2 margin to a calibrated probability that the
+/// top candidate is the action the user meant.
 ///
-/// This is an explicit, documented heuristic for the pre-release router:
-/// monotone in the fused score, discounted when the runner-up is close. It
-/// is replaced by benchmark-fitted calibration in a later phase.
+/// Logistic regression fitted on the DEV benchmark suites (1,450 episodes
+/// each; CLINC-150/Banking77/MASSIVE, including out-of-scope and
+/// gold-absent episodes as negatives) by `tools/dataprep/fit_calibration.py`
+/// — see `docs/benchmarks.md`. Separate coefficients for lexical-only and
+/// semantic-active routing because their fused-score distributions differ.
+/// Regenerate with the script; never hand-tune.
 enum Confidence {
-    static func estimate(fusedScore: Double, margin: Double) -> Double {
-        let marginFactor = 0.75 + 0.25 * Swift.min(1, Swift.max(0, margin) / 0.2)
-        return Swift.min(1, Swift.max(0, fusedScore * marginFactor))
+    struct Coefficients: Sendable {
+        let fused: Double
+        let margin: Double
+        let intercept: Double
+    }
+
+    /// Fitted on dev with the lexical tier only (ECE 0.025, Brier 0.166).
+    static let lexicalOnly = Coefficients(fused: 5.5581, margin: 9.0162, intercept: -2.7450)
+
+    /// Fitted on dev with the e5 semantic tier active (ECE 0.033, Brier 0.188).
+    static let semanticActive = Coefficients(fused: 2.4226, margin: 8.9502, intercept: -2.4809)
+
+    static func estimate(
+        fusedScore: Double, margin: Double, semanticTierActive: Bool
+    ) -> Double {
+        let c = semanticTierActive ? semanticActive : lexicalOnly
+        let z = c.fused * fusedScore + c.margin * Swift.max(0, margin) + c.intercept
+        return 1 / (1 + Foundation.exp(-Swift.min(30, Swift.max(-30, z))))
     }
 }

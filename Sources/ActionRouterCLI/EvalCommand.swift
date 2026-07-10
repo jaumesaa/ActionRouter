@@ -17,6 +17,9 @@ struct Eval: AsyncParsableCommand {
     @Option(name: .long, help: "Enable the semantic tier with a converted E5 Core ML model directory.")
     var e5Dir: String?
 
+    @Option(name: .long, help: "Model package filename inside --e5-dir (e.g. MultilingualE5Small-Int8.mlpackage).")
+    var e5Model = "MultilingualE5Small.mlpackage"
+
     @Option(name: .long, help: "Override the abstention confidence threshold.")
     var minConfidence: Double?
 
@@ -76,7 +79,7 @@ struct Eval: AsyncParsableCommand {
             let directory = URL(fileURLWithPath: e5Dir, isDirectory: true)
             configuration.semantic = .e5
             provider = CoreMLEmbeddingProvider(
-                modelURL: directory.appendingPathComponent("MultilingualE5Small.mlpackage"),
+                modelURL: directory.appendingPathComponent(e5Model),
                 tokenizerDirectory: directory.appendingPathComponent("tokenizer")
             )
         } else if semantic {
@@ -114,6 +117,8 @@ struct Eval: AsyncParsableCommand {
             let goldRank = episode.gold.flatMap { gold in
                 result.candidates.firstIndex { $0.action.id == gold }.map { $0 + 1 }
             }
+            let best = result.candidates.first
+            let runnerUp = result.candidates.dropFirst().first
             records.append(EvalRecord(
                 suite: suite.suite,
                 language: episode.language,
@@ -122,9 +127,12 @@ struct Eval: AsyncParsableCommand {
                 goldPresent: episode.gold != nil,
                 matched: result.match != nil,
                 top1Correct: episode.gold != nil
-                    && result.candidates.first?.action.id == episode.gold,
+                    && best?.action.id == episode.gold,
                 goldRank: goldRank,
-                bestConfidence: result.candidates.first?.confidence ?? 0,
+                bestConfidence: best?.confidence ?? 0,
+                bestFusedScore: best?.fusedScore ?? 0,
+                fusedMargin: (best?.fusedScore ?? 0) - (runnerUp?.fusedScore ?? 0),
+                bestSemanticCosine: best?.signals[.semanticCosine],
                 durationMilliseconds: ms
             ))
             if (index + 1) % 200 == 0 {

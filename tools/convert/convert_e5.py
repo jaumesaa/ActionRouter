@@ -29,14 +29,24 @@ MODEL_ID = "intfloat/multilingual-e5-small"
 MAX_LENGTH = 128
 
 
+PAD_TOKEN_ID = 1  # XLM-R <pad>
+
+
 class PooledE5(torch.nn.Module):
-    """E5 encoder + masked mean pooling + L2 normalization."""
+    """E5 encoder + masked mean pooling + L2 normalization.
+
+    The attention mask is derived inside the model (input_ids != <pad>), so
+    the exported Core ML model has a single input. That matters: below
+    iOS 18 / macOS 15, Core ML allows enumerated (Neural-Engine-friendly)
+    shapes on only ONE input.
+    """
 
     def __init__(self, model):
         super().__init__()
         self.model = model
 
-    def forward(self, input_ids, attention_mask):
+    def forward(self, input_ids):
+        attention_mask = input_ids.ne(PAD_TOKEN_ID).to(torch.int32)
         hidden = self.model(
             input_ids=input_ids, attention_mask=attention_mask
         ).last_hidden_state
@@ -57,16 +67,17 @@ def convert(output_dir: pathlib.Path, int8: bool) -> None:
         max_length=MAX_LENGTH, return_tensors="pt",
     )
     example_ids = example["input_ids"].to(torch.int32)
-    example_mask = example["attention_mask"].to(torch.int32)
 
-    traced = torch.jit.trace(wrapped, (example_ids, example_mask))
+    traced = torch.jit.trace(wrapped, (example_ids,))
 
-    sequence = ct.RangeDim(lower_bound=1, upper_bound=MAX_LENGTH, default=64)
+    # Enumerated (fixed) sequence lengths instead of a RangeDim: the Neural
+    # Engine rejects data-dependent shapes, so a flexible-shape model falls
+    # back to CPU/GPU. The Swift provider pads inputs to the next bucket.
+    shapes = ct.EnumeratedShapes(shapes=[(1, 32), (1, 64), (1, MAX_LENGTH)])
     mlmodel = ct.convert(
         traced,
         inputs=[
-            ct.TensorType(name="input_ids", shape=(1, sequence), dtype=np.int32),
-            ct.TensorType(name="attention_mask", shape=(1, sequence), dtype=np.int32),
+            ct.TensorType(name="input_ids", shape=shapes, dtype=np.int32),
         ],
         outputs=[ct.TensorType(name="embedding")],
         minimum_deployment_target=ct.target.macOS14,
@@ -115,17 +126,19 @@ def parity_report(output_dir: pathlib.Path, reference, tokenizer) -> None:
     )
     lines = []
     worst = 1.0
+    buckets = [32, 64, MAX_LENGTH]
     for text in texts:
         batch = tokenizer([text], truncation=True, max_length=MAX_LENGTH,
                           return_tensors="pt")
         ids = batch["input_ids"].to(torch.int32)
-        mask = batch["attention_mask"].to(torch.int32)
         with torch.no_grad():
-            expected = reference(ids, mask)[0].numpy()
-        got = mlmodel.predict({
-            "input_ids": ids.numpy().astype(np.int32),
-            "attention_mask": mask.numpy().astype(np.int32),
-        })["embedding"][0]
+            expected = reference(ids)[0].numpy()
+        # Pad to the next enumerated bucket, exactly as the Swift provider does.
+        bucket = next(b for b in buckets if b >= ids.shape[1])
+        pad = bucket - ids.shape[1]
+        ids_np = np.pad(ids.numpy(), ((0, 0), (0, pad)),
+                        constant_values=PAD_TOKEN_ID).astype(np.int32)
+        got = mlmodel.predict({"input_ids": ids_np})["embedding"][0]
         cos = float(np.dot(expected, got)
                     / (np.linalg.norm(expected) * np.linalg.norm(got)))
         worst = min(worst, cos)

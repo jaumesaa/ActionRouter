@@ -8,7 +8,8 @@ import Tokenizers
 /// `intfloat/multilingual-e5-small`).
 ///
 /// Expectations on the model:
-/// - inputs `input_ids` and `attention_mask`, shape `[1, sequence]`, Int32;
+/// - single input `input_ids`, shape `[1, sequence]`, Int32, padded with
+///   the model's pad token (the attention mask is derived in-model);
 /// - output `embedding`, shape `[1, dimensions]`, already mean-pooled and
 ///   L2-normalized;
 /// - an E5-style asymmetric scheme: texts are prefixed with `"query: "` or
@@ -24,6 +25,12 @@ public actor CoreMLEmbeddingProvider: EmbeddingProvider {
     private let usesE5Prefixes: Bool
     private let maxSequenceLength: Int
     private let computeUnits: MLComputeUnits
+
+    /// Sequence-length buckets matching the model's enumerated input shapes
+    /// (fixed shapes keep the model eligible for the Neural Engine). Inputs
+    /// are padded to the next bucket. XLM-R pad token id = 1.
+    private let shapeBuckets = [32, 64, 128]
+    private let padTokenID: Int32 = 1
 
     private var model: MLModel?
     private var tokenizer: (any Tokenizer)?
@@ -89,17 +96,14 @@ public actor CoreMLEmbeddingProvider: EmbeddingProvider {
             }
             guard !ids.isEmpty else { throw EmbeddingError.emptyResult }
 
-            let count = ids.count
-            let inputIDs = try MLMultiArray(shape: [1, NSNumber(value: count)], dataType: .int32)
-            let attentionMask = try MLMultiArray(shape: [1, NSNumber(value: count)], dataType: .int32)
-            for (index, id) in ids.enumerated() {
-                inputIDs[index] = NSNumber(value: Int32(id))
-                attentionMask[index] = 1
+            let bucket = shapeBuckets.first { $0 >= ids.count } ?? maxSequenceLength
+            let inputIDs = try MLMultiArray(shape: [1, NSNumber(value: bucket)], dataType: .int32)
+            for index in 0..<bucket {
+                inputIDs[index] = NSNumber(value: index < ids.count ? Int32(ids[index]) : padTokenID)
             }
 
             let input = try MLDictionaryFeatureProvider(dictionary: [
                 "input_ids": MLFeatureValue(multiArray: inputIDs),
-                "attention_mask": MLFeatureValue(multiArray: attentionMask),
             ])
             let output = try predict(model, input)
             guard let embedding = output.featureValue(for: "embedding")?.multiArrayValue else {

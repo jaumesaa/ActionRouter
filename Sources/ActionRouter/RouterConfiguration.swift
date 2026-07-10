@@ -14,8 +14,14 @@ public struct AbstentionPolicy: Sendable {
     /// visible in `alternatives`.
     public var abstainOnAmbiguity: Bool
 
+    /// The default `minimumConfidence` (0.3) maximizes overall decision
+    /// accuracy (correct answers + correct abstentions) on the dev
+    /// benchmark suites across both routing modes. Raise it when wrong
+    /// suggestions are costlier than missing ones; confidence values are
+    /// calibrated probabilities, so the threshold reads as "answer when
+    /// P(top candidate is right) >= x".
     public init(
-        minimumConfidence: Double = 0.35,
+        minimumConfidence: Double = 0.3,
         minimumMargin: Double = 0.08,
         abstainOnAmbiguity: Bool = false
     ) {
