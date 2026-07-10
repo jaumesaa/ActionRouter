@@ -9,7 +9,7 @@ struct ActionRouterCommand: AsyncParsableCommand {
         commandName: "actionrouter",
         abstract: "On-device dynamic intent routing: match a natural-language request to the best action.",
         version: "0.1.0-dev",
-        subcommands: [Route.self],
+        subcommands: [Route.self, Eval.self],
         defaultSubcommand: Route.self
     )
 }

@@ -2,6 +2,7 @@
 /.build
 tools/convert/.venv/
 tools/convert/build/
+tools/dataprep/cache/
 /Packages
 xcuserdata/
 DerivedData/

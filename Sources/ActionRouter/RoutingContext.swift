@@ -16,13 +16,24 @@ public struct RoutingContext: Hashable, Sendable, Codable {
     /// Additional key/value context for custom backends.
     public var attributes: [String: String]
 
+    /// When set, routing considers only the registered actions with these
+    /// identifiers. Useful when availability varies per invocation (e.g.
+    /// actions applicable to the currently selected file type) without
+    /// re-registering — precomputed indexes and embeddings are reused.
+    ///
+    /// Unknown identifiers are ignored; an empty intersection abstains with
+    /// ``AbstentionReason/noActionsRegistered``.
+    public var allowedActionIDs: Set<String>?
+
     public init(
         hints: [String] = [],
         locale: Locale? = nil,
-        attributes: [String: String] = [:]
+        attributes: [String: String] = [:],
+        allowedActionIDs: Set<String>? = nil
     ) {
         self.hints = hints
         self.locale = locale
         self.attributes = attributes
+        self.allowedActionIDs = allowedActionIDs
     }
 }

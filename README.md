@@ -43,7 +43,7 @@ Pre-release, under active development. Current state:
 | Lexical tier (exact / prefix / fuzzy / BM25 / keywords) | Implemented |
 | Semantic tier: Apple `NLContextualEmbedding` provider (zero download) | Implemented — weak discrimination, see `docs/experiments/` |
 | Semantic tier: Core ML `multilingual-e5-small` provider + conversion tooling | Implemented (`ActionRouterCoreML`, `tools/convert`) |
-| Reproducible benchmark harness | Planned |
+| Reproducible benchmark harness (5,350 episodes from CLINC-150 / Banking77 / MASSIVE) | Implemented (`Benchmarks/`, `actionrouter eval`) |
 | Calibrated confidence | Planned (current values are a documented heuristic) |
 | Playground app (live decision visualization) | Planned |
 

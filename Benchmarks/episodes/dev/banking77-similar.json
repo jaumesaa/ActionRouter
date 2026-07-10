@@ -1,0 +1,5263 @@
+{
+ "suite": "banking77-similar-dev",
+ "source": "Banking77",
+ "license": "CC-BY-4.0",
+ "seed": 42,
+ "actions": [
+  {
+   "id": "Refund_not_showing_up",
+   "name": "Refund not showing up",
+   "description": "Banking support action for Refund not showing up.",
+   "keywords": [
+    "Refund",
+    "not",
+    "showing",
+    "up"
+   ],
+   "examples": [
+    "Why am I missing my refund",
+    "I was supposed to get a refund but I do not see it on my statement. When is it going to be updated?",
+    "how does my statement get updated so i know when a refund will reflect on my balance",
+    "Why isn't my refund shown on my statement?"
+   ]
+  },
+  {
+   "id": "activate_my_card",
+   "name": "Activate my card",
+   "description": "Banking support action for activate my card.",
+   "keywords": [
+    "activate",
+    "card",
+    "my"
+   ],
+   "examples": [
+    "I have a new card and need to activate it",
+    "I just got a new card, and I want to know how to activate.",
+    "Can someone assist me with activating my new card?",
+    "how long should i wait ti activate my card"
+   ]
+  },
+  {
+   "id": "age_limit",
+   "name": "Age limit",
+   "description": "Banking support action for age limit.",
+   "keywords": [
+    "age",
+    "limit"
+   ],
+   "examples": [
+    "Am I allowed to get an account for my daughter?",
+    "I'd like to open an account for my kids can I do that?",
+    "Can I make an account for my kids?",
+    "Can I open an account for my offspring?"
+   ]
+  },
+  {
+   "id": "apple_pay_or_google_pay",
+   "name": "Apple pay or google pay",
+   "description": "Banking support action for apple pay or google pay.",
+   "keywords": [
+    "apple",
+    "google",
+    "or",
+    "pay"
+   ],
+   "examples": [
+    "Why doesn't my Google pay top up work?",
+    "Can Google Pay be used for top up, please help?",
+    "Could google pay and top up be together?",
+    "Google Pay isn't working. What is wrong?"
+   ]
+  },
+  {
+   "id": "atm_support",
+   "name": "Atm support",
+   "description": "Banking support action for atm support.",
+   "keywords": [
+    "atm",
+    "support"
+   ],
+   "examples": [
+    "Which ATM's can I use to make a withdrawal?",
+    "What is the closest ATM?",
+    "Can I use the card at any cash machine?",
+    "Which ATMs take the card?"
+   ]
+  },
+  {
+   "id": "automatic_top_up",
+   "name": "Automatic top up",
+   "description": "Banking support action for automatic top up.",
+   "keywords": [
+    "automatic",
+    "top",
+    "up"
+   ],
+   "examples": [
+    "How will I know when I can use the auto top-up feature?",
+    "Can I use an auto top-up option?",
+    "How many times can I auto top-up?",
+    "Is there a way to set up an auto top-up?"
+   ]
+  },
+  {
+   "id": "balance_not_updated_after_bank_transfer",
+   "name": "Balance not updated after bank transfer",
+   "description": "Banking support action for balance not updated after bank transfer.",
+   "keywords": [
+    "after",
+    "balance",
+    "bank",
+    "not",
+    "transfer",
+    "updated"
+   ],
+   "examples": [
+    "Money that I have transferred hasn't arrived yet",
+    "Hello I made a bank account transfer from the UK. The transfer was a couple hours ago, nothing has shown up yet.  Can you check to see if everything okay. Please.",
+    "Where is my money that I transfered?!",
+    "My transfer to my account is missing."
+   ]
+  },
+  {
+   "id": "balance_not_updated_after_cheque_or_cash_deposit",
+   "name": "Balance not updated after cheque or cash deposit",
+   "description": "Banking support action for balance not updated after cheque or cash deposit.",
+   "keywords": [
+    "after",
+    "balance",
+    "cash",
+    "cheque",
+    "deposit",
+    "not",
+    "or",
+    "updated"
+   ],
+   "examples": [
+    "Why is it taking so long for my money to appear in my account? I have been waiting a week!",
+    "Why am I not seeing the check I deposited this morning in my account?",
+    "I made a cash deposit and the balance wasn't updated.",
+    "My account balance doesn't reflect an update I made by cheque yesterday. Is something wrong or is the system slow?"
+   ]
+  },
+  {
+   "id": "beneficiary_not_allowed",
+   "name": "Beneficiary not allowed",
+   "description": "Banking support action for beneficiary not allowed.",
+   "keywords": [
+    "allowed",
+    "beneficiary",
+    "not"
+   ],
+   "examples": [
+    "Why didn't my transfer to a beneficiary go through?",
+    "Why can't a beneficiary receive a money transfer from me?",
+    "I cannot make a transfer to another account.",
+    "It's not letting me transfer money to my beneficiery."
+   ]
+  },
+  {
+   "id": "cancel_transfer",
+   "name": "Cancel transfer",
+   "description": "Banking support action for cancel transfer.",
+   "keywords": [
+    "cancel",
+    "transfer"
+   ],
+   "examples": [
+    "I just initiated a transfer but I'd like to cancel it.",
+    "Is there a way to undo a transaction?",
+    "Could I please cancel my transfer, I paid it into the wrong account. I need to pay it into the right account by tomorrow.",
+    "I wanted to transfer money to another account, but now I don't have to so I'd like to cancel said transfer. How can I do that?"
+   ]
+  },
+  {
+   "id": "card_about_to_expire",
+   "name": "Card about to expire",
+   "description": "Banking support action for card about to expire.",
+   "keywords": [
+    "about",
+    "card",
+    "expire",
+    "to"
+   ],
+   "examples": [
+    "Does it cost anything and how long would it take to get a card if I need a new one? My card is about to expire.",
+    "How do I get a new expiration date?",
+    "How can I replace an expired card?",
+    "My card is about to expire.  How do I order another?"
+   ]
+  },
+  {
+   "id": "card_acceptance",
+   "name": "Card acceptance",
+   "description": "Banking support action for card acceptance.",
+   "keywords": [
+    "acceptance",
+    "card"
+   ],
+   "examples": [
+    "Where is this card accepted?",
+    "In what places can I use my card?",
+    "Are there limits as to where my card will be accepted?",
+    "Are there limits to businesses that will accept this card?"
+   ]
+  },
+  {
+   "id": "card_arrival",
+   "name": "Card arrival",
+   "description": "Banking support action for card arrival.",
+   "keywords": [
+    "arrival",
+    "card"
+   ],
+   "examples": [
+    "Is there a reason my new card hasn't arrived?",
+    "Is there a reason my new card hasn't arrived yet?",
+    "What's the tracking on the card you sent?",
+    "My card still hasn't been delivered"
+   ]
+  },
+  {
+   "id": "card_delivery_estimate",
+   "name": "Card delivery estimate",
+   "description": "Banking support action for card delivery estimate.",
+   "keywords": [
+    "card",
+    "delivery",
+    "estimate"
+   ],
+   "examples": [
+    "how soon will my card arrive?",
+    "I'd like to have it delivered on Saturday.  Is that possible?",
+    "Please send my card as quickly as possible.",
+    "Could I chose the date to have it delivered?"
+   ]
+  },
+  {
+   "id": "card_linking",
+   "name": "Card linking",
+   "description": "Banking support action for card linking.",
+   "keywords": [
+    "card",
+    "linking"
+   ],
+   "examples": [
+    "Can you tell me how to get my card on the app?",
+    "Can I put my found card back into the app on my phone?",
+    "How do I reactivate a card I thought I lost?",
+    "Can I link your physical card"
+   ]
+  },
+  {
+   "id": "card_not_working",
+   "name": "Card not working",
+   "description": "Banking support action for card not working.",
+   "keywords": [
+    "card",
+    "not",
+    "working"
+   ],
+   "examples": [
+    "Can you tell me what the problem with my card is? It was declined at a restaurant today.",
+    "My card is not working.",
+    "What do I do if my card gets broken?",
+    "The card is non-functional."
+   ]
+  },
+  {
+   "id": "card_payment_fee_charged",
+   "name": "Card payment fee charged",
+   "description": "Banking support action for card payment fee charged.",
+   "keywords": [
+    "card",
+    "charged",
+    "fee",
+    "payment"
+   ],
+   "examples": [
+    "I have been charged an extra fee when buying from your store. Why is this?",
+    "Why was I charged a fee for using my card",
+    "Why was my transaction charged an extra fee when paying with my card?",
+    "Why am I charged a fee when using my debit or credit card?"
+   ]
+  },
+  {
+   "id": "card_payment_not_recognised",
+   "name": "Card payment not recognised",
+   "description": "Banking support action for card payment not recognised.",
+   "keywords": [
+    "card",
+    "not",
+    "payment",
+    "recognised"
+   ],
+   "examples": [
+    "There are a couple payments with my card in the app I see that I didn't create. What is happening? Maybe someone gained access to my account.",
+    "I don't think I made this transaction on my statement",
+    "There are a couple of payments with my card shown in the app that in reality I didn't make. Maybe someone has access to my card?Can you check whats the issue ?",
+    "My statement has a payment that I do not recall making"
+   ]
+  },
+  {
+   "id": "card_payment_wrong_exchange_rate",
+   "name": "Card payment wrong exchange rate",
+   "description": "Banking support action for card payment wrong exchange rate.",
+   "keywords": [
+    "card",
+    "exchange",
+    "payment",
+    "rate",
+    "wrong"
+   ],
+   "examples": [
+    "An item I bought had the wrong exchange rate applied.",
+    "The exchange rate on my payment doesn't look right",
+    "The currency exchange rate was wrong for a purchase I made.",
+    "I was charged the wrong exchange rate on a purchase"
+   ]
+  },
+  {
+   "id": "card_swallowed",
+   "name": "Card swallowed",
+   "description": "Banking support action for card swallowed.",
+   "keywords": [
+    "card",
+    "swallowed"
+   ],
+   "examples": [
+    "I didn't get my card back from the ATM.",
+    "An ATM machine didn't return my card.",
+    "atm ate my card",
+    "The ATM didnt return my card!"
+   ]
+  },
+  {
+   "id": "cash_withdrawal_charge",
+   "name": "Cash withdrawal charge",
+   "description": "Banking support action for cash withdrawal charge.",
+   "keywords": [
+    "cash",
+    "charge",
+    "withdrawal"
+   ],
+   "examples": [
+    "Why have I all of a sudden been charged for my ATM withdrawal? I thought the withdrawals were free because this is the first time I've ever had this problem.",
+    "Why am I being charged for withdrawing cash but haven't in the past?",
+    "I have a question about fee for cash withdraw.",
+    "So, I was just charged for my recent ATM withdrawal and any withdrawal prior to this has been free. What is the issue here?"
+   ]
+  },
+  {
+   "id": "cash_withdrawal_not_recognised",
+   "name": "Cash withdrawal not recognised",
+   "description": "Banking support action for cash withdrawal not recognised.",
+   "keywords": [
+    "cash",
+    "not",
+    "recognised",
+    "withdrawal"
+   ],
+   "examples": [
+    "Someone else used my card to withdraw cash from an ATM",
+    "My app shows cash I didn't get.",
+    "Some cash was withdrawn in the app, but I did not do it.",
+    "The app is showing a cash withdrawal that I didn't make."
+   ]
+  },
+  {
+   "id": "change_pin",
+   "name": "Change pin",
+   "description": "Banking support action for change pin.",
+   "keywords": [
+    "change",
+    "pin"
+   ],
+   "examples": [
+    "Please help me change my PIN.",
+    "Can I change my PIN at a nearby ATM when in Spain? I think someone saw my PIN and I need to change it but am on vacation.",
+    "What are the steps to change my PIN to something else?",
+    "Tell me what ATMs allow me to change my PIN."
+   ]
+  },
+  {
+   "id": "compromised_card",
+   "name": "Compromised card",
+   "description": "Banking support action for compromised card.",
+   "keywords": [
+    "card",
+    "compromised"
+   ],
+   "examples": [
+    "I sees some suspicious spending on my credit card that I don't recall I had made. What should I do?",
+    "What do I do if I believe to be a victim of credit card fraud?",
+    "I have some transactions on my account I did not make. Can you cancel my card and prevent further use.",
+    "card is being used by someone else"
+   ]
+  },
+  {
+   "id": "contactless_not_working",
+   "name": "Contactless not working",
+   "description": "Banking support action for contactless not working.",
+   "keywords": [
+    "contactless",
+    "not",
+    "working"
+   ],
+   "examples": [
+    "Would reinstalling the app solve the problem?",
+    "I can't get a contactless payment to work.",
+    "How come when I tried to pay contactless at the bus it didnt work?",
+    "How can I fix my card if the contactless function didn't work this morning?"
+   ]
+  },
+  {
+   "id": "country_support",
+   "name": "Country support",
+   "description": "Banking support action for country support.",
+   "keywords": [
+    "country",
+    "support"
+   ],
+   "examples": [
+    "Can you tell me the countries you provide support for.",
+    "I just moved to the US how do I get a card?",
+    "Can I get a card even though I live in the US",
+    "Where are you present globally?"
+   ]
+  },
+  {
+   "id": "declined_card_payment",
+   "name": "Declined card payment",
+   "description": "Banking support action for declined card payment.",
+   "keywords": [
+    "card",
+    "declined",
+    "payment"
+   ],
+   "examples": [
+    "I made a card payment, but it has been declined?",
+    "Is there an issue with my card payment as it has not gone through.",
+    "My card payment failed.",
+    "I'm not sure why the card payment didn't work."
+   ]
+  },
+  {
+   "id": "declined_cash_withdrawal",
+   "name": "Declined cash withdrawal",
+   "description": "Banking support action for declined cash withdrawal.",
+   "keywords": [
+    "cash",
+    "declined",
+    "withdrawal"
+   ],
+   "examples": [
+    "How come I can't get money at the ATM",
+    "I couldn't get money from the ATM",
+    "I attempted to get cash in the ATM but I was denied",
+    "Why am I having trouble withdrawing cash?"
+   ]
+  },
+  {
+   "id": "declined_transfer",
+   "name": "Declined transfer",
+   "description": "Banking support action for declined transfer.",
+   "keywords": [
+    "declined",
+    "transfer"
+   ],
+   "examples": [
+    "I am sure I have plenty of money to transfer but my transfer is being declined.",
+    "how come my transfer declined",
+    "How come my transfer got declined",
+    "Please explain why my transfer attempt was declined. Thank you."
+   ]
+  },
+  {
+   "id": "direct_debit_payment_not_recognised",
+   "name": "Direct debit payment not recognised",
+   "description": "Banking support action for direct debit payment not recognised.",
+   "keywords": [
+    "debit",
+    "direct",
+    "not",
+    "payment",
+    "recognised"
+   ],
+   "examples": [
+    "Why is there a direct debit to my account? I didn't do that.",
+    "There was a direct debit from my account and I didn't authorise it",
+    "after going over my transactions for the last couple of months I noticed a pretty large charge that I know I did not make. I know it's been a while but can I still dispute this charge?",
+    "How long after I receive my statement can I dispute payments on it?"
+   ]
+  },
+  {
+   "id": "disposable_card_limits",
+   "name": "Disposable card limits",
+   "description": "Banking support action for disposable card limits.",
+   "keywords": [
+    "card",
+    "disposable",
+    "limits"
+   ],
+   "examples": [
+    "I need more than one disposable card",
+    "I have to make more then a few disposable cards per day.",
+    "How many times can I use my disposable card?",
+    "Can I get a disposable card?  How many can I have?  How often can I use them?"
+   ]
+  },
+  {
+   "id": "edit_personal_details",
+   "name": "Edit personal details",
+   "description": "Banking support action for edit personal details.",
+   "keywords": [
+    "details",
+    "edit",
+    "personal"
+   ],
+   "examples": [
+    "Where can I edit personal details?",
+    "How can I change my name in my profile?",
+    "Can someone assist me with updating my account details with changing my last name?",
+    "I need to change my phone number."
+   ]
+  },
+  {
+   "id": "exchange_charge",
+   "name": "Exchange charge",
+   "description": "Banking support action for exchange charge.",
+   "keywords": [
+    "charge",
+    "exchange"
+   ],
+   "examples": [
+    "Will there be any extra fees if I exchange currencies?",
+    "What is the fee for accepting money from a foreign country?",
+    "What are the currency exchange fees?",
+    "Can you tell me about the exchange fee?"
+   ]
+  },
+  {
+   "id": "exchange_rate",
+   "name": "Exchange rate",
+   "description": "Banking support action for exchange rate.",
+   "keywords": [
+    "exchange",
+    "rate"
+   ],
+   "examples": [
+    "where do you find your exchange rates?",
+    "Will I know which exchange rate I will get?",
+    "Please explain your exchange rate policy.",
+    "What foreign exchange rate will I get?"
+   ]
+  },
+  {
+   "id": "exchange_via_app",
+   "name": "Exchange via app",
+   "description": "Banking support action for exchange via app.",
+   "keywords": [
+    "app",
+    "exchange",
+    "via"
+   ],
+   "examples": [
+    "how to exchange currencies",
+    "I accidentally chose to exchange GBP, but I need to pick AUD. How can I change it?",
+    "How can I change the currency I'm exchanging from AUD to GBP?",
+    "How do I go about exchanging currencies with this app?"
+   ]
+  },
+  {
+   "id": "extra_charge_on_statement",
+   "name": "Extra charge on statement",
+   "description": "Banking support action for extra charge on statement.",
+   "keywords": [
+    "charge",
+    "extra",
+    "on",
+    "statement"
+   ],
+   "examples": [
+    "The $1.00 has still not been reverted as indicated in the previous email.",
+    "How can I find out about an extra fee on my statement?",
+    "Why do I see an extra fee on my statement?",
+    "Why does my statement show a $1 charge on my account?"
+   ]
+  },
+  {
+   "id": "failed_transfer",
+   "name": "Failed transfer",
+   "description": "Banking support action for failed transfer.",
+   "keywords": [
+    "failed",
+    "transfer"
+   ],
+   "examples": [
+    "I've been trying to make a transfer and it doesn't seem to be working. (5 times) What is wrong with your system?",
+    "My transfer didn't work how come?",
+    "My transfer didn't complete. Why can't I access funds?",
+    "My transfer failed"
+   ]
+  },
+  {
+   "id": "fiat_currency_support",
+   "name": "Fiat currency support",
+   "description": "Banking support action for fiat currency support.",
+   "keywords": [
+    "currency",
+    "fiat",
+    "support"
+   ],
+   "examples": [
+    "Can you do exchanges of EUR?",
+    "Tell me the currencies that you support.",
+    "What other fiat currencies can I use?",
+    "Which fiat currencies can I use through this app?"
+   ]
+  },
+  {
+   "id": "get_disposable_virtual_card",
+   "name": "Get disposable virtual card",
+   "description": "Banking support action for get disposable virtual card.",
+   "keywords": [
+    "card",
+    "disposable",
+    "get",
+    "virtual"
+   ],
+   "examples": [
+    "I would like a disposable virtual card, could I get one?",
+    "How do I request a disposable virtual card?",
+    "How can disposable cards be used?",
+    "Who can purchase a disposable virtual card?"
+   ]
+  },
+  {
+   "id": "get_physical_card",
+   "name": "Get physical card",
+   "description": "Banking support action for get physical card.",
+   "keywords": [
+    "card",
+    "get",
+    "physical"
+   ],
+   "examples": [
+    "I signed up, but don't have a PIN. Where can I find it?",
+    "Do you deliver the PIN separately?",
+    "Will the PIN come separately?",
+    "I haven't received my PIN yet. Do I need to get it from you?"
+   ]
+  },
+  {
+   "id": "getting_spare_card",
+   "name": "Getting spare card",
+   "description": "Banking support action for getting spare card.",
+   "keywords": [
+    "card",
+    "getting",
+    "spare"
+   ],
+   "examples": [
+    "If I need an additional card, is there a fee for that?",
+    "How do I get a spare card?",
+    "I would like to use one of my cards for a family member. Is that allowed?",
+    "How do I get another card"
+   ]
+  },
+  {
+   "id": "getting_virtual_card",
+   "name": "Getting virtual card",
+   "description": "Banking support action for getting virtual card.",
+   "keywords": [
+    "card",
+    "getting",
+    "virtual"
+   ],
+   "examples": [
+    "How can I receive a virtual card?",
+    "Do I get to have one of those virtual cards I've heard about?",
+    "I need to make a purchase online, where is my virtual card?",
+    "Please tell me how I can get a virtual card."
+   ]
+  },
+  {
+   "id": "lost_or_stolen_card",
+   "name": "Lost or stolen card",
+   "description": "Banking support action for lost or stolen card.",
+   "keywords": [
+    "card",
+    "lost",
+    "or",
+    "stolen"
+   ],
+   "examples": [
+    "My card has been stolen what do I do?",
+    "My card is stolen.  Help!",
+    "Need help with a stolen card.",
+    "I lost my card, what do I do now?"
+   ]
+  },
+  {
+   "id": "lost_or_stolen_phone",
+   "name": "Lost or stolen phone",
+   "description": "Banking support action for lost or stolen phone.",
+   "keywords": [
+    "lost",
+    "or",
+    "phone",
+    "stolen"
+   ],
+   "examples": [
+    "Can I use the app without my phone?",
+    "I am not sure where my phone is.",
+    "Do I need my phone to use the app?",
+    "Is there anything to do because my phone was stolen?"
+   ]
+  },
+  {
+   "id": "order_physical_card",
+   "name": "Order physical card",
+   "description": "Banking support action for order physical card.",
+   "keywords": [
+    "card",
+    "order",
+    "physical"
+   ],
+   "examples": [
+    "Is there a fee for physical cards?",
+    "Where do you mail physical cards?",
+    "Where are the cards delivered to",
+    "Do I get an actual card?"
+   ]
+  },
+  {
+   "id": "passcode_forgotten",
+   "name": "Passcode forgotten",
+   "description": "Banking support action for passcode forgotten.",
+   "keywords": [
+    "forgotten",
+    "passcode"
+   ],
+   "examples": [
+    "I do not understand why my pass-code is not working.",
+    "I don't remember my login code",
+    "I cannot remember my passcode, is there a way to retrieve it?",
+    "Why doesn't my passcode work?"
+   ]
+  },
+  {
+   "id": "pending_card_payment",
+   "name": "Pending card payment",
+   "description": "Banking support action for pending card payment.",
+   "keywords": [
+    "card",
+    "payment",
+    "pending"
+   ],
+   "examples": [
+    "What's taking so long for this payment to go through?",
+    "It says \"pending payment?\" Why is it saying this?",
+    "I bought something this morning and the payment is still pending",
+    "Why is my payment still pending?"
+   ]
+  },
+  {
+   "id": "pending_cash_withdrawal",
+   "name": "Pending cash withdrawal",
+   "description": "Banking support action for pending cash withdrawal.",
+   "keywords": [
+    "cash",
+    "pending",
+    "withdrawal"
+   ],
+   "examples": [
+    "Should my cash withdrawal still be pending?",
+    "When will the cash that I put in the ATM be cleared from pending status?",
+    "The machine didn't work earlier when I went to get money out and now my account says transaction in progress.Why?",
+    "Explain pending transactions."
+   ]
+  },
+  {
+   "id": "pending_top_up",
+   "name": "Pending top up",
+   "description": "Banking support action for pending top up.",
+   "keywords": [
+    "pending",
+    "top",
+    "up"
+   ],
+   "examples": [
+    "How long will it take for my money to be deposited?",
+    "How long will it take for my top up to work? It's still pending",
+    "How do I make my top up complete?",
+    "Can you please sort out your top up? I need this to go through asap because I really need the money. It's already been pending for an hour."
+   ]
+  },
+  {
+   "id": "pending_transfer",
+   "name": "Pending transfer",
+   "description": "Banking support action for pending transfer.",
+   "keywords": [
+    "pending",
+    "transfer"
+   ],
+   "examples": [
+    "It seems like a transfer is pending.",
+    "when will my transfer clear",
+    "How long does the \"pending\" period of a transfer take?",
+    "Why is my transfer still pending after all this time?"
+   ]
+  },
+  {
+   "id": "pin_blocked",
+   "name": "Pin blocked",
+   "description": "Banking support action for pin blocked.",
+   "keywords": [
+    "blocked",
+    "pin"
+   ],
+   "examples": [
+    "Can I unblock my PIN in the app?",
+    "My PIN is locked, how do I unlock it?",
+    "I blocked my card by mistake, how do I unblock it?",
+    "I have exceeded all my PIN tries"
+   ]
+  },
+  {
+   "id": "receiving_money",
+   "name": "Receiving money",
+   "description": "Banking support action for receiving money.",
+   "keywords": [
+    "money",
+    "receiving"
+   ],
+   "examples": [
+    "Do I need to convert my currency from GBP before transferring?",
+    "I would like to know how my friend would be able to send me money",
+    "I received a transfer in GBP how do I change it to a different currency?",
+    "How can I receive money?"
+   ]
+  },
+  {
+   "id": "request_refund",
+   "name": "Request refund",
+   "description": "Banking support action for request refund.",
+   "keywords": [
+    "refund",
+    "request"
+   ],
+   "examples": [
+    "I need a refund for something I bought.",
+    "I would like to return my purchases",
+    "Can you please assist on my item that needs to be refunded?",
+    "Can I have a refund for one of your products?"
+   ]
+  },
+  {
+   "id": "reverted_card_payment?",
+   "name": "Reverted card payment?",
+   "description": "Banking support action for reverted card payment?.",
+   "keywords": [
+    "card",
+    "payment?",
+    "reverted"
+   ],
+   "examples": [
+    "My payment has not been accepted.",
+    "I didn't cancel my card payment.",
+    "I have an issue. I bought something within the past one to two weeks and have received one of the products; however, today the total was returned to my account. What's going on here?",
+    "What does it mean if my payment was reverted?"
+   ]
+  },
+  {
+   "id": "supported_cards_and_currencies",
+   "name": "Supported cards and currencies",
+   "description": "Banking support action for supported cards and currencies.",
+   "keywords": [
+    "and",
+    "cards",
+    "currencies",
+    "supported"
+   ],
+   "examples": [
+    "Do you accept all cards and currencies?",
+    "I would like to top up via credit card, which credit cards do you support?",
+    "What are my payment options?",
+    "What cards and currencies can I use to top up my account?"
+   ]
+  },
+  {
+   "id": "terminate_account",
+   "name": "Terminate account",
+   "description": "Banking support action for terminate account.",
+   "keywords": [
+    "account",
+    "terminate"
+   ],
+   "examples": [
+    "Delete all of my account information and my account right now.",
+    "I would like to delete my account now, please.",
+    "I want to shut down my account as soon as possible.",
+    "How do I close my account, since I'm dissatisfied?"
+   ]
+  },
+  {
+   "id": "top_up_by_bank_transfer_charge",
+   "name": "Top up by bank transfer charge",
+   "description": "Banking support action for top up by bank transfer charge.",
+   "keywords": [
+    "bank",
+    "by",
+    "charge",
+    "top",
+    "transfer",
+    "up"
+   ],
+   "examples": [
+    "Is there a charge for using transfers for top ups?",
+    "Is there a top up fee?",
+    "Will you guys charge me for topping up by transfer?",
+    "Are SWIFT transfers supported?"
+   ]
+  },
+  {
+   "id": "top_up_by_card_charge",
+   "name": "Top up by card charge",
+   "description": "Banking support action for top up by card charge.",
+   "keywords": [
+    "by",
+    "card",
+    "charge",
+    "top",
+    "up"
+   ],
+   "examples": [
+    "Are there any charges for topping up a US-issued card?",
+    "Will I get charged for topping up with an international card?",
+    "How much is it to use my US debit or credit card to top up?",
+    "Do I get charged for a top up from a European bank?"
+   ]
+  },
+  {
+   "id": "top_up_by_cash_or_cheque",
+   "name": "Top up by cash or cheque",
+   "description": "Banking support action for top up by cash or cheque.",
+   "keywords": [
+    "by",
+    "cash",
+    "cheque",
+    "or",
+    "top",
+    "up"
+   ],
+   "examples": [
+    "I can't find any option to top up with a cheque?",
+    "What's the best way to use a cheque to top up?",
+    "Can I top up my account with a check?",
+    "What types of top-up methods do you accept?"
+   ]
+  },
+  {
+   "id": "top_up_failed",
+   "name": "Top up failed",
+   "description": "Banking support action for top up failed.",
+   "keywords": [
+    "failed",
+    "top",
+    "up"
+   ],
+   "examples": [
+    "Hi, My card is getting declined continuously when i am trying to top-up. Request you to look into this issue or tell me any other alternatives.",
+    "I just topped up, and the app denied it.",
+    "What reasons would a topup fail?",
+    "My top-up hasn't gone through, what happened?"
+   ]
+  },
+  {
+   "id": "top_up_limits",
+   "name": "Top up limits",
+   "description": "Banking support action for top up limits.",
+   "keywords": [
+    "limits",
+    "top",
+    "up"
+   ],
+   "examples": [
+    "Would I be able to top up as much as I can?",
+    "Is there a limit for top ups?",
+    "Is there a limit to how much I can top-up?",
+    "What is the top-up limit for my card?"
+   ]
+  },
+  {
+   "id": "top_up_reverted",
+   "name": "Top up reverted",
+   "description": "Banking support action for top up reverted.",
+   "keywords": [
+    "reverted",
+    "top",
+    "up"
+   ],
+   "examples": [
+    "What's the deal? Money has just disappeared out of my account. I thought you offered crypto top up and it doesn't seem to working.",
+    "I was checking my statement and my top-up has been reverted",
+    "Why won't my top up go through?",
+    "Is there a reason my top-up has been cancelled?"
+   ]
+  },
+  {
+   "id": "topping_up_by_card",
+   "name": "Topping up by card",
+   "description": "Banking support action for topping up by card.",
+   "keywords": [
+    "by",
+    "card",
+    "topping",
+    "up"
+   ],
+   "examples": [
+    "Hoe do i use my credit card to transfer money?",
+    "The money disappeared after I topped up my account.",
+    "Can other people top up my account?",
+    "My top up is not showing up in my wallet!"
+   ]
+  },
+  {
+   "id": "transaction_charged_twice",
+   "name": "Transaction charged twice",
+   "description": "Banking support action for transaction charged twice.",
+   "keywords": [
+    "charged",
+    "transaction",
+    "twice"
+   ],
+   "examples": [
+    "There is a transaction showing up several times.",
+    "Hey there, I just went through my most recent credit card payments and I notice the same charge for a restaurant was processed twice. There was only one meal at this place, so I would like one of the charges to be reversed and my money to be put back in the account.",
+    "I need a transaction reversed from my account.",
+    "I think I was charged double for something I bought - how long should I wait before reporting this?"
+   ]
+  },
+  {
+   "id": "transfer_fee_charged",
+   "name": "Transfer fee charged",
+   "description": "Banking support action for transfer fee charged.",
+   "keywords": [
+    "charged",
+    "fee",
+    "transfer"
+   ],
+   "examples": [
+    "I thought transfers were free of charge.  I bought something abroad and got charged a ridiculous fee. How do I get this problem fixed.",
+    "I transferred money from one account to another account and I charged a fee for it. Why is that?",
+    "I do not like this, I made a simple transfer but I have an additional charge for doing so.",
+    "When I was transferring money I was charged extra why?"
+   ]
+  },
+  {
+   "id": "transfer_into_account",
+   "name": "Transfer into account",
+   "description": "Banking support action for transfer into account.",
+   "keywords": [
+    "account",
+    "into",
+    "transfer"
+   ],
+   "examples": [
+    "I need to transfer money into my account, HOW?",
+    "Can I add money to my account via bank transfer?",
+    "How can I add money to my account from another account I have?",
+    "How can I move money from an account at another bank to this one?"
+   ]
+  },
+  {
+   "id": "transfer_not_received_by_recipient",
+   "name": "Transfer not received by recipient",
+   "description": "Banking support action for transfer not received by recipient.",
+   "keywords": [
+    "by",
+    "not",
+    "received",
+    "recipient",
+    "transfer"
+   ],
+   "examples": [
+    "I dont see my reciept",
+    "A transaction I did to my friend hasn't arrived yet, why?",
+    "Hi, I sent my landlord my rent money a few days ago and while everything seems good on my end he says that he never got the money. I double checked the account number and it's correct. Can you help me figure this out?",
+    "My money transaction can't be seen by the person I sent it to"
+   ]
+  },
+  {
+   "id": "transfer_timing",
+   "name": "Transfer timing",
+   "description": "Banking support action for transfer timing.",
+   "keywords": [
+    "timing",
+    "transfer"
+   ],
+   "examples": [
+    "How long does it take for a transfer to be in my account?",
+    "How long do I have to wait for Europe transfers?",
+    "I need to transfer funds from China and quick expedition is crucial. Approximately how long does it take for a transfer from China to go through?",
+    "I'm having money transferred from Europe, how long will this take?"
+   ]
+  },
+  {
+   "id": "unable_to_verify_identity",
+   "name": "Unable to verify identity",
+   "description": "Banking support action for unable to verify identity.",
+   "keywords": [
+    "identity",
+    "to",
+    "unable",
+    "verify"
+   ],
+   "examples": [
+    "I need help proving that this is really me and to verify my identity.",
+    "My identity verification is not working.",
+    "I am unable to prove my identity",
+    "Why isn't this accepting my identity?"
+   ]
+  },
+  {
+   "id": "verify_my_identity",
+   "name": "Verify my identity",
+   "description": "Banking support action for verify my identity.",
+   "keywords": [
+    "identity",
+    "my",
+    "verify"
+   ],
+   "examples": [
+    "im worried about fraud how do you protect my account",
+    "What documents do I need for the identity check?",
+    "How do I complete the ID check?",
+    "If I don't have all my documents can they still verify my identity?"
+   ]
+  },
+  {
+   "id": "verify_source_of_funds",
+   "name": "Verify source of funds",
+   "description": "Banking support action for verify source of funds.",
+   "keywords": [
+    "funds",
+    "of",
+    "source",
+    "verify"
+   ],
+   "examples": [
+    "What source do my fund come from?",
+    "I would like to verify my source of funds.",
+    "Can you tell me how I would go about learning where my funds came from?",
+    "Is there a way to lookup where funds came from?"
+   ]
+  },
+  {
+   "id": "verify_top_up",
+   "name": "Verify top up",
+   "description": "Banking support action for verify top up.",
+   "keywords": [
+    "top",
+    "up",
+    "verify"
+   ],
+   "examples": [
+    "Is the verification number on the top up card",
+    "What is the verification code for my top up card?",
+    "Where is the verification code display?",
+    "Why does top-up need to be verified?"
+   ]
+  },
+  {
+   "id": "virtual_card_not_working",
+   "name": "Virtual card not working",
+   "description": "Banking support action for virtual card not working.",
+   "keywords": [
+    "card",
+    "not",
+    "virtual",
+    "working"
+   ],
+   "examples": [
+    "I cannot get my virtual card to function.",
+    "Please help me.  My disposable virtual card won't work right.",
+    "Is there a reason why my virtual card won't work?",
+    "Why is my disposable card not working?"
+   ]
+  },
+  {
+   "id": "visa_or_mastercard",
+   "name": "Visa or mastercard",
+   "description": "Banking support action for visa or mastercard.",
+   "keywords": [
+    "mastercard",
+    "or",
+    "visa"
+   ],
+   "examples": [
+    "Can I choose my card scheme?",
+    "Will I be able to get both a visa and a mastercard?",
+    "I prefer Mastecard.",
+    "I would like to get a Visa card"
+   ]
+  },
+  {
+   "id": "why_verify_identity",
+   "name": "Why verify identity",
+   "description": "Banking support action for why verify identity.",
+   "keywords": [
+    "identity",
+    "verify",
+    "why"
+   ],
+   "examples": [
+    "I'm not verifying my identity.",
+    "Why do you need verification for my identity?",
+    "Why is there an identity check?",
+    "I would like to know why so much identity information is required?"
+   ]
+  },
+  {
+   "id": "wrong_amount_of_cash_received",
+   "name": "Wrong amount of cash received",
+   "description": "Banking support action for wrong amount of cash received.",
+   "keywords": [
+    "amount",
+    "cash",
+    "of",
+    "received",
+    "wrong"
+   ],
+   "examples": [
+    "You shorted me money when I tried to make a withdrawal.",
+    "The cash I asked for still hasn't been received",
+    "How can I get cash back? The ATM just gave me the wrong amount that I've been actually charged though...",
+    "I was just giving the wrong amount by the ATM. How do I request cash back at this point? The app is showing the amount that I actually requested even though that's not what I got."
+   ]
+  },
+  {
+   "id": "wrong_exchange_rate_for_cash_withdrawal",
+   "name": "Wrong exchange rate for cash withdrawal",
+   "description": "Banking support action for wrong exchange rate for cash withdrawal.",
+   "keywords": [
+    "cash",
+    "exchange",
+    "for",
+    "rate",
+    "withdrawal",
+    "wrong"
+   ],
+   "examples": [
+    "When I received my cash, the exchange rate was wrong.",
+    "The cash withdrawal I took seems to be off. The exchange rate is wrong.",
+    "I am travelling and I tried to withdraw cash but didn't get what I was supposed to get.",
+    "When I got cash, my exchange rate was off."
+   ]
+  }
+ ],
+ "episodes": [
+  {
+   "query": "How long does it take for my payment to process?",
+   "actions": [
+    "balance_not_updated_after_bank_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "card_arrival",
+    "pending_cash_withdrawal",
+    "pending_transfer",
+    "pending_card_payment",
+    "card_payment_fee_charged",
+    "transfer_not_received_by_recipient",
+    "pending_top_up",
+    "reverted_card_payment?"
+   ],
+   "gold": "pending_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I still access the app even though my phone was stolen?",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "card_payment_not_recognised",
+    "compromised_card",
+    "passcode_forgotten",
+    "activate_my_card",
+    "top_up_reverted",
+    "lost_or_stolen_card",
+    "pin_blocked",
+    "Refund_not_showing_up",
+    "lost_or_stolen_phone"
+   ],
+   "gold": "lost_or_stolen_phone",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I activate my card with the app?",
+   "actions": [
+    "activate_my_card",
+    "age_limit",
+    "getting_virtual_card",
+    "order_physical_card",
+    "request_refund",
+    "lost_or_stolen_card",
+    "visa_or_mastercard",
+    "getting_spare_card",
+    "apple_pay_or_google_pay",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "activate_my_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How long will a transfer be pending for?",
+   "actions": [
+    "reverted_card_payment?",
+    "pending_top_up",
+    "beneficiary_not_allowed",
+    "pending_transfer",
+    "pending_card_payment",
+    "transfer_not_received_by_recipient",
+    "Refund_not_showing_up",
+    "pending_cash_withdrawal",
+    "balance_not_updated_after_bank_transfer",
+    "transfer_timing"
+   ],
+   "gold": "pending_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What is the current exchange rate?",
+   "actions": [
+    "atm_support",
+    "automatic_top_up",
+    "verify_source_of_funds",
+    "exchange_charge",
+    "get_disposable_virtual_card",
+    "country_support",
+    "exchange_rate",
+    "exchange_via_app",
+    "get_physical_card",
+    "order_physical_card"
+   ],
+   "gold": "exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How long do EU transfers take? I bought something online a couple of days ago , sent the money immediately online but the seller says it is still not there yet.",
+   "actions": [
+    "beneficiary_not_allowed",
+    "transfer_not_received_by_recipient",
+    "pending_transfer",
+    "reverted_card_payment?",
+    "balance_not_updated_after_bank_transfer",
+    "pending_top_up",
+    "pending_cash_withdrawal",
+    "Refund_not_showing_up",
+    "pending_card_payment",
+    "transfer_timing"
+   ],
+   "gold": "pending_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I have a discount if I exchange currency often?",
+   "actions": [
+    "cash_withdrawal_charge",
+    "order_physical_card",
+    "card_payment_fee_charged",
+    "exchange_rate",
+    "age_limit",
+    "fiat_currency_support",
+    "getting_spare_card",
+    "top_up_by_bank_transfer_charge",
+    "exchange_charge",
+    "top_up_by_card_charge"
+   ],
+   "gold": "exchange_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "The app does not know it is me.",
+   "actions": [
+    "why_verify_identity",
+    "pending_transfer",
+    "verify_top_up",
+    "balance_not_updated_after_bank_transfer",
+    "age_limit",
+    "beneficiary_not_allowed",
+    "unable_to_verify_identity",
+    "pending_top_up",
+    "verify_my_identity",
+    "transfer_not_received_by_recipient"
+   ],
+   "gold": "unable_to_verify_identity",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I use GBP for my salary deposits. Must I set this up somewhere?",
+   "actions": [
+    "exchange_via_app",
+    "top_up_by_cash_or_cheque",
+    "exchange_rate",
+    "age_limit",
+    "transfer_into_account",
+    "transfer_timing",
+    "atm_support",
+    "receiving_money",
+    "fiat_currency_support",
+    "top_up_by_bank_transfer_charge"
+   ],
+   "gold": "receiving_money",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I can't find my phone; what can I do to prevent someone from accessing my account on it?",
+   "actions": [
+    "passcode_forgotten",
+    "activate_my_card",
+    "lost_or_stolen_phone",
+    "lost_or_stolen_card",
+    "Refund_not_showing_up",
+    "compromised_card",
+    "top_up_reverted",
+    "cash_withdrawal_not_recognised",
+    "card_payment_not_recognised",
+    "pin_blocked"
+   ],
+   "gold": "lost_or_stolen_phone",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My top-up was cancelled, could my bank be the problem?",
+   "actions": [
+    "top_up_reverted",
+    "cash_withdrawal_not_recognised",
+    "extra_charge_on_statement",
+    "beneficiary_not_allowed",
+    "declined_card_payment",
+    "Refund_not_showing_up",
+    "pending_top_up",
+    "reverted_card_payment?",
+    "transfer_fee_charged",
+    "top_up_failed"
+   ],
+   "gold": "top_up_reverted",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How many days until my US transfer arrives?",
+   "actions": [
+    "pending_cash_withdrawal",
+    "balance_not_updated_after_bank_transfer",
+    "pending_transfer",
+    "pending_card_payment",
+    "pending_top_up",
+    "card_delivery_estimate",
+    "exchange_rate",
+    "transfer_timing",
+    "receiving_money",
+    "top_up_by_bank_transfer_charge"
+   ],
+   "gold": "transfer_timing",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What do I do about a debit on my account that I didn't make?",
+   "actions": [
+    "extra_charge_on_statement",
+    "top_up_reverted",
+    "cash_withdrawal_not_recognised",
+    "direct_debit_payment_not_recognised",
+    "declined_card_payment",
+    "card_payment_not_recognised",
+    "card_payment_fee_charged",
+    "transfer_fee_charged",
+    "transaction_charged_twice",
+    "Refund_not_showing_up"
+   ],
+   "gold": "direct_debit_payment_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I moved and need to change my address.",
+   "actions": [
+    "terminate_account",
+    "cancel_transfer",
+    "edit_personal_details",
+    "age_limit",
+    "change_pin",
+    "activate_my_card",
+    "getting_virtual_card",
+    "card_linking",
+    "request_refund",
+    "top_up_by_cash_or_cheque"
+   ],
+   "gold": "edit_personal_details",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Are there ways for other people to send me money?",
+   "actions": [
+    "receiving_money",
+    "exchange_via_app",
+    "atm_support",
+    "exchange_rate",
+    "top_up_by_bank_transfer_charge",
+    "transfer_into_account",
+    "transfer_timing",
+    "fiat_currency_support",
+    "age_limit",
+    "top_up_by_cash_or_cheque"
+   ],
+   "gold": "receiving_money",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I happened to forget my passcode",
+   "actions": [
+    "order_physical_card",
+    "apple_pay_or_google_pay",
+    "passcode_forgotten",
+    "contactless_not_working",
+    "getting_virtual_card",
+    "verify_top_up",
+    "get_physical_card",
+    "unable_to_verify_identity",
+    "activate_my_card",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "passcode_forgotten",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Do you charge for sending out more cards?",
+   "actions": [
+    "disposable_card_limits",
+    "transfer_into_account",
+    "getting_virtual_card",
+    "activate_my_card",
+    "country_support",
+    "request_refund",
+    "get_disposable_virtual_card",
+    "age_limit",
+    "order_physical_card",
+    "getting_spare_card"
+   ],
+   "gold": "getting_spare_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Today I was out eating and my card was declined. Why's that?",
+   "actions": [
+    "declined_cash_withdrawal",
+    "virtual_card_not_working",
+    "contactless_not_working",
+    "beneficiary_not_allowed",
+    "activate_my_card",
+    "reverted_card_payment?",
+    "apple_pay_or_google_pay",
+    "top_up_failed",
+    "card_not_working",
+    "declined_card_payment"
+   ],
+   "gold": "card_not_working",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I'm waiting for my transaction to complete.",
+   "actions": [
+    "transfer_not_received_by_recipient",
+    "balance_not_updated_after_bank_transfer",
+    "Refund_not_showing_up",
+    "card_arrival",
+    "pending_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "pending_cash_withdrawal",
+    "reverted_card_payment?",
+    "pending_card_payment",
+    "pending_top_up"
+   ],
+   "gold": "transfer_not_received_by_recipient",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My wallet isn't showing my top-up, did I do something wrong?",
+   "actions": [
+    "automatic_top_up",
+    "supported_cards_and_currencies",
+    "pending_cash_withdrawal",
+    "apple_pay_or_google_pay",
+    "transfer_into_account",
+    "top_up_by_bank_transfer_charge",
+    "top_up_by_cash_or_cheque",
+    "balance_not_updated_after_bank_transfer",
+    "top_up_reverted",
+    "topping_up_by_card"
+   ],
+   "gold": "topping_up_by_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Are there any restrictions to where I can use my card?",
+   "actions": [
+    "card_payment_fee_charged",
+    "atm_support",
+    "disposable_card_limits",
+    "top_up_limits",
+    "country_support",
+    "visa_or_mastercard",
+    "card_acceptance",
+    "top_up_by_cash_or_cheque",
+    "get_disposable_virtual_card",
+    "supported_cards_and_currencies"
+   ],
+   "gold": "card_acceptance",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My cash deposit from a week ago is still not in my account. Can you help me please?",
+   "actions": [
+    "reverted_card_payment?",
+    "cash_withdrawal_not_recognised",
+    "transfer_not_received_by_recipient",
+    "pending_cash_withdrawal",
+    "Refund_not_showing_up",
+    "balance_not_updated_after_bank_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "pending_top_up",
+    "top_up_reverted",
+    "pending_card_payment"
+   ],
+   "gold": "balance_not_updated_after_cheque_or_cash_deposit",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Been trying to transfer money this morning but keep getting rejected. I don't understand why this is happening.",
+   "actions": [
+    "transfer_fee_charged",
+    "pending_transfer",
+    "cash_withdrawal_not_recognised",
+    "pending_top_up",
+    "declined_transfer",
+    "beneficiary_not_allowed",
+    "failed_transfer",
+    "top_up_reverted",
+    "declined_card_payment",
+    "top_up_failed"
+   ],
+   "gold": "failed_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How can a payment be declined",
+   "actions": [
+    "beneficiary_not_allowed",
+    "card_not_working",
+    "failed_transfer",
+    "reverted_card_payment?",
+    "declined_card_payment",
+    "declined_cash_withdrawal",
+    "declined_transfer",
+    "top_up_failed",
+    "top_up_reverted",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "declined_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How does the exchange rate work on this app?",
+   "actions": [
+    "get_physical_card",
+    "get_disposable_virtual_card",
+    "automatic_top_up",
+    "verify_source_of_funds",
+    "order_physical_card",
+    "exchange_charge",
+    "atm_support",
+    "exchange_via_app",
+    "country_support",
+    "exchange_rate"
+   ],
+   "gold": "exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can you explain to me why a cash withdrawal shows up as pending?",
+   "actions": [
+    "pending_transfer",
+    "balance_not_updated_after_bank_transfer",
+    "pending_cash_withdrawal",
+    "cash_withdrawal_charge",
+    "pending_card_payment",
+    "pending_top_up",
+    "declined_cash_withdrawal",
+    "transfer_not_received_by_recipient",
+    "Refund_not_showing_up",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "pending_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How long does a transfer from the United Kingdom take? I haven't seen it show up yet in my bank account and want to make sure I get the transfer.",
+   "actions": [
+    "transfer_not_received_by_recipient",
+    "pending_top_up",
+    "pending_transfer",
+    "transfer_timing",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "pending_cash_withdrawal",
+    "balance_not_updated_after_bank_transfer",
+    "transfer_fee_charged",
+    "Refund_not_showing_up",
+    "pending_card_payment"
+   ],
+   "gold": "balance_not_updated_after_bank_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How old do you need to be to have an account?",
+   "actions": [
+    "get_disposable_virtual_card",
+    "order_physical_card",
+    "activate_my_card",
+    "age_limit",
+    "terminate_account",
+    "getting_spare_card",
+    "disposable_card_limits",
+    "request_refund",
+    "supported_cards_and_currencies",
+    "top_up_limits"
+   ],
+   "gold": "age_limit",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My exchange rate isn't correct.",
+   "actions": [
+    "cash_withdrawal_charge",
+    "card_payment_wrong_exchange_rate",
+    "extra_charge_on_statement",
+    "transaction_charged_twice",
+    "request_refund",
+    "reverted_card_payment?",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "card_payment_fee_charged",
+    "transfer_fee_charged",
+    "beneficiary_not_allowed"
+   ],
+   "gold": "card_payment_wrong_exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What ATMs can I use this card at?",
+   "actions": [
+    "verify_source_of_funds",
+    "supported_cards_and_currencies",
+    "card_acceptance",
+    "exchange_rate",
+    "top_up_by_cash_or_cheque",
+    "atm_support",
+    "receiving_money",
+    "change_pin",
+    "order_physical_card",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "atm_support",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Will you be able to exchange to EUR?",
+   "actions": [
+    "exchange_charge",
+    "top_up_limits",
+    "fiat_currency_support",
+    "supported_cards_and_currencies",
+    "exchange_via_app",
+    "receiving_money",
+    "disposable_card_limits",
+    "age_limit",
+    "country_support",
+    "beneficiary_not_allowed"
+   ],
+   "gold": "fiat_currency_support",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can you send me a new card and block my current one. I'm in Spain and my wallet was stolen.",
+   "actions": [
+    "change_pin",
+    "cash_withdrawal_not_recognised",
+    "lost_or_stolen_phone",
+    "declined_card_payment",
+    "lost_or_stolen_card",
+    "activate_my_card",
+    "card_arrival",
+    "compromised_card",
+    "getting_virtual_card",
+    "disposable_card_limits"
+   ],
+   "gold": "lost_or_stolen_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Something is wrong with the top up! I'm a regular customer and use your service all the time, usually this works but now it just shows up as pending",
+   "actions": [
+    "card_arrival",
+    "balance_not_updated_after_bank_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "pending_card_payment",
+    "pending_cash_withdrawal",
+    "transfer_not_received_by_recipient",
+    "top_up_reverted",
+    "pending_transfer",
+    "pending_top_up",
+    "Refund_not_showing_up"
+   ],
+   "gold": "pending_top_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How long does it take for a card to arrive?",
+   "actions": [
+    "get_physical_card",
+    "pending_transfer",
+    "card_delivery_estimate",
+    "pending_card_payment",
+    "transfer_timing",
+    "visa_or_mastercard",
+    "pending_top_up",
+    "card_arrival",
+    "order_physical_card",
+    "card_about_to_expire"
+   ],
+   "gold": "card_delivery_estimate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What is the way to go about getting a virtual card?",
+   "actions": [
+    "verify_top_up",
+    "getting_virtual_card",
+    "request_refund",
+    "order_physical_card",
+    "activate_my_card",
+    "lost_or_stolen_card",
+    "get_physical_card",
+    "get_disposable_virtual_card",
+    "getting_spare_card",
+    "country_support"
+   ],
+   "gold": "getting_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Hi, I am interested buying crypto currency but unable to purchase it through the application. I do want to do the exchange, Could you please let me know what is the problem?",
+   "actions": [
+    "top_up_failed",
+    "transfer_fee_charged",
+    "declined_transfer",
+    "cash_withdrawal_not_recognised",
+    "failed_transfer",
+    "declined_card_payment",
+    "pending_transfer",
+    "beneficiary_not_allowed",
+    "reverted_card_payment?",
+    "top_up_reverted"
+   ],
+   "gold": "beneficiary_not_allowed",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What is the highest amount of top ups I'm allowed?",
+   "actions": [
+    "get_disposable_virtual_card",
+    "top_up_by_cash_or_cheque",
+    "change_pin",
+    "top_up_by_card_charge",
+    "age_limit",
+    "order_physical_card",
+    "disposable_card_limits",
+    "card_acceptance",
+    "verify_top_up",
+    "top_up_limits"
+   ],
+   "gold": "top_up_limits",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can you delete the account?",
+   "actions": [
+    "top_up_by_cash_or_cheque",
+    "request_refund",
+    "getting_spare_card",
+    "activate_my_card",
+    "terminate_account",
+    "age_limit",
+    "exchange_via_app",
+    "cancel_transfer",
+    "getting_virtual_card",
+    "unable_to_verify_identity"
+   ],
+   "gold": "terminate_account",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Does the auto top-up have any limits?",
+   "actions": [
+    "top_up_by_cash_or_cheque",
+    "verify_source_of_funds",
+    "transfer_into_account",
+    "exchange_rate",
+    "supported_cards_and_currencies",
+    "top_up_by_bank_transfer_charge",
+    "get_disposable_virtual_card",
+    "automatic_top_up",
+    "age_limit",
+    "get_physical_card"
+   ],
+   "gold": "automatic_top_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Do you charge for cash withdrawals?  I want to get my hands on my own money and you appear to be charging me for the pleasure! Why is this, you'd never get this with my high street bank!",
+   "actions": [
+    "card_payment_fee_charged",
+    "cash_withdrawal_charge",
+    "pending_cash_withdrawal",
+    "extra_charge_on_statement",
+    "card_arrival",
+    "exchange_charge",
+    "transfer_fee_charged",
+    "cash_withdrawal_not_recognised",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "declined_cash_withdrawal"
+   ],
+   "gold": "cash_withdrawal_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I have a Visa and Mastercard, can I use these?",
+   "actions": [
+    "visa_or_mastercard",
+    "getting_spare_card",
+    "exchange_via_app",
+    "atm_support",
+    "getting_virtual_card",
+    "request_refund",
+    "age_limit",
+    "activate_my_card",
+    "get_disposable_virtual_card",
+    "supported_cards_and_currencies"
+   ],
+   "gold": "visa_or_mastercard",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why is there a verification to identity",
+   "actions": [
+    "unable_to_verify_identity",
+    "card_payment_not_recognised",
+    "verify_my_identity",
+    "extra_charge_on_statement",
+    "getting_virtual_card",
+    "why_verify_identity",
+    "verify_top_up",
+    "age_limit",
+    "transfer_not_received_by_recipient",
+    "Refund_not_showing_up"
+   ],
+   "gold": "why_verify_identity",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Where do I go to terminate my account?",
+   "actions": [
+    "request_refund",
+    "getting_spare_card",
+    "exchange_via_app",
+    "activate_my_card",
+    "getting_virtual_card",
+    "age_limit",
+    "cancel_transfer",
+    "terminate_account",
+    "top_up_by_cash_or_cheque",
+    "unable_to_verify_identity"
+   ],
+   "gold": "terminate_account",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I bought an item then noticed the exchange rate was wrong.",
+   "actions": [
+    "card_payment_fee_charged",
+    "beneficiary_not_allowed",
+    "request_refund",
+    "cash_withdrawal_charge",
+    "transfer_fee_charged",
+    "extra_charge_on_statement",
+    "transaction_charged_twice",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "reverted_card_payment?",
+    "card_payment_wrong_exchange_rate"
+   ],
+   "gold": "card_payment_wrong_exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How come I was charged a transaction of $1?",
+   "actions": [
+    "reverted_card_payment?",
+    "transfer_fee_charged",
+    "card_payment_fee_charged",
+    "top_up_reverted",
+    "card_payment_not_recognised",
+    "cash_withdrawal_charge",
+    "cash_withdrawal_not_recognised",
+    "direct_debit_payment_not_recognised",
+    "extra_charge_on_statement",
+    "transaction_charged_twice"
+   ],
+   "gold": "extra_charge_on_statement",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why was my request for cash declined?",
+   "actions": [
+    "beneficiary_not_allowed",
+    "declined_cash_withdrawal",
+    "virtual_card_not_working",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "cash_withdrawal_not_recognised",
+    "cash_withdrawal_charge",
+    "declined_card_payment",
+    "top_up_failed",
+    "apple_pay_or_google_pay",
+    "pending_cash_withdrawal"
+   ],
+   "gold": "declined_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I look but I see no virtual card. Why is that?",
+   "actions": [
+    "activate_my_card",
+    "verify_top_up",
+    "request_refund",
+    "get_disposable_virtual_card",
+    "getting_virtual_card",
+    "get_physical_card",
+    "lost_or_stolen_card",
+    "getting_spare_card",
+    "order_physical_card",
+    "country_support"
+   ],
+   "gold": "getting_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can you tell me why I haven't received my new card yet?",
+   "actions": [
+    "pending_card_payment",
+    "request_refund",
+    "transfer_not_received_by_recipient",
+    "card_arrival",
+    "get_physical_card",
+    "card_delivery_estimate",
+    "getting_virtual_card",
+    "card_payment_fee_charged",
+    "cash_withdrawal_charge",
+    "pending_top_up"
+   ],
+   "gold": "card_arrival",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "You charged me more than once for the same transaction!",
+   "actions": [
+    "declined_card_payment",
+    "cash_withdrawal_charge",
+    "transaction_charged_twice",
+    "card_payment_wrong_exchange_rate",
+    "reverted_card_payment?",
+    "card_payment_fee_charged",
+    "extra_charge_on_statement",
+    "cash_withdrawal_not_recognised",
+    "direct_debit_payment_not_recognised",
+    "transfer_fee_charged"
+   ],
+   "gold": "transaction_charged_twice",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "There has been a payment  in the App that has not be done by me.",
+   "actions": [
+    "lost_or_stolen_phone",
+    "direct_debit_payment_not_recognised",
+    "transfer_fee_charged",
+    "extra_charge_on_statement",
+    "declined_card_payment",
+    "card_payment_not_recognised",
+    "card_payment_fee_charged",
+    "compromised_card",
+    "reverted_card_payment?",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "card_payment_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I have made 5 attempts to make a very standard survey, yet I can't get it to work. What is the problem? Is there an issue related to your system?",
+   "actions": [
+    "failed_transfer",
+    "top_up_reverted",
+    "declined_card_payment",
+    "declined_transfer",
+    "top_up_failed",
+    "beneficiary_not_allowed",
+    "pending_transfer",
+    "pending_top_up",
+    "cash_withdrawal_not_recognised",
+    "transfer_fee_charged"
+   ],
+   "gold": "failed_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "If I top up by transfer, am I going to be charged?",
+   "actions": [
+    "pending_transfer",
+    "card_payment_fee_charged",
+    "transfer_fee_charged",
+    "top_up_by_bank_transfer_charge",
+    "order_physical_card",
+    "exchange_charge",
+    "transfer_into_account",
+    "top_up_by_cash_or_cheque",
+    "top_up_by_card_charge",
+    "automatic_top_up"
+   ],
+   "gold": "top_up_by_bank_transfer_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Are there still fees for european top-ups?",
+   "actions": [
+    "top_up_limits",
+    "automatic_top_up",
+    "top_up_by_card_charge",
+    "apple_pay_or_google_pay",
+    "exchange_charge",
+    "order_physical_card",
+    "top_up_by_bank_transfer_charge",
+    "top_up_by_cash_or_cheque",
+    "supported_cards_and_currencies",
+    "card_payment_fee_charged"
+   ],
+   "gold": "top_up_by_card_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "A cash withdrawal that I didn't authorize is shown on my account - can you please cancel my card as soon as possible?",
+   "actions": [
+    "Refund_not_showing_up",
+    "direct_debit_payment_not_recognised",
+    "cash_withdrawal_not_recognised",
+    "reverted_card_payment?",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "transfer_fee_charged",
+    "card_payment_not_recognised",
+    "extra_charge_on_statement",
+    "declined_card_payment",
+    "top_up_reverted"
+   ],
+   "gold": "cash_withdrawal_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I exchanged Russian rubles for British pounds today and got less than I expected. Was exchange rate correct?",
+   "actions": [
+    "card_payment_fee_charged",
+    "extra_charge_on_statement",
+    "cash_withdrawal_charge",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "request_refund",
+    "card_payment_wrong_exchange_rate",
+    "transfer_fee_charged",
+    "transaction_charged_twice",
+    "reverted_card_payment?",
+    "beneficiary_not_allowed"
+   ],
+   "gold": "card_payment_wrong_exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What is the reason for my beneficiary to be disallowed?",
+   "actions": [
+    "beneficiary_not_allowed",
+    "declined_transfer",
+    "declined_card_payment",
+    "failed_transfer",
+    "top_up_failed",
+    "reverted_card_payment?",
+    "transfer_fee_charged",
+    "top_up_reverted",
+    "pending_transfer",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "beneficiary_not_allowed",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Hello, I am a new customer, and just tried topping up for the first time. According to your information, the transaction should be instant - why does it still show as pending?",
+   "actions": [
+    "pending_card_payment",
+    "balance_not_updated_after_bank_transfer",
+    "transfer_not_received_by_recipient",
+    "pending_cash_withdrawal",
+    "card_arrival",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "Refund_not_showing_up",
+    "pending_transfer",
+    "top_up_reverted",
+    "pending_top_up"
+   ],
+   "gold": "pending_top_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Where do I find PIN for my card?",
+   "actions": [
+    "pin_blocked",
+    "cancel_transfer",
+    "lost_or_stolen_card",
+    "activate_my_card",
+    "getting_virtual_card",
+    "get_physical_card",
+    "card_swallowed",
+    "change_pin",
+    "getting_spare_card",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "pin_blocked",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can you tell me why a cheque deposit isn't showing in my balance?",
+   "actions": [
+    "pending_cash_withdrawal",
+    "reverted_card_payment?",
+    "top_up_reverted",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "pending_card_payment",
+    "balance_not_updated_after_bank_transfer",
+    "transfer_not_received_by_recipient",
+    "pending_top_up",
+    "cash_withdrawal_not_recognised",
+    "Refund_not_showing_up"
+   ],
+   "gold": "balance_not_updated_after_cheque_or_cash_deposit",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I'd like to discuss an order I placed quite a long time ago. I have yet to receive it and am growing upset.  I want a refund as I now refuse to pay for the product.",
+   "actions": [
+    "age_limit",
+    "getting_virtual_card",
+    "visa_or_mastercard",
+    "get_disposable_virtual_card",
+    "reverted_card_payment?",
+    "activate_my_card",
+    "request_refund",
+    "terminate_account",
+    "getting_spare_card",
+    "Refund_not_showing_up"
+   ],
+   "gold": "request_refund",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why are my purchases from this morning still pending?",
+   "actions": [
+    "reverted_card_payment?",
+    "transfer_not_received_by_recipient",
+    "balance_not_updated_after_bank_transfer",
+    "pending_card_payment",
+    "pending_transfer",
+    "pending_cash_withdrawal",
+    "pending_top_up",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "card_payment_fee_charged",
+    "card_arrival"
+   ],
+   "gold": "pending_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Am I gonna be charged for sending out more cards?",
+   "actions": [
+    "age_limit",
+    "transfer_into_account",
+    "getting_spare_card",
+    "order_physical_card",
+    "request_refund",
+    "get_disposable_virtual_card",
+    "activate_my_card",
+    "disposable_card_limits",
+    "country_support",
+    "getting_virtual_card"
+   ],
+   "gold": "getting_spare_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Yesterday I had my phone stolen.  Please advise what I should do.",
+   "actions": [
+    "lost_or_stolen_phone",
+    "card_payment_not_recognised",
+    "lost_or_stolen_card",
+    "top_up_reverted",
+    "compromised_card",
+    "cash_withdrawal_not_recognised",
+    "pin_blocked",
+    "passcode_forgotten",
+    "activate_my_card",
+    "Refund_not_showing_up"
+   ],
+   "gold": "lost_or_stolen_phone",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "tell me how I can order my card.",
+   "actions": [
+    "top_up_limits",
+    "exchange_charge",
+    "card_delivery_estimate",
+    "order_physical_card",
+    "getting_spare_card",
+    "get_disposable_virtual_card",
+    "age_limit",
+    "disposable_card_limits",
+    "getting_virtual_card",
+    "activate_my_card"
+   ],
+   "gold": "order_physical_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Any charges applicable for new card?",
+   "actions": [
+    "passcode_forgotten",
+    "declined_card_payment",
+    "contactless_not_working",
+    "card_not_working",
+    "card_payment_fee_charged",
+    "activate_my_card",
+    "get_physical_card",
+    "virtual_card_not_working",
+    "apple_pay_or_google_pay",
+    "declined_cash_withdrawal"
+   ],
+   "gold": "contactless_not_working",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "how do i set up my apple pay watch to connect to my account",
+   "actions": [
+    "passcode_forgotten",
+    "card_not_working",
+    "declined_cash_withdrawal",
+    "virtual_card_not_working",
+    "contactless_not_working",
+    "top_up_failed",
+    "country_support",
+    "apple_pay_or_google_pay",
+    "activate_my_card",
+    "declined_card_payment"
+   ],
+   "gold": "apple_pay_or_google_pay",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I bought something and received it, but the payment went back to my account. Is the seller okay?",
+   "actions": [
+    "reverted_card_payment?",
+    "cash_withdrawal_not_recognised",
+    "card_payment_fee_charged",
+    "transfer_not_received_by_recipient",
+    "beneficiary_not_allowed",
+    "top_up_failed",
+    "transfer_fee_charged",
+    "Refund_not_showing_up",
+    "declined_card_payment",
+    "top_up_reverted"
+   ],
+   "gold": "reverted_card_payment?",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I use this app for both USD and GBP?",
+   "actions": [
+    "request_refund",
+    "exchange_via_app",
+    "country_support",
+    "visa_or_mastercard",
+    "getting_spare_card",
+    "age_limit",
+    "receiving_money",
+    "fiat_currency_support",
+    "exchange_rate",
+    "activate_my_card"
+   ],
+   "gold": "exchange_via_app",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I tried to transfer some money and it hasn't done it yet - what's going on?",
+   "actions": [
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "card_arrival",
+    "balance_not_updated_after_bank_transfer",
+    "pending_cash_withdrawal",
+    "Refund_not_showing_up",
+    "pending_card_payment",
+    "pending_top_up",
+    "transfer_not_received_by_recipient",
+    "pending_transfer",
+    "reverted_card_payment?"
+   ],
+   "gold": "transfer_not_received_by_recipient",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I accidentally made a payment to a wrong account. What should I do?",
+   "actions": [
+    "transfer_fee_charged",
+    "transfer_into_account",
+    "balance_not_updated_after_bank_transfer",
+    "cash_withdrawal_not_recognised",
+    "change_pin",
+    "card_payment_not_recognised",
+    "cancel_transfer",
+    "beneficiary_not_allowed",
+    "request_refund",
+    "direct_debit_payment_not_recognised"
+   ],
+   "gold": "cancel_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My password doesn't work.",
+   "actions": [
+    "activate_my_card",
+    "unable_to_verify_identity",
+    "verify_top_up",
+    "getting_virtual_card",
+    "apple_pay_or_google_pay",
+    "order_physical_card",
+    "contactless_not_working",
+    "get_physical_card",
+    "passcode_forgotten",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "passcode_forgotten",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can you explain why the ATM is giving me less money than what I asked for?",
+   "actions": [
+    "cash_withdrawal_charge",
+    "wrong_amount_of_cash_received",
+    "pending_cash_withdrawal",
+    "transfer_fee_charged",
+    "top_up_reverted",
+    "reverted_card_payment?",
+    "beneficiary_not_allowed",
+    "Refund_not_showing_up",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "wrong_amount_of_cash_received",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Hey a seller just contacted me that my money didn't come through. It was definitely deducted from my account, but now it appears it's back with me! Sort this out asap please.",
+   "actions": [
+    "card_payment_fee_charged",
+    "declined_card_payment",
+    "top_up_reverted",
+    "Refund_not_showing_up",
+    "beneficiary_not_allowed",
+    "transfer_not_received_by_recipient",
+    "transfer_fee_charged",
+    "cash_withdrawal_not_recognised",
+    "reverted_card_payment?",
+    "top_up_failed"
+   ],
+   "gold": "reverted_card_payment?",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I'd prefer to use my American Express when putting funds into my account.",
+   "actions": [
+    "country_support",
+    "transfer_into_account",
+    "top_up_by_cash_or_cheque",
+    "supported_cards_and_currencies",
+    "get_disposable_virtual_card",
+    "age_limit",
+    "topping_up_by_card",
+    "visa_or_mastercard",
+    "fiat_currency_support",
+    "automatic_top_up"
+   ],
+   "gold": "supported_cards_and_currencies",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How do I access the virtual card?",
+   "actions": [
+    "lost_or_stolen_card",
+    "order_physical_card",
+    "get_physical_card",
+    "activate_my_card",
+    "get_disposable_virtual_card",
+    "country_support",
+    "request_refund",
+    "verify_top_up",
+    "getting_spare_card",
+    "getting_virtual_card"
+   ],
+   "gold": "getting_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is it possible to exchange currencies using the app?",
+   "actions": [
+    "country_support",
+    "receiving_money",
+    "activate_my_card",
+    "getting_spare_card",
+    "visa_or_mastercard",
+    "exchange_via_app",
+    "exchange_rate",
+    "age_limit",
+    "fiat_currency_support",
+    "request_refund"
+   ],
+   "gold": "exchange_via_app",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My card payment was reverted",
+   "actions": [
+    "declined_card_payment",
+    "transfer_fee_charged",
+    "transfer_not_received_by_recipient",
+    "Refund_not_showing_up",
+    "card_payment_fee_charged",
+    "cash_withdrawal_not_recognised",
+    "top_up_failed",
+    "beneficiary_not_allowed",
+    "top_up_reverted",
+    "reverted_card_payment?"
+   ],
+   "gold": "reverted_card_payment?",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is my card broken? I can't get cash out of the ATM",
+   "actions": [
+    "cash_withdrawal_charge",
+    "apple_pay_or_google_pay",
+    "beneficiary_not_allowed",
+    "pending_cash_withdrawal",
+    "declined_cash_withdrawal",
+    "declined_card_payment",
+    "virtual_card_not_working",
+    "top_up_failed",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "declined_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why was I charged a fee to transfer money?",
+   "actions": [
+    "top_up_reverted",
+    "transaction_charged_twice",
+    "beneficiary_not_allowed",
+    "cash_withdrawal_charge",
+    "reverted_card_payment?",
+    "extra_charge_on_statement",
+    "direct_debit_payment_not_recognised",
+    "transfer_fee_charged",
+    "card_payment_fee_charged",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "transfer_fee_charged",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What currency can I use to add money?",
+   "actions": [
+    "top_up_by_cash_or_cheque",
+    "visa_or_mastercard",
+    "supported_cards_and_currencies",
+    "topping_up_by_card",
+    "get_disposable_virtual_card",
+    "automatic_top_up",
+    "country_support",
+    "transfer_into_account",
+    "fiat_currency_support",
+    "age_limit"
+   ],
+   "gold": "supported_cards_and_currencies",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is there a fee to top up by bank transfers?",
+   "actions": [
+    "transfer_into_account",
+    "exchange_charge",
+    "top_up_by_cash_or_cheque",
+    "top_up_by_bank_transfer_charge",
+    "automatic_top_up",
+    "top_up_by_card_charge",
+    "pending_transfer",
+    "transfer_fee_charged",
+    "order_physical_card",
+    "card_payment_fee_charged"
+   ],
+   "gold": "top_up_by_bank_transfer_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why can I not transfer money into my account?",
+   "actions": [
+    "getting_spare_card",
+    "transfer_fee_charged",
+    "activate_my_card",
+    "topping_up_by_card",
+    "receiving_money",
+    "transfer_into_account",
+    "supported_cards_and_currencies",
+    "top_up_by_cash_or_cheque",
+    "top_up_by_bank_transfer_charge",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "transfer_into_account",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I found a charge on my debit that I did not make.",
+   "actions": [
+    "top_up_reverted",
+    "Refund_not_showing_up",
+    "declined_card_payment",
+    "transfer_fee_charged",
+    "direct_debit_payment_not_recognised",
+    "transaction_charged_twice",
+    "cash_withdrawal_not_recognised",
+    "extra_charge_on_statement",
+    "card_payment_fee_charged",
+    "card_payment_not_recognised"
+   ],
+   "gold": "direct_debit_payment_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why am I being charged to withdrawal money?",
+   "actions": [
+    "cash_withdrawal_charge",
+    "declined_cash_withdrawal",
+    "pending_cash_withdrawal",
+    "card_arrival",
+    "extra_charge_on_statement",
+    "exchange_charge",
+    "transfer_fee_charged",
+    "cash_withdrawal_not_recognised",
+    "card_payment_fee_charged",
+    "wrong_exchange_rate_for_cash_withdrawal"
+   ],
+   "gold": "cash_withdrawal_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My transaction has not been received. When are you going to process it?",
+   "actions": [
+    "balance_not_updated_after_bank_transfer",
+    "reverted_card_payment?",
+    "Refund_not_showing_up",
+    "pending_transfer",
+    "pending_top_up",
+    "transfer_not_received_by_recipient",
+    "pending_card_payment",
+    "card_arrival",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "pending_cash_withdrawal"
+   ],
+   "gold": "transfer_not_received_by_recipient",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I need to update my demographics.",
+   "actions": [
+    "age_limit",
+    "terminate_account",
+    "getting_virtual_card",
+    "edit_personal_details",
+    "card_linking",
+    "change_pin",
+    "request_refund",
+    "top_up_by_cash_or_cheque",
+    "cancel_transfer",
+    "activate_my_card"
+   ],
+   "gold": "edit_personal_details",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "where do I top up my google pay?",
+   "actions": [
+    "activate_my_card",
+    "declined_cash_withdrawal",
+    "card_not_working",
+    "contactless_not_working",
+    "apple_pay_or_google_pay",
+    "top_up_failed",
+    "virtual_card_not_working",
+    "passcode_forgotten",
+    "country_support",
+    "declined_card_payment"
+   ],
+   "gold": "apple_pay_or_google_pay",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I'm seeing a direct debit payment that is not me.",
+   "actions": [
+    "Refund_not_showing_up",
+    "cash_withdrawal_not_recognised",
+    "card_payment_not_recognised",
+    "direct_debit_payment_not_recognised",
+    "transfer_fee_charged",
+    "transaction_charged_twice",
+    "declined_card_payment",
+    "extra_charge_on_statement",
+    "top_up_reverted",
+    "card_payment_fee_charged"
+   ],
+   "gold": "direct_debit_payment_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What do I have to do to get my virtual card?",
+   "actions": [
+    "order_physical_card",
+    "request_refund",
+    "lost_or_stolen_card",
+    "getting_spare_card",
+    "get_physical_card",
+    "verify_top_up",
+    "getting_virtual_card",
+    "activate_my_card",
+    "get_disposable_virtual_card",
+    "country_support"
+   ],
+   "gold": "getting_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My statement shows charges for things I never purchased. Were my account details stolen?",
+   "actions": [
+    "card_payment_not_recognised",
+    "lost_or_stolen_card",
+    "disposable_card_limits",
+    "supported_cards_and_currencies",
+    "compromised_card",
+    "lost_or_stolen_phone",
+    "cash_withdrawal_not_recognised",
+    "card_payment_fee_charged",
+    "direct_debit_payment_not_recognised",
+    "top_up_reverted"
+   ],
+   "gold": "compromised_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I'd like my account to be deleted. I'm not satisfied with the service you provide.",
+   "actions": [
+    "unable_to_verify_identity",
+    "cancel_transfer",
+    "getting_virtual_card",
+    "top_up_by_cash_or_cheque",
+    "exchange_via_app",
+    "activate_my_card",
+    "age_limit",
+    "terminate_account",
+    "getting_spare_card",
+    "request_refund"
+   ],
+   "gold": "terminate_account",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I have a contactless that's broken.",
+   "actions": [
+    "card_not_working",
+    "apple_pay_or_google_pay",
+    "card_payment_fee_charged",
+    "contactless_not_working",
+    "declined_card_payment",
+    "activate_my_card",
+    "passcode_forgotten",
+    "virtual_card_not_working",
+    "get_physical_card",
+    "declined_cash_withdrawal"
+   ],
+   "gold": "contactless_not_working",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Hello, what is a virtual card and how do I get one?",
+   "actions": [
+    "getting_spare_card",
+    "get_disposable_virtual_card",
+    "lost_or_stolen_card",
+    "request_refund",
+    "country_support",
+    "verify_top_up",
+    "order_physical_card",
+    "get_physical_card",
+    "activate_my_card",
+    "getting_virtual_card"
+   ],
+   "gold": "getting_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why won't my card work anymore?",
+   "actions": [
+    "top_up_failed",
+    "card_not_working",
+    "beneficiary_not_allowed",
+    "activate_my_card",
+    "declined_cash_withdrawal",
+    "virtual_card_not_working",
+    "declined_card_payment",
+    "reverted_card_payment?",
+    "apple_pay_or_google_pay",
+    "contactless_not_working"
+   ],
+   "gold": "card_not_working",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I have cancelled payments to this card.",
+   "actions": [
+    "transfer_fee_charged",
+    "top_up_reverted",
+    "beneficiary_not_allowed",
+    "card_payment_fee_charged",
+    "transfer_not_received_by_recipient",
+    "top_up_failed",
+    "cash_withdrawal_not_recognised",
+    "Refund_not_showing_up",
+    "reverted_card_payment?",
+    "declined_card_payment"
+   ],
+   "gold": "reverted_card_payment?",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How do you top up with a cheque?",
+   "actions": [
+    "verify_source_of_funds",
+    "transfer_into_account",
+    "supported_cards_and_currencies",
+    "atm_support",
+    "get_disposable_virtual_card",
+    "topping_up_by_card",
+    "top_up_by_cash_or_cheque",
+    "activate_my_card",
+    "age_limit",
+    "automatic_top_up"
+   ],
+   "gold": "top_up_by_cash_or_cheque",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I change my PIN without being physically present?",
+   "actions": [
+    "get_physical_card",
+    "getting_spare_card",
+    "atm_support",
+    "lost_or_stolen_card",
+    "order_physical_card",
+    "activate_my_card",
+    "pin_blocked",
+    "getting_virtual_card",
+    "change_pin",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "change_pin",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How can correct Top up with the app to work correctly?",
+   "actions": [
+    "pending_top_up",
+    "card_not_working",
+    "declined_cash_withdrawal",
+    "reverted_card_payment?",
+    "top_up_reverted",
+    "top_up_failed",
+    "declined_card_payment",
+    "failed_transfer",
+    "beneficiary_not_allowed",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "top_up_failed",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I don't think the exchange rate was right.",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "wrong_amount_of_cash_received",
+    "card_payment_wrong_exchange_rate",
+    "transfer_fee_charged",
+    "cash_withdrawal_charge",
+    "reverted_card_payment?",
+    "pending_cash_withdrawal",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "declined_cash_withdrawal",
+    "fiat_currency_support"
+   ],
+   "gold": "wrong_exchange_rate_for_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How to unblock my PIN?",
+   "actions": [
+    "pin_blocked",
+    "cash_withdrawal_not_recognised",
+    "activate_my_card",
+    "change_pin",
+    "getting_virtual_card",
+    "getting_spare_card",
+    "cancel_transfer",
+    "card_swallowed",
+    "lost_or_stolen_card",
+    "get_physical_card"
+   ],
+   "gold": "pin_blocked",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "can i use my app to get a virtual card",
+   "actions": [
+    "verify_top_up",
+    "get_physical_card",
+    "get_disposable_virtual_card",
+    "activate_my_card",
+    "getting_virtual_card",
+    "order_physical_card",
+    "country_support",
+    "request_refund",
+    "getting_spare_card",
+    "lost_or_stolen_card"
+   ],
+   "gold": "getting_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why do I need to verify a top-up?",
+   "actions": [
+    "top_up_limits",
+    "passcode_forgotten",
+    "get_disposable_virtual_card",
+    "unable_to_verify_identity",
+    "getting_virtual_card",
+    "get_physical_card",
+    "verify_my_identity",
+    "verify_source_of_funds",
+    "verify_top_up",
+    "order_physical_card"
+   ],
+   "gold": "verify_top_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "If my phone was stolen, do I need to do anything?",
+   "actions": [
+    "Refund_not_showing_up",
+    "card_payment_not_recognised",
+    "activate_my_card",
+    "passcode_forgotten",
+    "lost_or_stolen_card",
+    "top_up_reverted",
+    "cash_withdrawal_not_recognised",
+    "pin_blocked",
+    "lost_or_stolen_phone",
+    "compromised_card"
+   ],
+   "gold": "lost_or_stolen_phone",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What is the process to create a disposable virtual card?",
+   "actions": [
+    "getting_virtual_card",
+    "country_support",
+    "order_physical_card",
+    "getting_spare_card",
+    "request_refund",
+    "age_limit",
+    "top_up_limits",
+    "get_disposable_virtual_card",
+    "disposable_card_limits",
+    "activate_my_card"
+   ],
+   "gold": "get_disposable_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Help me terminate and close my account.",
+   "actions": [
+    "getting_virtual_card",
+    "activate_my_card",
+    "terminate_account",
+    "top_up_by_cash_or_cheque",
+    "age_limit",
+    "exchange_via_app",
+    "request_refund",
+    "unable_to_verify_identity",
+    "cancel_transfer",
+    "getting_spare_card"
+   ],
+   "gold": "terminate_account",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "oh my god I lost my card! what should I do?",
+   "actions": [
+    "change_pin",
+    "getting_virtual_card",
+    "lost_or_stolen_card",
+    "activate_my_card",
+    "card_arrival",
+    "compromised_card",
+    "declined_card_payment",
+    "lost_or_stolen_phone",
+    "disposable_card_limits",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "lost_or_stolen_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I can't get my virtual card to work.",
+   "actions": [
+    "declined_card_payment",
+    "contactless_not_working",
+    "activate_my_card",
+    "declined_transfer",
+    "declined_cash_withdrawal",
+    "virtual_card_not_working",
+    "country_support",
+    "card_not_working",
+    "apple_pay_or_google_pay",
+    "top_up_failed"
+   ],
+   "gold": "virtual_card_not_working",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is it possible to top up by card?",
+   "actions": [
+    "top_up_by_cash_or_cheque",
+    "pending_cash_withdrawal",
+    "top_up_reverted",
+    "transfer_into_account",
+    "supported_cards_and_currencies",
+    "apple_pay_or_google_pay",
+    "top_up_by_bank_transfer_charge",
+    "automatic_top_up",
+    "topping_up_by_card",
+    "balance_not_updated_after_bank_transfer"
+   ],
+   "gold": "topping_up_by_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why won't you accept my payment? I keep trying with this card and it's not working.",
+   "actions": [
+    "top_up_failed",
+    "top_up_reverted",
+    "beneficiary_not_allowed",
+    "reverted_card_payment?",
+    "cash_withdrawal_not_recognised",
+    "failed_transfer",
+    "card_not_working",
+    "declined_cash_withdrawal",
+    "declined_card_payment",
+    "declined_transfer"
+   ],
+   "gold": "declined_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Where do I find the auto top- up?",
+   "actions": [
+    "age_limit",
+    "top_up_by_bank_transfer_charge",
+    "get_physical_card",
+    "verify_source_of_funds",
+    "transfer_into_account",
+    "supported_cards_and_currencies",
+    "get_disposable_virtual_card",
+    "exchange_rate",
+    "automatic_top_up",
+    "top_up_by_cash_or_cheque"
+   ],
+   "gold": "automatic_top_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I want a mastercard",
+   "actions": [
+    "getting_virtual_card",
+    "getting_spare_card",
+    "atm_support",
+    "exchange_via_app",
+    "age_limit",
+    "visa_or_mastercard",
+    "activate_my_card",
+    "supported_cards_and_currencies",
+    "get_disposable_virtual_card",
+    "request_refund"
+   ],
+   "gold": "visa_or_mastercard",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "When will the money show in my account?",
+   "actions": [
+    "top_up_by_bank_transfer_charge",
+    "pending_top_up",
+    "exchange_rate",
+    "card_delivery_estimate",
+    "pending_transfer",
+    "pending_card_payment",
+    "pending_cash_withdrawal",
+    "balance_not_updated_after_bank_transfer",
+    "receiving_money",
+    "transfer_timing"
+   ],
+   "gold": "transfer_timing",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "what are weekend rates for getting cash",
+   "actions": [
+    "fiat_currency_support",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "pending_cash_withdrawal",
+    "card_payment_wrong_exchange_rate",
+    "declined_cash_withdrawal",
+    "transfer_fee_charged",
+    "cash_withdrawal_charge",
+    "cash_withdrawal_not_recognised",
+    "reverted_card_payment?",
+    "wrong_amount_of_cash_received"
+   ],
+   "gold": "wrong_exchange_rate_for_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How to order my card?",
+   "actions": [
+    "order_physical_card",
+    "disposable_card_limits",
+    "top_up_limits",
+    "get_disposable_virtual_card",
+    "getting_virtual_card",
+    "card_delivery_estimate",
+    "getting_spare_card",
+    "exchange_charge",
+    "activate_my_card",
+    "age_limit"
+   ],
+   "gold": "order_physical_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I need my card soon.",
+   "actions": [
+    "pending_transfer",
+    "pending_top_up",
+    "visa_or_mastercard",
+    "card_arrival",
+    "get_physical_card",
+    "transfer_timing",
+    "order_physical_card",
+    "pending_card_payment",
+    "card_about_to_expire",
+    "card_delivery_estimate"
+   ],
+   "gold": "card_delivery_estimate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why are all my transfers failing?  I have the details right and they won't complete.  I've been trying all day and they still won't go through, this is URGENT, please help.",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "beneficiary_not_allowed",
+    "card_not_working",
+    "declined_transfer",
+    "transfer_fee_charged",
+    "pending_transfer",
+    "top_up_failed",
+    "failed_transfer",
+    "declined_card_payment",
+    "reverted_card_payment?"
+   ],
+   "gold": "declined_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I have a duplicate payment on my account",
+   "actions": [
+    "transaction_charged_twice",
+    "card_payment_fee_charged",
+    "transfer_fee_charged",
+    "extra_charge_on_statement",
+    "card_payment_wrong_exchange_rate",
+    "cash_withdrawal_not_recognised",
+    "declined_card_payment",
+    "cash_withdrawal_charge",
+    "direct_debit_payment_not_recognised",
+    "reverted_card_payment?"
+   ],
+   "gold": "transaction_charged_twice",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I did not charge my account for that transaction.  That's an error.",
+   "actions": [
+    "lost_or_stolen_phone",
+    "declined_card_payment",
+    "direct_debit_payment_not_recognised",
+    "cash_withdrawal_not_recognised",
+    "card_payment_fee_charged",
+    "compromised_card",
+    "reverted_card_payment?",
+    "extra_charge_on_statement",
+    "card_payment_not_recognised",
+    "transfer_fee_charged"
+   ],
+   "gold": "card_payment_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is it free for top ups?",
+   "actions": [
+    "top_up_by_cash_or_cheque",
+    "top_up_by_bank_transfer_charge",
+    "top_up_limits",
+    "apple_pay_or_google_pay",
+    "order_physical_card",
+    "supported_cards_and_currencies",
+    "top_up_by_card_charge",
+    "automatic_top_up",
+    "card_payment_fee_charged",
+    "exchange_charge"
+   ],
+   "gold": "top_up_by_card_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I exchange currencies a lot.  Can I get a discount?",
+   "actions": [
+    "fiat_currency_support",
+    "exchange_rate",
+    "getting_spare_card",
+    "top_up_by_bank_transfer_charge",
+    "exchange_charge",
+    "age_limit",
+    "top_up_by_card_charge",
+    "order_physical_card",
+    "card_payment_fee_charged",
+    "cash_withdrawal_charge"
+   ],
+   "gold": "exchange_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How can I the person see my money transaction?",
+   "actions": [
+    "pending_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "card_arrival",
+    "reverted_card_payment?",
+    "balance_not_updated_after_bank_transfer",
+    "Refund_not_showing_up",
+    "pending_top_up",
+    "pending_card_payment",
+    "pending_cash_withdrawal",
+    "transfer_not_received_by_recipient"
+   ],
+   "gold": "transfer_not_received_by_recipient",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "i bought the wrong size and would like a refund",
+   "actions": [
+    "getting_virtual_card",
+    "get_disposable_virtual_card",
+    "activate_my_card",
+    "age_limit",
+    "Refund_not_showing_up",
+    "terminate_account",
+    "visa_or_mastercard",
+    "getting_spare_card",
+    "request_refund",
+    "reverted_card_payment?"
+   ],
+   "gold": "request_refund",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What is the maximum for top-ups?",
+   "actions": [
+    "order_physical_card",
+    "card_acceptance",
+    "top_up_limits",
+    "top_up_by_cash_or_cheque",
+    "verify_top_up",
+    "age_limit",
+    "top_up_by_card_charge",
+    "change_pin",
+    "disposable_card_limits",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "top_up_limits",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My card is not working when I try to use it.",
+   "actions": [
+    "declined_cash_withdrawal",
+    "apple_pay_or_google_pay",
+    "activate_my_card",
+    "declined_card_payment",
+    "contactless_not_working",
+    "card_not_working",
+    "beneficiary_not_allowed",
+    "reverted_card_payment?",
+    "top_up_failed",
+    "virtual_card_not_working"
+   ],
+   "gold": "card_not_working",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How can receive a physical card",
+   "actions": [
+    "getting_virtual_card",
+    "order_physical_card",
+    "disposable_card_limits",
+    "top_up_limits",
+    "card_delivery_estimate",
+    "age_limit",
+    "get_disposable_virtual_card",
+    "activate_my_card",
+    "exchange_charge",
+    "getting_spare_card"
+   ],
+   "gold": "order_physical_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I tried to buy something online but my funds were transferred back to my account. What is happening?",
+   "actions": [
+    "transfer_not_received_by_recipient",
+    "Refund_not_showing_up",
+    "card_payment_fee_charged",
+    "declined_card_payment",
+    "transfer_fee_charged",
+    "beneficiary_not_allowed",
+    "top_up_failed",
+    "top_up_reverted",
+    "cash_withdrawal_not_recognised",
+    "reverted_card_payment?"
+   ],
+   "gold": "reverted_card_payment?",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I have a card payment that I don't recognize. What should I do?",
+   "actions": [
+    "reverted_card_payment?",
+    "card_payment_not_recognised",
+    "transfer_fee_charged",
+    "compromised_card",
+    "declined_card_payment",
+    "cash_withdrawal_not_recognised",
+    "lost_or_stolen_phone",
+    "extra_charge_on_statement",
+    "card_payment_fee_charged",
+    "direct_debit_payment_not_recognised"
+   ],
+   "gold": "card_payment_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Please help me with my card. As i have tried to use my card in two different ATMs but repeatedly it was declining by ATM.",
+   "actions": [
+    "pending_cash_withdrawal",
+    "cash_withdrawal_charge",
+    "declined_cash_withdrawal",
+    "cash_withdrawal_not_recognised",
+    "top_up_failed",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "beneficiary_not_allowed",
+    "apple_pay_or_google_pay",
+    "declined_card_payment",
+    "virtual_card_not_working"
+   ],
+   "gold": "declined_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is my card working? It's the first time I tried using it I tried to get money out of an ATM, but got nothing.",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "virtual_card_not_working",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "top_up_failed",
+    "pending_cash_withdrawal",
+    "cash_withdrawal_charge",
+    "declined_card_payment",
+    "beneficiary_not_allowed",
+    "apple_pay_or_google_pay",
+    "declined_cash_withdrawal"
+   ],
+   "gold": "declined_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I do not know why I was charged for the $1 transaction.",
+   "actions": [
+    "cash_withdrawal_charge",
+    "cash_withdrawal_not_recognised",
+    "direct_debit_payment_not_recognised",
+    "reverted_card_payment?",
+    "card_payment_fee_charged",
+    "transaction_charged_twice",
+    "card_payment_not_recognised",
+    "transfer_fee_charged",
+    "extra_charge_on_statement",
+    "top_up_reverted"
+   ],
+   "gold": "extra_charge_on_statement",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Do I have a limit to the number of top-ups per day?",
+   "actions": [
+    "verify_top_up",
+    "top_up_by_cash_or_cheque",
+    "change_pin",
+    "get_disposable_virtual_card",
+    "top_up_by_card_charge",
+    "top_up_limits",
+    "order_physical_card",
+    "disposable_card_limits",
+    "card_acceptance",
+    "age_limit"
+   ],
+   "gold": "top_up_limits",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How much do you charge for exchange rates?",
+   "actions": [
+    "exchange_rate",
+    "card_payment_fee_charged",
+    "cash_withdrawal_charge",
+    "top_up_by_card_charge",
+    "age_limit",
+    "top_up_by_bank_transfer_charge",
+    "exchange_charge",
+    "getting_spare_card",
+    "fiat_currency_support",
+    "order_physical_card"
+   ],
+   "gold": "exchange_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "The activation process for my card isn't working.",
+   "actions": [
+    "getting_spare_card",
+    "getting_virtual_card",
+    "request_refund",
+    "activate_my_card",
+    "lost_or_stolen_card",
+    "order_physical_card",
+    "get_disposable_virtual_card",
+    "age_limit",
+    "visa_or_mastercard",
+    "apple_pay_or_google_pay"
+   ],
+   "gold": "activate_my_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My top-up has not posted.",
+   "actions": [
+    "card_arrival",
+    "top_up_reverted",
+    "pending_cash_withdrawal",
+    "Refund_not_showing_up",
+    "transfer_not_received_by_recipient",
+    "pending_card_payment",
+    "pending_top_up",
+    "pending_transfer",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "balance_not_updated_after_bank_transfer"
+   ],
+   "gold": "pending_top_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I just realised I made the wrong payment yesterday. Can you please change it to the right account? It's my rent payment and really really needs to be in the right account by tomorrow",
+   "actions": [
+    "transfer_into_account",
+    "cancel_transfer",
+    "change_pin",
+    "direct_debit_payment_not_recognised",
+    "request_refund",
+    "card_payment_not_recognised",
+    "beneficiary_not_allowed",
+    "balance_not_updated_after_bank_transfer",
+    "cash_withdrawal_not_recognised",
+    "transfer_fee_charged"
+   ],
+   "gold": "cancel_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "May I change my PIN?",
+   "actions": [
+    "activate_my_card",
+    "pin_blocked",
+    "get_disposable_virtual_card",
+    "getting_spare_card",
+    "lost_or_stolen_card",
+    "atm_support",
+    "get_physical_card",
+    "order_physical_card",
+    "change_pin",
+    "getting_virtual_card"
+   ],
+   "gold": "change_pin",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can you tell me why a refund I'm owed is not showing on my statement?",
+   "actions": [
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "Refund_not_showing_up",
+    "pending_top_up",
+    "transfer_not_received_by_recipient",
+    "reverted_card_payment?",
+    "balance_not_updated_after_bank_transfer",
+    "cash_withdrawal_not_recognised",
+    "pending_cash_withdrawal",
+    "pending_transfer",
+    "direct_debit_payment_not_recognised"
+   ],
+   "gold": "Refund_not_showing_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "There's a cash withdrawal on my account that I didn't make",
+   "actions": [
+    "top_up_reverted",
+    "transfer_fee_charged",
+    "extra_charge_on_statement",
+    "card_payment_not_recognised",
+    "declined_card_payment",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "reverted_card_payment?",
+    "cash_withdrawal_not_recognised",
+    "Refund_not_showing_up",
+    "direct_debit_payment_not_recognised"
+   ],
+   "gold": "cash_withdrawal_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Tell me your opinion on the exchange rate.",
+   "actions": [
+    "get_disposable_virtual_card",
+    "verify_source_of_funds",
+    "get_physical_card",
+    "order_physical_card",
+    "exchange_charge",
+    "automatic_top_up",
+    "country_support",
+    "exchange_rate",
+    "exchange_via_app",
+    "atm_support"
+   ],
+   "gold": "exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My top-up hasn't happened yet.",
+   "actions": [
+    "Refund_not_showing_up",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "transfer_not_received_by_recipient",
+    "pending_cash_withdrawal",
+    "card_arrival",
+    "balance_not_updated_after_bank_transfer",
+    "top_up_reverted",
+    "pending_card_payment",
+    "pending_transfer",
+    "pending_top_up"
+   ],
+   "gold": "pending_top_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "When will a cash withdrawal show up?",
+   "actions": [
+    "declined_cash_withdrawal",
+    "Refund_not_showing_up",
+    "cash_withdrawal_charge",
+    "transfer_not_received_by_recipient",
+    "cash_withdrawal_not_recognised",
+    "pending_card_payment",
+    "pending_top_up",
+    "pending_cash_withdrawal",
+    "pending_transfer",
+    "balance_not_updated_after_bank_transfer"
+   ],
+   "gold": "pending_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why can't I top up by cheque?",
+   "actions": [
+    "automatic_top_up",
+    "supported_cards_and_currencies",
+    "atm_support",
+    "get_disposable_virtual_card",
+    "transfer_into_account",
+    "verify_source_of_funds",
+    "top_up_by_cash_or_cheque",
+    "age_limit",
+    "activate_my_card",
+    "topping_up_by_card"
+   ],
+   "gold": "top_up_by_cash_or_cheque",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I'm in Austria right now, but I really need to change my PIN right now. Can I do this even though I'm in another country?",
+   "actions": [
+    "order_physical_card",
+    "activate_my_card",
+    "get_physical_card",
+    "getting_spare_card",
+    "atm_support",
+    "get_disposable_virtual_card",
+    "getting_virtual_card",
+    "change_pin",
+    "pin_blocked",
+    "lost_or_stolen_card"
+   ],
+   "gold": "change_pin",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I use American Express?",
+   "actions": [
+    "supported_cards_and_currencies",
+    "age_limit",
+    "visa_or_mastercard",
+    "transfer_into_account",
+    "automatic_top_up",
+    "country_support",
+    "fiat_currency_support",
+    "top_up_by_cash_or_cheque",
+    "topping_up_by_card",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "supported_cards_and_currencies",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I am having problems with a top-up.",
+   "actions": [
+    "declined_cash_withdrawal",
+    "top_up_reverted",
+    "failed_transfer",
+    "cash_withdrawal_not_recognised",
+    "reverted_card_payment?",
+    "pending_top_up",
+    "declined_card_payment",
+    "card_not_working",
+    "beneficiary_not_allowed",
+    "top_up_failed"
+   ],
+   "gold": "top_up_failed",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why is this not letting me exchange crypto? I need help making this transaction go through.",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "reverted_card_payment?",
+    "top_up_reverted",
+    "declined_card_payment",
+    "top_up_failed",
+    "beneficiary_not_allowed",
+    "failed_transfer",
+    "transfer_fee_charged",
+    "declined_transfer",
+    "pending_transfer"
+   ],
+   "gold": "beneficiary_not_allowed",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I have a cash withdrawal that I do not recognise.",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "card_payment_not_recognised",
+    "reverted_card_payment?",
+    "declined_card_payment",
+    "top_up_reverted",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "direct_debit_payment_not_recognised",
+    "transfer_fee_charged",
+    "extra_charge_on_statement",
+    "Refund_not_showing_up"
+   ],
+   "gold": "cash_withdrawal_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is my card ready for use or does it need activated and if so how?",
+   "actions": [
+    "activate_my_card",
+    "order_physical_card",
+    "lost_or_stolen_card",
+    "get_disposable_virtual_card",
+    "apple_pay_or_google_pay",
+    "getting_virtual_card",
+    "visa_or_mastercard",
+    "age_limit",
+    "request_refund",
+    "getting_spare_card"
+   ],
+   "gold": "activate_my_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How do I get a refund for an item I bought?",
+   "actions": [
+    "getting_spare_card",
+    "visa_or_mastercard",
+    "Refund_not_showing_up",
+    "activate_my_card",
+    "terminate_account",
+    "get_disposable_virtual_card",
+    "age_limit",
+    "request_refund",
+    "getting_virtual_card",
+    "reverted_card_payment?"
+   ],
+   "gold": "request_refund",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I'm really upset because I made a typo during a transfer and now I've sent money to the wrong account.  I can't fix this with the app.  Please help me immediately!",
+   "actions": [
+    "beneficiary_not_allowed",
+    "transfer_fee_charged",
+    "card_payment_not_recognised",
+    "request_refund",
+    "cash_withdrawal_not_recognised",
+    "cancel_transfer",
+    "transfer_into_account",
+    "balance_not_updated_after_bank_transfer",
+    "direct_debit_payment_not_recognised",
+    "change_pin"
+   ],
+   "gold": "cancel_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Hello, I made a payment with my card and it's not working. It's been a while and still says its pending. Can you tell when this will go through?",
+   "actions": [
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "pending_transfer",
+    "balance_not_updated_after_bank_transfer",
+    "pending_top_up",
+    "pending_cash_withdrawal",
+    "card_payment_fee_charged",
+    "card_arrival",
+    "pending_card_payment",
+    "transfer_not_received_by_recipient",
+    "reverted_card_payment?"
+   ],
+   "gold": "pending_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How do I change to AUD from GBP?",
+   "actions": [
+    "visa_or_mastercard",
+    "getting_spare_card",
+    "country_support",
+    "exchange_via_app",
+    "receiving_money",
+    "age_limit",
+    "activate_my_card",
+    "request_refund",
+    "exchange_rate",
+    "fiat_currency_support"
+   ],
+   "gold": "exchange_via_app",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I need assistance with activating my new card.",
+   "actions": [
+    "lost_or_stolen_card",
+    "order_physical_card",
+    "request_refund",
+    "visa_or_mastercard",
+    "age_limit",
+    "getting_virtual_card",
+    "getting_spare_card",
+    "activate_my_card",
+    "get_disposable_virtual_card",
+    "apple_pay_or_google_pay"
+   ],
+   "gold": "activate_my_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How long do deposits take to appear? I've been waiting for more than a week and need the money!",
+   "actions": [
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "cash_withdrawal_not_recognised",
+    "transfer_not_received_by_recipient",
+    "pending_card_payment",
+    "Refund_not_showing_up",
+    "top_up_reverted",
+    "pending_top_up",
+    "balance_not_updated_after_bank_transfer",
+    "pending_cash_withdrawal",
+    "reverted_card_payment?"
+   ],
+   "gold": "balance_not_updated_after_cheque_or_cash_deposit",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "what to do about stolen phone",
+   "actions": [
+    "Refund_not_showing_up",
+    "cash_withdrawal_not_recognised",
+    "top_up_reverted",
+    "pin_blocked",
+    "lost_or_stolen_card",
+    "compromised_card",
+    "activate_my_card",
+    "card_payment_not_recognised",
+    "lost_or_stolen_phone",
+    "passcode_forgotten"
+   ],
+   "gold": "lost_or_stolen_phone",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I increase my top-up maximum?",
+   "actions": [
+    "order_physical_card",
+    "top_up_limits",
+    "top_up_by_card_charge",
+    "verify_top_up",
+    "top_up_by_cash_or_cheque",
+    "get_disposable_virtual_card",
+    "disposable_card_limits",
+    "card_acceptance",
+    "age_limit",
+    "change_pin"
+   ],
+   "gold": "top_up_limits",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I want one of the virtual cards!",
+   "actions": [
+    "getting_virtual_card",
+    "getting_spare_card",
+    "country_support",
+    "order_physical_card",
+    "get_disposable_virtual_card",
+    "lost_or_stolen_card",
+    "verify_top_up",
+    "request_refund",
+    "get_physical_card",
+    "activate_my_card"
+   ],
+   "gold": "getting_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why was the exchange rate so wrong when I bought something!",
+   "actions": [
+    "request_refund",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "card_payment_wrong_exchange_rate",
+    "transaction_charged_twice",
+    "beneficiary_not_allowed",
+    "transfer_fee_charged",
+    "cash_withdrawal_charge",
+    "reverted_card_payment?",
+    "card_payment_fee_charged",
+    "extra_charge_on_statement"
+   ],
+   "gold": "card_payment_wrong_exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why was a fee charged to me for transferring money?",
+   "actions": [
+    "reverted_card_payment?",
+    "cash_withdrawal_charge",
+    "beneficiary_not_allowed",
+    "cash_withdrawal_not_recognised",
+    "direct_debit_payment_not_recognised",
+    "top_up_reverted",
+    "transaction_charged_twice",
+    "extra_charge_on_statement",
+    "transfer_fee_charged",
+    "card_payment_fee_charged"
+   ],
+   "gold": "transfer_fee_charged",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I can't withdraw money",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "pending_cash_withdrawal",
+    "top_up_failed",
+    "apple_pay_or_google_pay",
+    "declined_card_payment",
+    "beneficiary_not_allowed",
+    "cash_withdrawal_charge",
+    "virtual_card_not_working",
+    "declined_cash_withdrawal"
+   ],
+   "gold": "declined_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Where do I go to cancel a transaction?",
+   "actions": [
+    "request_refund",
+    "cash_withdrawal_not_recognised",
+    "balance_not_updated_after_bank_transfer",
+    "beneficiary_not_allowed",
+    "change_pin",
+    "cancel_transfer",
+    "direct_debit_payment_not_recognised",
+    "transfer_fee_charged",
+    "card_payment_not_recognised",
+    "transfer_into_account"
+   ],
+   "gold": "cancel_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What do I do to verify my source of funds?",
+   "actions": [
+    "automatic_top_up",
+    "exchange_rate",
+    "atm_support",
+    "verify_my_identity",
+    "verify_top_up",
+    "getting_spare_card",
+    "get_disposable_virtual_card",
+    "order_physical_card",
+    "verify_source_of_funds",
+    "top_up_by_cash_or_cheque"
+   ],
+   "gold": "verify_source_of_funds",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is there a limit to how much I can top up?",
+   "actions": [
+    "top_up_by_cash_or_cheque",
+    "age_limit",
+    "get_disposable_virtual_card",
+    "verify_top_up",
+    "top_up_limits",
+    "change_pin",
+    "disposable_card_limits",
+    "top_up_by_card_charge",
+    "order_physical_card",
+    "card_acceptance"
+   ],
+   "gold": "top_up_limits",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How long will it take the money to appear in my account?",
+   "actions": [
+    "balance_not_updated_after_bank_transfer",
+    "transfer_timing",
+    "pending_cash_withdrawal",
+    "exchange_rate",
+    "top_up_by_bank_transfer_charge",
+    "pending_top_up",
+    "pending_transfer",
+    "card_delivery_estimate",
+    "receiving_money",
+    "pending_card_payment"
+   ],
+   "gold": "transfer_timing",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I was overcharged an additional pound.",
+   "actions": [
+    "card_payment_not_recognised",
+    "cash_withdrawal_charge",
+    "direct_debit_payment_not_recognised",
+    "extra_charge_on_statement",
+    "reverted_card_payment?",
+    "top_up_reverted",
+    "transfer_fee_charged",
+    "cash_withdrawal_not_recognised",
+    "transaction_charged_twice",
+    "card_payment_fee_charged"
+   ],
+   "gold": "extra_charge_on_statement",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I do not recognize a direct debit payment that I see on my app",
+   "actions": [
+    "declined_card_payment",
+    "direct_debit_payment_not_recognised",
+    "extra_charge_on_statement",
+    "card_payment_fee_charged",
+    "card_payment_not_recognised",
+    "cash_withdrawal_not_recognised",
+    "top_up_reverted",
+    "Refund_not_showing_up",
+    "transaction_charged_twice",
+    "transfer_fee_charged"
+   ],
+   "gold": "direct_debit_payment_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Mastercard is preferred to me.",
+   "actions": [
+    "getting_virtual_card",
+    "supported_cards_and_currencies",
+    "activate_my_card",
+    "getting_spare_card",
+    "request_refund",
+    "atm_support",
+    "exchange_via_app",
+    "age_limit",
+    "get_disposable_virtual_card",
+    "visa_or_mastercard"
+   ],
+   "gold": "visa_or_mastercard",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I wasn't charged the correct exchange rate for an item I purchased.",
+   "actions": [
+    "transfer_fee_charged",
+    "card_payment_fee_charged",
+    "reverted_card_payment?",
+    "card_payment_wrong_exchange_rate",
+    "cash_withdrawal_charge",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "transaction_charged_twice",
+    "beneficiary_not_allowed",
+    "extra_charge_on_statement",
+    "request_refund"
+   ],
+   "gold": "card_payment_wrong_exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Everything seems fine with my account, so why did it decline my payment?",
+   "actions": [
+    "beneficiary_not_allowed",
+    "declined_card_payment",
+    "reverted_card_payment?",
+    "failed_transfer",
+    "top_up_reverted",
+    "declined_cash_withdrawal",
+    "cash_withdrawal_not_recognised",
+    "card_not_working",
+    "top_up_failed",
+    "declined_transfer"
+   ],
+   "gold": "declined_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My card payment wasn't accepted.",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "top_up_reverted",
+    "reverted_card_payment?",
+    "beneficiary_not_allowed",
+    "declined_cash_withdrawal",
+    "card_not_working",
+    "declined_transfer",
+    "failed_transfer",
+    "declined_card_payment",
+    "top_up_failed"
+   ],
+   "gold": "declined_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "They said I would get a refund but I don't see it on my statement.",
+   "actions": [
+    "pending_transfer",
+    "direct_debit_payment_not_recognised",
+    "pending_cash_withdrawal",
+    "transfer_not_received_by_recipient",
+    "reverted_card_payment?",
+    "cash_withdrawal_not_recognised",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "Refund_not_showing_up",
+    "balance_not_updated_after_bank_transfer",
+    "pending_top_up"
+   ],
+   "gold": "Refund_not_showing_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "i need to add express delivery if that's an option",
+   "actions": [
+    "pending_card_payment",
+    "pending_transfer",
+    "visa_or_mastercard",
+    "card_delivery_estimate",
+    "card_arrival",
+    "order_physical_card",
+    "card_about_to_expire",
+    "get_physical_card",
+    "pending_top_up",
+    "transfer_timing"
+   ],
+   "gold": "card_delivery_estimate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Who can request disposable cards?",
+   "actions": [
+    "age_limit",
+    "get_disposable_virtual_card",
+    "lost_or_stolen_card",
+    "getting_spare_card",
+    "card_acceptance",
+    "order_physical_card",
+    "fiat_currency_support",
+    "top_up_limits",
+    "country_support",
+    "disposable_card_limits"
+   ],
+   "gold": "disposable_card_limits",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My card is missing!  Help!",
+   "actions": [
+    "card_arrival",
+    "activate_my_card",
+    "change_pin",
+    "compromised_card",
+    "disposable_card_limits",
+    "cash_withdrawal_not_recognised",
+    "getting_virtual_card",
+    "lost_or_stolen_card",
+    "declined_card_payment",
+    "lost_or_stolen_phone"
+   ],
+   "gold": "lost_or_stolen_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I withdraw money in my hometown currency while on holiday without any additional fees?",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "fiat_currency_support",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "pending_cash_withdrawal",
+    "wrong_amount_of_cash_received",
+    "cash_withdrawal_charge",
+    "reverted_card_payment?",
+    "card_payment_wrong_exchange_rate",
+    "declined_cash_withdrawal",
+    "transfer_fee_charged"
+   ],
+   "gold": "wrong_exchange_rate_for_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I tried to top up but the app rejected it.",
+   "actions": [
+    "top_up_reverted",
+    "declined_cash_withdrawal",
+    "beneficiary_not_allowed",
+    "top_up_failed",
+    "failed_transfer",
+    "reverted_card_payment?",
+    "card_not_working",
+    "pending_top_up",
+    "cash_withdrawal_not_recognised",
+    "declined_card_payment"
+   ],
+   "gold": "top_up_failed",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How do I use disposable cards?",
+   "actions": [
+    "disposable_card_limits",
+    "request_refund",
+    "activate_my_card",
+    "get_disposable_virtual_card",
+    "age_limit",
+    "country_support",
+    "getting_virtual_card",
+    "getting_spare_card",
+    "top_up_limits",
+    "order_physical_card"
+   ],
+   "gold": "get_disposable_virtual_card",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "There is an unexplained $1 charge on my statement, can you please explain this to me?",
+   "actions": [
+    "reverted_card_payment?",
+    "direct_debit_payment_not_recognised",
+    "card_payment_not_recognised",
+    "transfer_fee_charged",
+    "extra_charge_on_statement",
+    "cash_withdrawal_not_recognised",
+    "top_up_reverted",
+    "transaction_charged_twice",
+    "cash_withdrawal_charge",
+    "card_payment_fee_charged"
+   ],
+   "gold": "extra_charge_on_statement",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I got cash and the exchange rate should have been different than it ended up being.",
+   "actions": [
+    "pending_cash_withdrawal",
+    "card_payment_wrong_exchange_rate",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "transfer_fee_charged",
+    "fiat_currency_support",
+    "wrong_amount_of_cash_received",
+    "declined_cash_withdrawal",
+    "cash_withdrawal_charge",
+    "reverted_card_payment?",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "wrong_exchange_rate_for_cash_withdrawal",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Change of location, need to change details",
+   "actions": [
+    "activate_my_card",
+    "getting_virtual_card",
+    "card_linking",
+    "terminate_account",
+    "change_pin",
+    "edit_personal_details",
+    "age_limit",
+    "top_up_by_cash_or_cheque",
+    "cancel_transfer",
+    "request_refund"
+   ],
+   "gold": "edit_personal_details",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "How can I fix this?  There is a double charge on my account.",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "card_payment_fee_charged",
+    "cash_withdrawal_charge",
+    "direct_debit_payment_not_recognised",
+    "transaction_charged_twice",
+    "card_payment_wrong_exchange_rate",
+    "extra_charge_on_statement",
+    "transfer_fee_charged",
+    "reverted_card_payment?",
+    "declined_card_payment"
+   ],
+   "gold": "transaction_charged_twice",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I tried to purchase airline tickets online this morning and my card information isn't working. Is there something going on with my account?",
+   "actions": [
+    "top_up_failed",
+    "card_not_working",
+    "virtual_card_not_working",
+    "beneficiary_not_allowed",
+    "activate_my_card",
+    "declined_cash_withdrawal",
+    "apple_pay_or_google_pay",
+    "declined_card_payment",
+    "reverted_card_payment?",
+    "contactless_not_working"
+   ],
+   "gold": "card_not_working",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I would like to dispute a payment I didnt make",
+   "actions": [
+    "cash_withdrawal_not_recognised",
+    "card_payment_not_recognised",
+    "card_payment_fee_charged",
+    "transaction_charged_twice",
+    "Refund_not_showing_up",
+    "top_up_reverted",
+    "extra_charge_on_statement",
+    "transfer_fee_charged",
+    "declined_card_payment",
+    "direct_debit_payment_not_recognised"
+   ],
+   "gold": "direct_debit_payment_not_recognised",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Where is the money I put in the bank?",
+   "actions": [
+    "reverted_card_payment?",
+    "Refund_not_showing_up",
+    "top_up_reverted",
+    "pending_cash_withdrawal",
+    "transfer_not_received_by_recipient",
+    "balance_not_updated_after_bank_transfer",
+    "pending_top_up",
+    "balance_not_updated_after_cheque_or_cash_deposit",
+    "pending_card_payment",
+    "cash_withdrawal_not_recognised"
+   ],
+   "gold": "balance_not_updated_after_cheque_or_cash_deposit",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Is there somewhere I can send a check to add to my account?",
+   "actions": [
+    "supported_cards_and_currencies",
+    "activate_my_card",
+    "atm_support",
+    "automatic_top_up",
+    "age_limit",
+    "transfer_into_account",
+    "topping_up_by_card",
+    "get_disposable_virtual_card",
+    "verify_source_of_funds",
+    "top_up_by_cash_or_cheque"
+   ],
+   "gold": "top_up_by_cash_or_cheque",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What is the charge for using a Top up card in the US?",
+   "actions": [
+    "apple_pay_or_google_pay",
+    "top_up_limits",
+    "order_physical_card",
+    "top_up_by_cash_or_cheque",
+    "card_payment_fee_charged",
+    "exchange_charge",
+    "top_up_by_card_charge",
+    "automatic_top_up",
+    "supported_cards_and_currencies",
+    "top_up_by_bank_transfer_charge"
+   ],
+   "gold": "top_up_by_card_charge",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Your foreign exchange rate is wrong.",
+   "actions": [
+    "extra_charge_on_statement",
+    "transaction_charged_twice",
+    "card_payment_fee_charged",
+    "beneficiary_not_allowed",
+    "cash_withdrawal_charge",
+    "transfer_fee_charged",
+    "request_refund",
+    "reverted_card_payment?",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "card_payment_wrong_exchange_rate"
+   ],
+   "gold": "card_payment_wrong_exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I only made one transaction at this place, but it's appearing multiple times.",
+   "actions": [
+    "card_payment_fee_charged",
+    "cash_withdrawal_not_recognised",
+    "card_payment_wrong_exchange_rate",
+    "declined_card_payment",
+    "cash_withdrawal_charge",
+    "reverted_card_payment?",
+    "transaction_charged_twice",
+    "extra_charge_on_statement",
+    "direct_debit_payment_not_recognised",
+    "transfer_fee_charged"
+   ],
+   "gold": "transaction_charged_twice",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why is my transfer not working? I tried multiple times to transfer money, and all that happens is an error message pops up.",
+   "actions": [
+    "declined_card_payment",
+    "top_up_reverted",
+    "cash_withdrawal_not_recognised",
+    "failed_transfer",
+    "transfer_fee_charged",
+    "declined_transfer",
+    "pending_transfer",
+    "top_up_failed",
+    "beneficiary_not_allowed",
+    "reverted_card_payment?"
+   ],
+   "gold": "beneficiary_not_allowed",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "I have trouble proving my identity.",
+   "actions": [
+    "transfer_not_received_by_recipient",
+    "verify_my_identity",
+    "age_limit",
+    "unable_to_verify_identity",
+    "pending_top_up",
+    "pending_transfer",
+    "beneficiary_not_allowed",
+    "why_verify_identity",
+    "balance_not_updated_after_bank_transfer",
+    "verify_top_up"
+   ],
+   "gold": "unable_to_verify_identity",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "In the exchange and holding, what fiat is allowed?",
+   "actions": [
+    "disposable_card_limits",
+    "country_support",
+    "age_limit",
+    "receiving_money",
+    "exchange_via_app",
+    "top_up_limits",
+    "beneficiary_not_allowed",
+    "exchange_charge",
+    "fiat_currency_support",
+    "supported_cards_and_currencies"
+   ],
+   "gold": "fiat_currency_support",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "what is going on, i have entered my passcode and its not working",
+   "actions": [
+    "order_physical_card",
+    "activate_my_card",
+    "getting_virtual_card",
+    "passcode_forgotten",
+    "verify_top_up",
+    "get_disposable_virtual_card",
+    "unable_to_verify_identity",
+    "contactless_not_working",
+    "get_physical_card",
+    "apple_pay_or_google_pay"
+   ],
+   "gold": "passcode_forgotten",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "This exchange rate you use is awful! Please tell me this is a mistake and not the official interbank exchange rate!",
+   "actions": [
+    "cash_withdrawal_charge",
+    "reverted_card_payment?",
+    "beneficiary_not_allowed",
+    "transfer_fee_charged",
+    "card_payment_fee_charged",
+    "wrong_exchange_rate_for_cash_withdrawal",
+    "card_payment_wrong_exchange_rate",
+    "extra_charge_on_statement",
+    "transaction_charged_twice",
+    "request_refund"
+   ],
+   "gold": "card_payment_wrong_exchange_rate",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Why has my card declined",
+   "actions": [
+    "declined_card_payment",
+    "card_not_working",
+    "cash_withdrawal_not_recognised",
+    "top_up_failed",
+    "declined_cash_withdrawal",
+    "declined_transfer",
+    "reverted_card_payment?",
+    "top_up_reverted",
+    "beneficiary_not_allowed",
+    "failed_transfer"
+   ],
+   "gold": "declined_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "If I make a mistake can I cancel the transaction?",
+   "actions": [
+    "request_refund",
+    "card_payment_not_recognised",
+    "transfer_fee_charged",
+    "transfer_into_account",
+    "cash_withdrawal_not_recognised",
+    "direct_debit_payment_not_recognised",
+    "change_pin",
+    "cancel_transfer",
+    "beneficiary_not_allowed",
+    "balance_not_updated_after_bank_transfer"
+   ],
+   "gold": "cancel_transfer",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Do you have an auto-top function and how do I use it if so?",
+   "actions": [
+    "age_limit",
+    "exchange_rate",
+    "verify_source_of_funds",
+    "top_up_by_cash_or_cheque",
+    "get_disposable_virtual_card",
+    "top_up_by_bank_transfer_charge",
+    "transfer_into_account",
+    "automatic_top_up",
+    "get_physical_card",
+    "supported_cards_and_currencies"
+   ],
+   "gold": "automatic_top_up",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "WHAT IS THE MAIN REASON OF THIS PROBLEM",
+   "actions": [
+    "virtual_card_not_working",
+    "card_not_working",
+    "declined_cash_withdrawal",
+    "declined_card_payment",
+    "activate_my_card",
+    "beneficiary_not_allowed",
+    "reverted_card_payment?",
+    "top_up_failed",
+    "contactless_not_working",
+    "apple_pay_or_google_pay"
+   ],
+   "gold": "card_not_working",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "My payment has been declined!! What's going on, I thought everything was alright and working well?",
+   "actions": [
+    "top_up_failed",
+    "card_not_working",
+    "declined_transfer",
+    "reverted_card_payment?",
+    "top_up_reverted",
+    "cash_withdrawal_not_recognised",
+    "declined_cash_withdrawal",
+    "beneficiary_not_allowed",
+    "declined_card_payment",
+    "failed_transfer"
+   ],
+   "gold": "declined_card_payment",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "What does it mean if it says my card payment has been cancelled?",
+   "actions": [
+    "beneficiary_not_allowed",
+    "transfer_fee_charged",
+    "top_up_reverted",
+    "top_up_failed",
+    "Refund_not_showing_up",
+    "transfer_not_received_by_recipient",
+    "cash_withdrawal_not_recognised",
+    "declined_card_payment",
+    "card_payment_fee_charged",
+    "reverted_card_payment?"
+   ],
+   "gold": "reverted_card_payment?",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  },
+  {
+   "query": "Can I top-up any amount I wish on any given day?",
+   "actions": [
+    "verify_top_up",
+    "disposable_card_limits",
+    "card_acceptance",
+    "top_up_by_cash_or_cheque",
+    "order_physical_card",
+    "change_pin",
+    "age_limit",
+    "top_up_limits",
+    "top_up_by_card_charge",
+    "get_disposable_virtual_card"
+   ],
+   "gold": "top_up_limits",
+   "language": "en",
+   "tags": [
+    "similar"
+   ]
+  }
+ ]
+}

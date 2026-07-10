@@ -134,7 +134,10 @@ public actor ActionRouter {
             )
         }
 
-        guard !indexed.isEmpty else {
+        let allowed = context?.allowedActionIDs
+        let candidateIDs = allowed.map { ids in insertionOrder.filter(ids.contains) }
+            ?? insertionOrder
+        guard !candidateIDs.isEmpty else {
             return finish(.abstained(.noActionsRegistered), candidates: [])
         }
         let parsedQuery = LexicalScorer.Query(text: query, context: context)
@@ -146,8 +149,8 @@ public actor ActionRouter {
         try Task.checkCancellation()
 
         var scored: [(fused: Double, signals: [RoutingSignal: Double], action: Action)] = []
-        scored.reserveCapacity(indexed.count)
-        for id in insertionOrder {
+        scored.reserveCapacity(candidateIDs.count)
+        for id in candidateIDs {
             guard let document = indexed[id] else { continue }
             var signals = LexicalScorer.signals(
                 query: parsedQuery,

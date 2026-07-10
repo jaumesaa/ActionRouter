@@ -1,0 +1,7501 @@
+{
+ "suite": "clinc-typo-dev",
+ "source": "CLINC-150",
+ "license": "CC-BY-3.0",
+ "seed": 42,
+ "actions": [
+  {
+   "id": "accept_reservations",
+   "name": "Accept reservations",
+   "description": "Assistant action that handles accept reservations requests.",
+   "keywords": [
+    "accept",
+    "reservations"
+   ],
+   "examples": [
+    "does the zen garden in la take reservations",
+    "find out if la tour d'argent in paris takes reservations",
+    "are reservations taken at redrobin",
+    "can you make a reservation at michael's"
+   ]
+  },
+  {
+   "id": "account_blocked",
+   "name": "Account blocked",
+   "description": "Assistant action that handles account blocked requests.",
+   "keywords": [
+    "account",
+    "blocked"
+   ],
+   "examples": [
+    "who can i talk to right away about the current freeze on my account",
+    "please let me into my bank account",
+    "my account has been blocked, but i have no idea why",
+    "find out the reason why am i locked out of my bank account"
+   ]
+  },
+  {
+   "id": "alarm",
+   "name": "Alarm",
+   "description": "Assistant action that handles alarm requests.",
+   "keywords": [
+    "alarm"
+   ],
+   "examples": [
+    "i need an alarm to go off at 6 am",
+    "i need an alarm for 6am",
+    "i want an alarm to go off at 9 am",
+    "set alarm for 5 am"
+   ]
+  },
+  {
+   "id": "application_status",
+   "name": "Application status",
+   "description": "Assistant action that handles application status requests.",
+   "keywords": [
+    "application",
+    "status"
+   ],
+   "examples": [
+    "has anyone looked at my mastercard application",
+    "what is the status of my new credit card application",
+    "please find out the current status of my credit card application",
+    "has my application for the mastercard card gone through"
+   ]
+  },
+  {
+   "id": "apr",
+   "name": "Apr",
+   "description": "Assistant action that handles apr requests.",
+   "keywords": [
+    "apr"
+   ],
+   "examples": [
+    "does my credit card apr fall into a good range",
+    "can you inform me what my apr is on my visa",
+    "could you please state the apr for the credit card",
+    "what is the apr for the credit card"
+   ]
+  },
+  {
+   "id": "are_you_a_bot",
+   "name": "Are you a bot",
+   "description": "Assistant action that handles are you a bot requests.",
+   "keywords": [
+    "a",
+    "are",
+    "bot",
+    "you"
+   ],
+   "examples": [
+    "can you tell me if you're human or if you're a computer",
+    "are you an ai or person",
+    "tell me if you are a real person or an ai",
+    "are you a live being"
+   ]
+  },
+  {
+   "id": "balance",
+   "name": "Balance",
+   "description": "Assistant action that handles balance requests.",
+   "keywords": [
+    "balance"
+   ],
+   "examples": [
+    "what's the amount of money accumulated in my bank accounts",
+    "is there enough money in my account for expenses",
+    "please tell me my bank balance",
+    "what is is the details of my bank account"
+   ]
+  },
+  {
+   "id": "bill_balance",
+   "name": "Bill balance",
+   "description": "Assistant action that handles bill balance requests.",
+   "keywords": [
+    "balance",
+    "bill"
+   ],
+   "examples": [
+    "do i still owe any bills",
+    "how much are my xfinity and dte bills",
+    "tell me what is owed for my water and gas bills",
+    "how much do i have to pay for my cable bill"
+   ]
+  },
+  {
+   "id": "bill_due",
+   "name": "Bill due",
+   "description": "Assistant action that handles bill due requests.",
+   "keywords": [
+    "bill",
+    "due"
+   ],
+   "examples": [
+    "do you know when my next electric bill is due",
+    "how do i know when to pay my gas bill",
+    "when should i pay my bill by",
+    "how do i find when my medical bill is due"
+   ]
+  },
+  {
+   "id": "book_flight",
+   "name": "Book flight",
+   "description": "Assistant action that handles book flight requests.",
+   "keywords": [
+    "book",
+    "flight"
+   ],
+   "examples": [
+    "i'm looking for a roundtrip flight from koa to mgj for june to july",
+    "would you let me know what flights are available out of dallas to el paso on march 20 for under $400",
+    "list roundtrip flights available from dallas to los angeles from march 2 to march 10",
+    "reserve me a flight from ft lauderdale to houston on southwest"
+   ]
+  },
+  {
+   "id": "book_hotel",
+   "name": "Book hotel",
+   "description": "Assistant action that handles book hotel requests.",
+   "keywords": [
+    "book",
+    "hotel"
+   ],
+   "examples": [
+    "see if you can get me a room in colorado springs near garden of the gods from march 01 to march 02",
+    "book me a hotel in seattle near the space needle from march 3rd to 5th",
+    "show me all hotels in evans with good reviews",
+    "could you reserve me a hotel room in philadelphia near chinatown from 3/19 through 3/22"
+   ]
+  },
+  {
+   "id": "calculator",
+   "name": "Calculator",
+   "description": "Assistant action that handles calculator requests.",
+   "keywords": [
+    "calculator"
+   ],
+   "examples": [
+    "what is 1785 minus 334 minus 87 plus 374 minus 400 plus 17",
+    "what is 25 percent of 6999",
+    "what is 60 percent off of 350 dollars",
+    "can you do a math problem"
+   ]
+  },
+  {
+   "id": "calendar",
+   "name": "Calendar",
+   "description": "Assistant action that handles calendar requests.",
+   "keywords": [
+    "calendar"
+   ],
+   "examples": [
+    "does the calendar already have easter noted on it",
+    "tell me what is showing on my calendar for the 17th of march",
+    "i gotta know what is currently on my calendar for friday the 1st",
+    "what's on my calendar for tuesday"
+   ]
+  },
+  {
+   "id": "calendar_update",
+   "name": "Calendar update",
+   "description": "Assistant action that handles calendar update requests.",
+   "keywords": [
+    "calendar",
+    "update"
+   ],
+   "examples": [
+    "erase any event on my calendar that's set for wednesday of next week",
+    "delete that event from calendar",
+    "remove meeting with carla from the calendar",
+    "can you add remember to register for the race on my calendar for the 15th of march"
+   ]
+  },
+  {
+   "id": "calories",
+   "name": "Calories",
+   "description": "Assistant action that handles calories requests.",
+   "keywords": [
+    "calories"
+   ],
+   "examples": [
+    "please tell me how many calories one chocolate bar contains",
+    "how many calories are there in a scoop of chocolate ice cream",
+    "how many calories are in a bag of regular doritos",
+    "how many calories does a scoop of chocolate ice cream have"
+   ]
+  },
+  {
+   "id": "cancel",
+   "name": "Cancel",
+   "description": "Assistant action that handles cancel requests.",
+   "keywords": [
+    "cancel"
+   ],
+   "examples": [
+    "actually, cancel that",
+    "please cancel your present task",
+    "never mind, don't do that",
+    "cancel that input"
+   ]
+  },
+  {
+   "id": "cancel_reservation",
+   "name": "Cancel reservation",
+   "description": "Assistant action that handles cancel reservation requests.",
+   "keywords": [
+    "cancel",
+    "reservation"
+   ],
+   "examples": [
+    "the reservation i placed is not needed anymore",
+    "please unreserve that table",
+    "can you cancel the reservation i have at 4 pm at ruth's",
+    "i won't require my reservation anymore"
+   ]
+  },
+  {
+   "id": "car_rental",
+   "name": "Car rental",
+   "description": "Assistant action that handles car rental requests.",
+   "keywords": [
+    "car",
+    "rental"
+   ],
+   "examples": [
+    "i need you to get me a rental car in nashville",
+    "a rental car needs to be booked in nashville",
+    "can you help me with a rental car",
+    "i need to rent a car in boston for march 2 until march 4"
+   ]
+  },
+  {
+   "id": "card_declined",
+   "name": "Card declined",
+   "description": "Assistant action that handles card declined requests.",
+   "keywords": [
+    "card",
+    "declined"
+   ],
+   "examples": [
+    "find out what happened to make my card get declined yesterday",
+    "tell me why my card didn't work yesterday",
+    "i need to know why my card was just declined at walgreen's",
+    "please tell me why walgreen's wouldn't take my card"
+   ]
+  },
+  {
+   "id": "carry_on",
+   "name": "Carry on",
+   "description": "Assistant action that handles carry on requests.",
+   "keywords": [
+    "carry",
+    "on"
+   ],
+   "examples": [
+    "i am wanting to know how many carry ons i can take on a flight with southwest airlines to houston",
+    "how many carry ons can i take on a flight with virgin airlines to vancouver bc",
+    "delta has too many carry-on restrictions! do you know them",
+    "what are the carry-on restrictions for united"
+   ]
+  },
+  {
+   "id": "change_accent",
+   "name": "Change accent",
+   "description": "Assistant action that handles change accent requests.",
+   "keywords": [
+    "accent",
+    "change"
+   ],
+   "examples": [
+    "can you use male voice",
+    "can you use a different accent",
+    "could you talk like a british male",
+    "let's change your accent"
+   ]
+  },
+  {
+   "id": "change_ai_name",
+   "name": "Change ai name",
+   "description": "Assistant action that handles change ai name requests.",
+   "keywords": [
+    "ai",
+    "change",
+    "name"
+   ],
+   "examples": [
+    "change the ai name",
+    "i need to change your name, do you have a new name that you like",
+    "i want to update you name, please",
+    "i would like you to think of yourself as machine and answer when i say your name as such"
+   ]
+  },
+  {
+   "id": "change_language",
+   "name": "Change language",
+   "description": "Assistant action that handles change language requests.",
+   "keywords": [
+    "change",
+    "language"
+   ],
+   "examples": [
+    "change language setting to english",
+    "please respond in english",
+    "select a new language",
+    "what languages can i switch to for your responses"
+   ]
+  },
+  {
+   "id": "change_speed",
+   "name": "Change speed",
+   "description": "Assistant action that handles change speed requests.",
+   "keywords": [
+    "change",
+    "speed"
+   ],
+   "examples": [
+    "i can't understand you because of how rapidly you're speaking",
+    "is there any way you can decrease your speaking rate",
+    "could you slow down your speech",
+    "can you please not talk so fast"
+   ]
+  },
+  {
+   "id": "change_user_name",
+   "name": "Change user name",
+   "description": "Assistant action that handles change user name requests.",
+   "keywords": [
+    "change",
+    "name",
+    "user"
+   ],
+   "examples": [
+    "i am josh",
+    "please refer to me as sharon",
+    "you can call me john",
+    "i need you to call me mary"
+   ]
+  },
+  {
+   "id": "change_volume",
+   "name": "Change volume",
+   "description": "Assistant action that handles change volume requests.",
+   "keywords": [
+    "change",
+    "volume"
+   ],
+   "examples": [
+    "volume needs to be at 4",
+    "i need it louder",
+    "make the volume set to 4",
+    "please increase volume"
+   ]
+  },
+  {
+   "id": "confirm_reservation",
+   "name": "Confirm reservation",
+   "description": "Assistant action that handles confirm reservation requests.",
+   "keywords": [
+    "confirm",
+    "reservation"
+   ],
+   "examples": [
+    "i would like to try and confirm that i have a reservation at macaroni grill for silva",
+    "do you know if my reservation for dono is confirmed at 8 pm",
+    "please confirm my reservation for march 8th at 12:00",
+    "i need to confirm that i have a reservation at red robin for josh"
+   ]
+  },
+  {
+   "id": "cook_time",
+   "name": "Cook time",
+   "description": "Assistant action that handles cook time requests.",
+   "keywords": [
+    "cook",
+    "time"
+   ],
+   "examples": [
+    "how long should i cook a steak for",
+    "how long should i wait before i can bake bread with homemade dough",
+    "how long does it take to bake a pork loin",
+    "what is the duration of time cookies should be in the oven"
+   ]
+  },
+  {
+   "id": "credit_limit",
+   "name": "Credit limit",
+   "description": "Assistant action that handles credit limit requests.",
+   "keywords": [
+    "credit",
+    "limit"
+   ],
+   "examples": [
+    "how high is my credit limit for my walmart card",
+    "tell me my visa's credit limit",
+    "will you let me know what my spending limit is",
+    "what is my credit limit looking like"
+   ]
+  },
+  {
+   "id": "credit_limit_change",
+   "name": "Credit limit change",
+   "description": "Assistant action that handles credit limit change requests.",
+   "keywords": [
+    "change",
+    "credit",
+    "limit"
+   ],
+   "examples": [
+    "can i get a higher limit on my american express card",
+    "is the limit on my visa card able to be increased",
+    "can i increase the credit limit on my maurices card",
+    "is it possible to raise the credit limit for my discover card"
+   ]
+  },
+  {
+   "id": "credit_score",
+   "name": "Credit score",
+   "description": "Assistant action that handles credit score requests.",
+   "keywords": [
+    "credit",
+    "score"
+   ],
+   "examples": [
+    "i really wanna know my credit score",
+    "how good is my credit score",
+    "show me my credit score",
+    "what's my credit rating"
+   ]
+  },
+  {
+   "id": "current_location",
+   "name": "Current location",
+   "description": "Assistant action that handles current location requests.",
+   "keywords": [
+    "current",
+    "location"
+   ],
+   "examples": [
+    "i'm lost",
+    "give me my current location",
+    "how can i know my current location",
+    "can i have my current gps coordinates"
+   ]
+  },
+  {
+   "id": "damaged_card",
+   "name": "Damaged card",
+   "description": "Assistant action that handles damaged card requests.",
+   "keywords": [
+    "card",
+    "damaged"
+   ],
+   "examples": [
+    "the magnetic strip on my card is scratched, let the card company know",
+    "my card got damaged and i need to report it, please",
+    "report that i split my card",
+    "my card fell in the toilet and now the chip does not work"
+   ]
+  },
+  {
+   "id": "date",
+   "name": "Date",
+   "description": "Assistant action that handles date requests.",
+   "keywords": [
+    "date"
+   ],
+   "examples": [
+    "what is the date",
+    "what day of the week is it",
+    "i need to know today's date please",
+    "what's the date 32 days from now"
+   ]
+  },
+  {
+   "id": "definition",
+   "name": "Definition",
+   "description": "Assistant action that handles definition requests.",
+   "keywords": [
+    "definition"
+   ],
+   "examples": [
+    "tell me what monstrosity means",
+    "please share the definition of episcopalian",
+    "definition of anachronism",
+    "i want to know the definition of discretionary"
+   ]
+  },
+  {
+   "id": "direct_deposit",
+   "name": "Direct deposit",
+   "description": "Assistant action that handles direct deposit requests.",
+   "keywords": [
+    "deposit",
+    "direct"
+   ],
+   "examples": [
+    "what do i need to set up direct deposit",
+    "i want to set direct deposit",
+    "i need to set up a direct deposit",
+    "how is a direct deposit set up"
+   ]
+  },
+  {
+   "id": "directions",
+   "name": "Directions",
+   "description": "Assistant action that handles directions requests.",
+   "keywords": [
+    "directions"
+   ],
+   "examples": [
+    "how do i get to the museum on foot",
+    "can you tell me the nearest restaurant to me and give me directions",
+    "how do i get to the park on foot",
+    "how do i get to the museum by bus"
+   ]
+  },
+  {
+   "id": "distance",
+   "name": "Distance",
+   "description": "Assistant action that handles distance requests.",
+   "keywords": [
+    "distance"
+   ],
+   "examples": [
+    "how long before i get to dallas , in time, not miles",
+    "if i go by bus, how long will it take to get to the airport",
+    "what is the distance to austin city limits from my hotel , the holiday inn at austin",
+    "how long will it take to get to long beach terminal from long beach airport"
+   ]
+  },
+  {
+   "id": "do_you_have_pets",
+   "name": "Do you have pets",
+   "description": "Assistant action that handles do you have pets requests.",
+   "keywords": [
+    "do",
+    "have",
+    "pets",
+    "you"
+   ],
+   "examples": [
+    "to what animal species do your pets belong",
+    "if you had to choose, cat or dog",
+    "do you have any pet animals",
+    "pets you have what kind"
+   ]
+  },
+  {
+   "id": "exchange_rate",
+   "name": "Exchange rate",
+   "description": "Assistant action that handles exchange rate requests.",
+   "keywords": [
+    "exchange",
+    "rate"
+   ],
+   "examples": [
+    "can you tell me the exchange rate for yen to euros",
+    "what's 10 pounds in dollars",
+    "how many us dollars can i get for 20 euros",
+    "i would like to know the usd to aud conversion rate"
+   ]
+  },
+  {
+   "id": "expiration_date",
+   "name": "Expiration date",
+   "description": "Assistant action that handles expiration date requests.",
+   "keywords": [
+    "date",
+    "expiration"
+   ],
+   "examples": [
+    "when does my card expire",
+    "please find out the expiration date for my credit card",
+    "on what date does my visa card expires",
+    "when will my discovery card expire"
+   ]
+  },
+  {
+   "id": "find_phone",
+   "name": "Find phone",
+   "description": "Assistant action that handles find phone requests.",
+   "keywords": [
+    "find",
+    "phone"
+   ],
+   "examples": [
+    "can you locate my phone for me",
+    "please locate my phone",
+    "i would like some help finding my phone",
+    "can you help me find my phone"
+   ]
+  },
+  {
+   "id": "flight_status",
+   "name": "Flight status",
+   "description": "Assistant action that handles flight status requests.",
+   "keywords": [
+    "flight",
+    "status"
+   ],
+   "examples": [
+    "can you tell me when my flight is going to board",
+    "when does boarding for my flight begin",
+    "i need to know when my flight is landing",
+    "i need to know when my flight scheduled to board"
+   ]
+  },
+  {
+   "id": "flip_coin",
+   "name": "Flip coin",
+   "description": "Assistant action that handles flip coin requests.",
+   "keywords": [
+    "coin",
+    "flip"
+   ],
+   "examples": [
+    "flip a coin; i say tails",
+    "please tell me if a coin lands on tails",
+    "flip a coin one time",
+    "i choose heads, now flip that coin"
+   ]
+  },
+  {
+   "id": "food_last",
+   "name": "Food last",
+   "description": "Assistant action that handles food last requests.",
+   "keywords": [
+    "food",
+    "last"
+   ],
+   "examples": [
+    "is it still safe to consume the cake she backed last thursday",
+    "how long can pizza be in the fridge",
+    "jello should stay in the fridge for how long",
+    "i have had pasta in the fridge since monday, can is till consume it"
+   ]
+  },
+  {
+   "id": "freeze_account",
+   "name": "Freeze account",
+   "description": "Assistant action that handles freeze account requests.",
+   "keywords": [
+    "account",
+    "freeze"
+   ],
+   "examples": [
+    "place a stop on my main account for me please",
+    "i need my account frozen",
+    "place a block on my capital one account right now",
+    "can you put a stop on my account"
+   ]
+  },
+  {
+   "id": "fun_fact",
+   "name": "Fun fact",
+   "description": "Assistant action that handles fun fact requests.",
+   "keywords": [
+    "fact",
+    "fun"
+   ],
+   "examples": [
+    "what's a fun fact about eggs",
+    "do you know any fun facts about australian football",
+    "i want to learn an interesting fact about cats",
+    "what's a fun fact about elephants"
+   ]
+  },
+  {
+   "id": "gas",
+   "name": "Gas",
+   "description": "Assistant action that handles gas requests.",
+   "keywords": [
+    "gas"
+   ],
+   "examples": [
+    "i wanna know how much gas i have",
+    "what percentage of gas do i have left",
+    "do i have enough fuel for the drive to tampa",
+    "inform me as to how much gas my car has"
+   ]
+  },
+  {
+   "id": "gas_type",
+   "name": "Gas type",
+   "description": "Assistant action that handles gas type requests.",
+   "keywords": [
+    "gas",
+    "type"
+   ],
+   "examples": [
+    "does my car need specific fuel",
+    "can i use any fuel in my car",
+    "what kind of gas goes in this car",
+    "what gas does this car need"
+   ]
+  },
+  {
+   "id": "goodbye",
+   "name": "Goodbye",
+   "description": "Assistant action that handles goodbye requests.",
+   "keywords": [
+    "goodbye"
+   ],
+   "examples": [
+    "catch you around",
+    "it was pleasant conversing with you",
+    "see you later!",
+    "it was great chatting with you"
+   ]
+  },
+  {
+   "id": "greeting",
+   "name": "Greeting",
+   "description": "Assistant action that handles greeting requests.",
+   "keywords": [
+    "greeting"
+   ],
+   "examples": [
+    "how's everything",
+    "how are you this fine day",
+    "heller",
+    "hi ai"
+   ]
+  },
+  {
+   "id": "how_busy",
+   "name": "How busy",
+   "description": "Assistant action that handles how busy requests.",
+   "keywords": [
+    "busy",
+    "how"
+   ],
+   "examples": [
+    "how long will it take to get seated at needham's",
+    "how busy will golden corral be at 7:30 tonight",
+    "how long is the wait at imanas",
+    "what time can i expect to be seated at this restaurant"
+   ]
+  },
+  {
+   "id": "how_old_are_you",
+   "name": "How old are you",
+   "description": "Assistant action that handles how old are you requests.",
+   "keywords": [
+    "are",
+    "how",
+    "old",
+    "you"
+   ],
+   "examples": [
+    "how old did you just turn",
+    "how many years do you have",
+    "what's your age alexa",
+    "how long have you been alive for"
+   ]
+  },
+  {
+   "id": "improve_credit_score",
+   "name": "Improve credit score",
+   "description": "Assistant action that handles improve credit score requests.",
+   "keywords": [
+    "credit",
+    "improve",
+    "score"
+   ],
+   "examples": [
+    "how can i build my credit",
+    "how do i build credit",
+    "how can i make my credit score better",
+    "what can i do to keep my score from dropping"
+   ]
+  },
+  {
+   "id": "income",
+   "name": "Income",
+   "description": "Assistant action that handles income requests.",
+   "keywords": [
+    "income"
+   ],
+   "examples": [
+    "i need to know my income",
+    "i need more information about my income",
+    "i would like to know my income",
+    "what has my income been like"
+   ]
+  },
+  {
+   "id": "ingredient_substitution",
+   "name": "Ingredient substitution",
+   "description": "Assistant action that handles ingredient substitution requests.",
+   "keywords": [
+    "ingredient",
+    "substitution"
+   ],
+   "examples": [
+    "can i exchange milk for cream in recipes",
+    "alternatives to white wine in food",
+    "can substitute cumin for tumeric",
+    "is it acceptable to swap marinara for alfredo"
+   ]
+  },
+  {
+   "id": "ingredients_list",
+   "name": "Ingredients list",
+   "description": "Assistant action that handles ingredients list requests.",
+   "keywords": [
+    "ingredients",
+    "list"
+   ],
+   "examples": [
+    "what ingredients do i need to make egg salad",
+    "which ingredients does gumbo have",
+    "what do you need to make general tsao's chicken",
+    "what ingredients are in tortillas"
+   ]
+  },
+  {
+   "id": "insurance",
+   "name": "Insurance",
+   "description": "Assistant action that handles insurance requests.",
+   "keywords": [
+    "insurance"
+   ],
+   "examples": [
+    "i would like to hear a list of my insurance benefits, please",
+    "what benefits does my insurance have",
+    "what was my health plan again",
+    "what are my insurance amenities"
+   ]
+  },
+  {
+   "id": "insurance_change",
+   "name": "Insurance change",
+   "description": "Assistant action that handles insurance change requests.",
+   "keywords": [
+    "change",
+    "insurance"
+   ],
+   "examples": [
+    "walk me through on how to change my insurance",
+    "i want a new policy with long-term care insurance",
+    "find the best life insurance for me",
+    "my insurance policy needs to be adjusted"
+   ]
+  },
+  {
+   "id": "interest_rate",
+   "name": "Interest rate",
+   "description": "Assistant action that handles interest rate requests.",
+   "keywords": [
+    "interest",
+    "rate"
+   ],
+   "examples": [
+    "what do i need to do to look up my 1st republic account's interest rate",
+    "what interest rate will i get from city national",
+    "on my chase bank account what is the interest rate",
+    "how do i know what interest rate chase has"
+   ]
+  },
+  {
+   "id": "international_fees",
+   "name": "International fees",
+   "description": "Assistant action that handles international fees requests.",
+   "keywords": [
+    "fees",
+    "international"
+   ],
+   "examples": [
+    "if i use my card in mexico, will there be added fees",
+    "what are the international transaction fees for my chase card",
+    "does my card charge a fee for use in indonesia",
+    "will i be charged if i use the card in germany"
+   ]
+  },
+  {
+   "id": "international_visa",
+   "name": "International visa",
+   "description": "Assistant action that handles international visa requests.",
+   "keywords": [
+    "international",
+    "visa"
+   ],
+   "examples": [
+    "does moscow require travel visas to visit",
+    "i need to know if i need a visa to travel to el salvador",
+    "am i in need of an international visa to go to france",
+    "to vacation to tel aviv do i need a travel visa"
+   ]
+  },
+  {
+   "id": "jump_start",
+   "name": "Jump start",
+   "description": "Assistant action that handles jump start requests.",
+   "keywords": [
+    "jump",
+    "start"
+   ],
+   "examples": [
+    "can you tell me how to jump start the car",
+    "how can i replace my car battery",
+    "i don't know how to jump start my car",
+    "how do i give my car a jump"
+   ]
+  },
+  {
+   "id": "last_maintenance",
+   "name": "Last maintenance",
+   "description": "Assistant action that handles last maintenance requests.",
+   "keywords": [
+    "last",
+    "maintenance"
+   ],
+   "examples": [
+    "how long ago was my car last in the shop",
+    "when did i last get my car tuned up",
+    "when was the last time i had an oil change",
+    "tell me when my car last had its oil changed"
+   ]
+  },
+  {
+   "id": "lost_luggage",
+   "name": "Lost luggage",
+   "description": "Assistant action that handles lost luggage requests.",
+   "keywords": [
+    "lost",
+    "luggage"
+   ],
+   "examples": [
+    "i think my luggage was misplaced or has been lost",
+    "help me find my luggage",
+    "where's my luggage for american airlines flight ab123 out of denver",
+    "my luggage is missing i was on spirit flight ab123 from chicago"
+   ]
+  },
+  {
+   "id": "make_call",
+   "name": "Make call",
+   "description": "Assistant action that handles make call requests.",
+   "keywords": [
+    "call",
+    "make"
+   ],
+   "examples": [
+    "call mark",
+    "call justin",
+    "call 911",
+    "would you give jenny a call"
+   ]
+  },
+  {
+   "id": "maybe",
+   "name": "Maybe",
+   "description": "Assistant action that handles maybe requests.",
+   "keywords": [
+    "maybe"
+   ],
+   "examples": [
+    "i dont have an answer for that",
+    "it could be that one or the other one",
+    "one or the other, or both",
+    "i am not confident on that"
+   ]
+  },
+  {
+   "id": "meal_suggestion",
+   "name": "Meal suggestion",
+   "description": "Assistant action that handles meal suggestion requests.",
+   "keywords": [
+    "meal",
+    "suggestion"
+   ],
+   "examples": [
+    "please provide an option for dinner",
+    "i would love an italian meal suggestion",
+    "what do you think would be a good dinner",
+    "suggest a meal from italy to me"
+   ]
+  },
+  {
+   "id": "meaning_of_life",
+   "name": "Meaning of life",
+   "description": "Assistant action that handles meaning of life requests.",
+   "keywords": [
+    "life",
+    "meaning",
+    "of"
+   ],
+   "examples": [
+    "what is our purpose in life",
+    "i always wonder about the meaning of life, can you tell me",
+    "what is our purpose here on earth",
+    "could you tell me the meaning of life"
+   ]
+  },
+  {
+   "id": "measurement_conversion",
+   "name": "Measurement conversion",
+   "description": "Assistant action that handles measurement conversion requests.",
+   "keywords": [
+    "conversion",
+    "measurement"
+   ],
+   "examples": [
+    "12 feet is equal to how many inches",
+    "how many cups make a gallon",
+    "what is the proper way to convert centimeters into inches",
+    "how many inches and centimeters would i need if i had 10 feet of something"
+   ]
+  },
+  {
+   "id": "meeting_schedule",
+   "name": "Meeting schedule",
+   "description": "Assistant action that handles meeting schedule requests.",
+   "keywords": [
+    "meeting",
+    "schedule"
+   ],
+   "examples": [
+    "do i have many meetings today between 2 and 4",
+    "i need to know if i have any meetings scheduled for today",
+    "are there any meetings i have today",
+    "does today's schedule include any meetings"
+   ]
+  },
+  {
+   "id": "min_payment",
+   "name": "Min payment",
+   "description": "Assistant action that handles min payment requests.",
+   "keywords": [
+    "min",
+    "payment"
+   ],
+   "examples": [
+    "how tiny a payment can i make on electric bill",
+    "how little can i pay on my car bill",
+    "what is the smallest amount i can pay on my tmobile bill",
+    "minimum to pay on power bill"
+   ]
+  },
+  {
+   "id": "mpg",
+   "name": "Mpg",
+   "description": "Assistant action that handles mpg requests.",
+   "keywords": [
+    "mpg"
+   ],
+   "examples": [
+    "in my car, what's the fuel economy",
+    "what is the mpg for this car in city",
+    "please tell me what the mpg is for this car",
+    "whats the cars mpg"
+   ]
+  },
+  {
+   "id": "new_card",
+   "name": "New card",
+   "description": "Assistant action that handles new card requests.",
+   "keywords": [
+    "card",
+    "new"
+   ],
+   "examples": [
+    "what is the process to apply for a visa card",
+    "is it possible to get a new credit card",
+    "can i get a new card",
+    "what is the process i need to follow to get a new credit card"
+   ]
+  },
+  {
+   "id": "next_holiday",
+   "name": "Next holiday",
+   "description": "Assistant action that handles next holiday requests.",
+   "keywords": [
+    "holiday",
+    "next"
+   ],
+   "examples": [
+    "when do i get a day off",
+    "which holiday is next in line",
+    "when will i get the next holiday with pay",
+    "when is the next scheduled day off"
+   ]
+  },
+  {
+   "id": "next_song",
+   "name": "Next song",
+   "description": "Assistant action that handles next song requests.",
+   "keywords": [
+    "next",
+    "song"
+   ],
+   "examples": [
+    "go to next song",
+    "please go to the song after this one",
+    "i want you to play the next song on this playlist",
+    "can you move to the next song"
+   ]
+  },
+  {
+   "id": "no",
+   "name": "No",
+   "description": "Assistant action that handles no requests.",
+   "keywords": [
+    "no"
+   ],
+   "examples": [
+    "nope, that's false",
+    "i would have to say the answer to that is no",
+    "the answer is definitely no",
+    "i disagree that is false"
+   ]
+  },
+  {
+   "id": "nutrition_info",
+   "name": "Nutrition info",
+   "description": "Assistant action that handles nutrition info requests.",
+   "keywords": [
+    "info",
+    "nutrition"
+   ],
+   "examples": [
+    "nutritional information for celery",
+    "share the nutrition info for spaghetti with me",
+    "can you tell me the nutritional information for chicken nuggets",
+    "how many kinds of nutrients does a glass of rice milk have"
+   ]
+  },
+  {
+   "id": "oil_change_how",
+   "name": "Oil change how",
+   "description": "Assistant action that handles oil change how requests.",
+   "keywords": [
+    "change",
+    "how",
+    "oil"
+   ],
+   "examples": [
+    "what is the way to change motor oil",
+    "tell me how to change the oil in 2014 odyssey",
+    "i can't change my oil and don't know what kind i need",
+    "how do i change my car oil"
+   ]
+  },
+  {
+   "id": "oil_change_when",
+   "name": "Oil change when",
+   "description": "Assistant action that handles oil change when requests.",
+   "keywords": [
+    "change",
+    "oil",
+    "when"
+   ],
+   "examples": [
+    "do i need to change my oil",
+    "when should my oil be changed",
+    "how often should you get an oil change",
+    "when must i change the oil in my car"
+   ]
+  },
+  {
+   "id": "order",
+   "name": "Order",
+   "description": "Assistant action that handles order requests.",
+   "keywords": [
+    "order"
+   ],
+   "examples": [
+    "can you buy me a toy car",
+    "are you able to purchase underpants for me",
+    "i'm out of soap so will you order me some more",
+    "i'm out of fabric softener so will you order me some more"
+   ]
+  },
+  {
+   "id": "order_checks",
+   "name": "Order checks",
+   "description": "Assistant action that handles order checks requests.",
+   "keywords": [
+    "checks",
+    "order"
+   ],
+   "examples": [
+    "can some more checkbooks get mailed to me",
+    "how do you order new checks",
+    "i don't have any checks left; please order some",
+    "can you show me how to order some more checks for my chase account"
+   ]
+  },
+  {
+   "id": "order_status",
+   "name": "Order status",
+   "description": "Assistant action that handles order status requests.",
+   "keywords": [
+    "order",
+    "status"
+   ],
+   "examples": [
+    "would you track my package",
+    "can you find my package in transit",
+    "please track my package",
+    "can you update me on my last amazon orders"
+   ]
+  },
+  {
+   "id": "pay_bill",
+   "name": "Pay bill",
+   "description": "Assistant action that handles pay bill requests.",
+   "keywords": [
+    "bill",
+    "pay"
+   ],
+   "examples": [
+    "schedule a gas bill payment",
+    "use my checkings account to pay the electric bill",
+    "pay my cell bill from my deposit account",
+    "i am not sure how to pay my phone bill and need assistance"
+   ]
+  },
+  {
+   "id": "payday",
+   "name": "Payday",
+   "description": "Assistant action that handles payday requests.",
+   "keywords": [
+    "payday"
+   ],
+   "examples": [
+    "when did they deposit my last salary",
+    "when is my paycheck coming",
+    "tell me when my next paycheck will be here",
+    "remind me of the date of my last paycheck"
+   ]
+  },
+  {
+   "id": "pin_change",
+   "name": "Pin change",
+   "description": "Assistant action that handles pin change requests.",
+   "keywords": [
+    "change",
+    "pin"
+   ],
+   "examples": [
+    "how do i update my pin number for my account",
+    "is there a way to change my pin number for my savings account",
+    "tell me how i can get a new pin number",
+    "i need to change my pin number for my account"
+   ]
+  },
+  {
+   "id": "play_music",
+   "name": "Play music",
+   "description": "Assistant action that handles play music requests.",
+   "keywords": [
+    "music",
+    "play"
+   ],
+   "examples": [
+    "turn my drake playlist on",
+    "put on my jam session playlist please",
+    "play some rock",
+    "is it okay to listen to elvis' music"
+   ]
+  },
+  {
+   "id": "plug_type",
+   "name": "Plug type",
+   "description": "Assistant action that handles plug type requests.",
+   "keywords": [
+    "plug",
+    "type"
+   ],
+   "examples": [
+    "what kind of electrical outlets do they use in z",
+    "do visitors to japan need to use a socket converter",
+    "do i need a plug converter when i visit china",
+    "what kind of plug does my hair dryer use in south korea"
+   ]
+  },
+  {
+   "id": "pto_balance",
+   "name": "Pto balance",
+   "description": "Assistant action that handles pto balance requests.",
+   "keywords": [
+    "balance",
+    "pto"
+   ],
+   "examples": [
+    "how many vacation days do i have remaining, please",
+    "how many vacation days do i have saved up",
+    "would you please tell me how many vacation days i have",
+    "can you figure out how many vacation days i have left"
+   ]
+  },
+  {
+   "id": "pto_request",
+   "name": "Pto request",
+   "description": "Assistant action that handles pto request requests.",
+   "keywords": [
+    "pto",
+    "request"
+   ],
+   "examples": [
+    "set a pto request for april 1st and 2nd",
+    "please place a pto request for february 18th to the february 25th",
+    "how do i schedule vacation days",
+    "for march 1 to 2 make a pto request for me"
+   ]
+  },
+  {
+   "id": "pto_request_status",
+   "name": "Pto request status",
+   "description": "Assistant action that handles pto request status requests.",
+   "keywords": [
+    "pto",
+    "request",
+    "status"
+   ],
+   "examples": [
+    "what's my day off request's status",
+    "did they say yes to my day off request",
+    "has my request for vacation days been signed by my supervisor yet",
+    "did they approve my day off request"
+   ]
+  },
+  {
+   "id": "pto_used",
+   "name": "Pto used",
+   "description": "Assistant action that handles pto used requests.",
+   "keywords": [
+    "pto",
+    "used"
+   ],
+   "examples": [
+    "what kind of pto do i have left",
+    "tell me the exact amount of pto i have used",
+    "tell me the number of days off i took this year",
+    "what is the extent of the pto i've taken"
+   ]
+  },
+  {
+   "id": "recipe",
+   "name": "Recipe",
+   "description": "Assistant action that handles recipe requests.",
+   "keywords": [
+    "recipe"
+   ],
+   "examples": [
+    "i am looking for a vegan friendly italian pasta recipe",
+    "you know procedure to cook apple pie",
+    "what's a good recipe for chicken divan",
+    "how do i make tuna salad"
+   ]
+  },
+  {
+   "id": "redeem_rewards",
+   "name": "Redeem rewards",
+   "description": "Assistant action that handles redeem rewards requests.",
+   "keywords": [
+    "redeem",
+    "rewards"
+   ],
+   "examples": [
+    "let me use my credit card points",
+    "i want to utilize my credit card points",
+    "how can i cash in the rewards i earned with my visa card",
+    "can i use my credit card point on amazon"
+   ]
+  },
+  {
+   "id": "reminder",
+   "name": "Reminder",
+   "description": "Assistant action that handles reminder requests.",
+   "keywords": [
+    "reminder"
+   ],
+   "examples": [
+    "check my reminders for mop the floor",
+    "is checking the mail on my list of reminder",
+    "please look to see if paying bills is on my reminders list currently",
+    "reminders of my list is what"
+   ]
+  },
+  {
+   "id": "reminder_update",
+   "name": "Reminder update",
+   "description": "Assistant action that handles reminder update requests.",
+   "keywords": [
+    "reminder",
+    "update"
+   ],
+   "examples": [
+    "create a reminder to give the cat her flea medicine",
+    "remind me to bring a jacket in tomorrow",
+    "i want you to remind me of something",
+    "set a reminder"
+   ]
+  },
+  {
+   "id": "repeat",
+   "name": "Repeat",
+   "description": "Assistant action that handles repeat requests.",
+   "keywords": [
+    "repeat"
+   ],
+   "examples": [
+    "restate the last thing you told me",
+    "say it one more time",
+    "i didn't catch that so please repeat it",
+    "im sorry can you repeat yourself"
+   ]
+  },
+  {
+   "id": "replacement_card_duration",
+   "name": "Replacement card duration",
+   "description": "Assistant action that handles replacement card duration requests.",
+   "keywords": [
+    "card",
+    "duration",
+    "replacement"
+   ],
+   "examples": [
+    "how long til my new card arrives by mail",
+    "when can i expect my new card to get here",
+    "for anew card to be mailed to me, how long does it take",
+    "if my credit card was stolen, how long will it take to replace"
+   ]
+  },
+  {
+   "id": "report_fraud",
+   "name": "Report fraud",
+   "description": "Assistant action that handles report fraud requests.",
+   "keywords": [
+    "fraud",
+    "report"
+   ],
+   "examples": [
+    "please file a fraud report",
+    "send information about suspicious credit card activity",
+    "someone misused my card and put fraudulent transactions on it",
+    "i made a fraudulent transaction"
+   ]
+  },
+  {
+   "id": "report_lost_card",
+   "name": "Report lost card",
+   "description": "Assistant action that handles report lost card requests.",
+   "keywords": [
+    "card",
+    "lost",
+    "report"
+   ],
+   "examples": [
+    "what must i do to report my card lost",
+    "i can't find my credit card and i want to report it as lost",
+    "my visa card got stolen",
+    "i lost my debit card and need it reported as lost"
+   ]
+  },
+  {
+   "id": "reset_settings",
+   "name": "Reset settings",
+   "description": "Assistant action that handles reset settings requests.",
+   "keywords": [
+    "reset",
+    "settings"
+   ],
+   "examples": [
+    "reset device to original settings",
+    "go to default setting",
+    "return to your original settings, please",
+    "go back to factory settings now"
+   ]
+  },
+  {
+   "id": "restaurant_reservation",
+   "name": "Restaurant reservation",
+   "description": "Assistant action that handles restaurant reservation requests.",
+   "keywords": [
+    "reservation",
+    "restaurant"
+   ],
+   "examples": [
+    "can you make a reservation for me at the restaurant",
+    "would you please make a reservation for 2 at olive garden for 5 pm today",
+    "book a reservation for 6 at shakey's under the name jason",
+    "i need you to book a reservation for 8 pm at red robin under the name kevin"
+   ]
+  },
+  {
+   "id": "restaurant_reviews",
+   "name": "Restaurant reviews",
+   "description": "Assistant action that handles restaurant reviews requests.",
+   "keywords": [
+    "restaurant",
+    "reviews"
+   ],
+   "examples": [
+    "are the reviews good or bad for burger king",
+    "tell me the reviews for chipotle",
+    "are the pancakes at ihop any good",
+    "does red robin have good reviews"
+   ]
+  },
+  {
+   "id": "restaurant_suggestion",
+   "name": "Restaurant suggestion",
+   "description": "Assistant action that handles restaurant suggestion requests.",
+   "keywords": [
+    "restaurant",
+    "suggestion"
+   ],
+   "examples": [
+    "please list nearby restaurants with 4 or more star reviews",
+    "are there any good restaurants in nyc that serve barbecue",
+    "what are good places for a burrito in albuquerque",
+    "can you tell me the best place for cajun shrimp in tampa"
+   ]
+  },
+  {
+   "id": "rewards_balance",
+   "name": "Rewards balance",
+   "description": "Assistant action that handles rewards balance requests.",
+   "keywords": [
+    "balance",
+    "rewards"
+   ],
+   "examples": [
+    "how many points have i accumulated on my mastercard",
+    "what is the remainder of my starbucks rewards balance",
+    "put my points up for master card",
+    "how many points did my visa earn"
+   ]
+  },
+  {
+   "id": "roll_dice",
+   "name": "Roll dice",
+   "description": "Assistant action that handles roll dice requests.",
+   "keywords": [
+    "dice",
+    "roll"
+   ],
+   "examples": [
+    "roll the dice!",
+    "6 sided dice roll",
+    "go ahead and roll the 6 sided dice for me",
+    "will you roll a 12 sided dice"
+   ]
+  },
+  {
+   "id": "rollover_401k",
+   "name": "Rollover 401k",
+   "description": "Assistant action that handles rollover 401k requests.",
+   "keywords": [
+    "401k",
+    "rollover"
+   ],
+   "examples": [
+    "can you explain to me how to rollover my 401k",
+    "my new job requires that i rollover my 401k",
+    "help me transfer my 401k",
+    "is there a way to transfer my 401k"
+   ]
+  },
+  {
+   "id": "routing",
+   "name": "Routing",
+   "description": "Assistant action that handles routing requests.",
+   "keywords": [
+    "routing"
+   ],
+   "examples": [
+    "what's bank of america's routing number",
+    "how do i find axos bank's routing number",
+    "i need to know my bank of america account routing number",
+    "i need to know nfcu's routing number"
+   ]
+  },
+  {
+   "id": "schedule_maintenance",
+   "name": "Schedule maintenance",
+   "description": "Assistant action that handles schedule maintenance requests.",
+   "keywords": [
+    "maintenance",
+    "schedule"
+   ],
+   "examples": [
+    "i need to get my tired checked at one of the location",
+    "i need to get my oil changed",
+    "i got to schedule some car maintenance",
+    "find local deals who schedule maintenance on cars"
+   ]
+  },
+  {
+   "id": "schedule_meeting",
+   "name": "Schedule meeting",
+   "description": "Assistant action that handles schedule meeting requests.",
+   "keywords": [
+    "meeting",
+    "schedule"
+   ],
+   "examples": [
+    "schedule a meeting with carrie and lisa",
+    "could you please schedule a meeting with carrie and lisa",
+    "what's the meeting room availability between noon and 2",
+    "can you schedule a meeting for me"
+   ]
+  },
+  {
+   "id": "share_location",
+   "name": "Share location",
+   "description": "Assistant action that handles share location requests.",
+   "keywords": [
+    "location",
+    "share"
+   ],
+   "examples": [
+    "can you share my location with mom",
+    "can you tell bob and alice where i am",
+    "send my current location to my superior",
+    "let the wife see where i'm at"
+   ]
+  },
+  {
+   "id": "shopping_list",
+   "name": "Shopping list",
+   "description": "Assistant action that handles shopping list requests.",
+   "keywords": [
+    "list",
+    "shopping"
+   ],
+   "examples": [
+    "did i remember to put milk in the shopping list",
+    "show me what's on the shopping list",
+    "what do i need to get when i go shopping",
+    "my shopping list contains what"
+   ]
+  },
+  {
+   "id": "shopping_list_update",
+   "name": "Shopping list update",
+   "description": "Assistant action that handles shopping list update requests.",
+   "keywords": [
+    "list",
+    "shopping",
+    "update"
+   ],
+   "examples": [
+    "put film on my shopping list",
+    "i need to delete tomatoes from my shopping list and add onions instead",
+    "add corn to my shopping list and remove wine",
+    "delete ice cream from my shopping list"
+   ]
+  },
+  {
+   "id": "smart_home",
+   "name": "Smart home",
+   "description": "Assistant action that handles smart home requests.",
+   "keywords": [
+    "home",
+    "smart"
+   ],
+   "examples": [
+    "please lock every door",
+    "set my oven to 350 for me right now",
+    "make sure all doors are locked",
+    "can you please turn on my furnace"
+   ]
+  },
+  {
+   "id": "spelling",
+   "name": "Spelling",
+   "description": "Assistant action that handles spelling requests.",
+   "keywords": [
+    "spelling"
+   ],
+   "examples": [
+    "can you tell me how to spell elephant",
+    "i don't know how to spell drought",
+    "how do you spell out wednesday",
+    "can you give me a spelling for antipathy"
+   ]
+  },
+  {
+   "id": "spending_history",
+   "name": "Spending history",
+   "description": "Assistant action that handles spending history requests.",
+   "keywords": [
+    "history",
+    "spending"
+   ],
+   "examples": [
+    "please tell me how much i have spent recently",
+    "how much have i spent on shoes lately",
+    "how much do i spend going out to eat",
+    "what is my total spent on dining out for the month of january"
+   ]
+  },
+  {
+   "id": "sync_device",
+   "name": "Sync device",
+   "description": "Assistant action that handles sync device requests.",
+   "keywords": [
+    "device",
+    "sync"
+   ],
+   "examples": [
+    "remove the sync from my phone",
+    "i'd like you to disconnect from my phone",
+    "could you connect to my phone",
+    "please unsync my phone"
+   ]
+  },
+  {
+   "id": "taxes",
+   "name": "Taxes",
+   "description": "Assistant action that handles taxes requests.",
+   "keywords": [
+    "taxes"
+   ],
+   "examples": [
+    "what will my state taxes cost",
+    "how much do i owe for state taxes",
+    "what is the amount of my federal taxes",
+    "what do i currently pay in taxes"
+   ]
+  },
+  {
+   "id": "tell_joke",
+   "name": "Tell joke",
+   "description": "Assistant action that handles tell joke requests.",
+   "keywords": [
+    "joke",
+    "tell"
+   ],
+   "examples": [
+    "tell me a joke if you'd like to",
+    "say something hilarious",
+    "what are some funny things about food",
+    "tell me a joke about politicians"
+   ]
+  },
+  {
+   "id": "text",
+   "name": "Text",
+   "description": "Assistant action that handles text requests.",
+   "keywords": [
+    "text"
+   ],
+   "examples": [
+    "can you send a text to my mother irene and tell her i love her",
+    "text robert and tell him winter is coming",
+    "please text nancy and give them the message that i am on vacation",
+    "text robby hello"
+   ]
+  },
+  {
+   "id": "thank_you",
+   "name": "Thank you",
+   "description": "Assistant action that handles thank you requests.",
+   "keywords": [
+    "thank",
+    "you"
+   ],
+   "examples": [
+    "thank you so very much",
+    "i want to thank you for helping",
+    "i appreciate your help",
+    "thanks for the info"
+   ]
+  },
+  {
+   "id": "time",
+   "name": "Time",
+   "description": "Assistant action that handles time requests.",
+   "keywords": [
+    "time"
+   ],
+   "examples": [
+    "i need to know the current time in the central timezone",
+    "what time is it in honolulu",
+    "what time is it currently in istanbul",
+    "what is the current time, please"
+   ]
+  },
+  {
+   "id": "timer",
+   "name": "Timer",
+   "description": "Assistant action that handles timer requests.",
+   "keywords": [
+    "timer"
+   ],
+   "examples": [
+    "set a timer for two minutes",
+    "set a timer to go off in 5 minutes",
+    "set timer for (x) minutes",
+    "i need you to set timer for me"
+   ]
+  },
+  {
+   "id": "timezone",
+   "name": "Timezone",
+   "description": "Assistant action that handles timezone requests.",
+   "keywords": [
+    "timezone"
+   ],
+   "examples": [
+    "what timezone is boston in",
+    "doy ou know what timezone chicago is in",
+    "nigeria is in which time zone",
+    "please search for portland's timezone"
+   ]
+  },
+  {
+   "id": "tire_change",
+   "name": "Tire change",
+   "description": "Assistant action that handles tire change requests.",
+   "keywords": [
+    "change",
+    "tire"
+   ],
+   "examples": [
+    "can you tell me when my tires should get changed",
+    "let me know when should i get my tires changed next",
+    "would you say i need new tires if i last bought them on the 24th",
+    "when shall i get my tires changed"
+   ]
+  },
+  {
+   "id": "tire_pressure",
+   "name": "Tire pressure",
+   "description": "Assistant action that handles tire pressure requests.",
+   "keywords": [
+    "pressure",
+    "tire"
+   ],
+   "examples": [
+    "air amount in tires",
+    "are my tires fully inflated",
+    "are my tire's air pressure good enough to drive on",
+    "can you tell me what my tire pressure is"
+   ]
+  },
+  {
+   "id": "todo_list",
+   "name": "Todo list",
+   "description": "Assistant action that handles todo list requests.",
+   "keywords": [
+    "list",
+    "todo"
+   ],
+   "examples": [
+    "is doing my laundry already on my todo list",
+    "what items do i need to do",
+    "is changing the water filter on my to do list right now",
+    "did i put unpacking groceries on my to do list"
+   ]
+  },
+  {
+   "id": "todo_list_update",
+   "name": "Todo list update",
+   "description": "Assistant action that handles todo list update requests.",
+   "keywords": [
+    "list",
+    "todo",
+    "update"
+   ],
+   "examples": [
+    "please put washing the dishes on my list of tasks to accomplish",
+    "please erase everything on my to do list",
+    "please include feeding the fish on my to do list",
+    "take everything off my todo list"
+   ]
+  },
+  {
+   "id": "traffic",
+   "name": "Traffic",
+   "description": "Assistant action that handles traffic requests.",
+   "keywords": [
+    "traffic"
+   ],
+   "examples": [
+    "is there traffic on dove road",
+    "tell me the traffic in tempe",
+    "is the traffic bad at 5:00 if i'm going to the mall",
+    "is traffic heavy on my route to washington"
+   ]
+  },
+  {
+   "id": "transactions",
+   "name": "Transactions",
+   "description": "Assistant action that handles transactions requests.",
+   "keywords": [
+    "transactions"
+   ],
+   "examples": [
+    "please tell me my in-person transactions for the last three days using my debit card",
+    "can you show me the transactions that were made last night at the restaurant",
+    "what was my last transaction",
+    "i want to see my recent transaction"
+   ]
+  },
+  {
+   "id": "transfer",
+   "name": "Transfer",
+   "description": "Assistant action that handles transfer requests.",
+   "keywords": [
+    "transfer"
+   ],
+   "examples": [
+    "send money from one account to another",
+    "i want you to send ten dollars from bank of america to capital one",
+    "i got to transfer ten dollars from my bank of america account to my capital one account",
+    "take $20000 from savings and put it in checking"
+   ]
+  },
+  {
+   "id": "translate",
+   "name": "Translate",
+   "description": "Assistant action that handles translate requests.",
+   "keywords": [
+    "translate"
+   ],
+   "examples": [
+    "how do you say please in arabic",
+    "how should i say hello in french",
+    "what do i say for goodbye in hawaii",
+    "what phrase means goodbye in hawaii"
+   ]
+  },
+  {
+   "id": "travel_alert",
+   "name": "Travel alert",
+   "description": "Assistant action that handles travel alert requests.",
+   "keywords": [
+    "alert",
+    "travel"
+   ],
+   "examples": [
+    "i am going to be traveling in turkey, are there any alerts",
+    "does myanmar have any travel alerts i should be aware of",
+    "do i need to read any travel alerts for kenya",
+    "list of countries with travel alerts"
+   ]
+  },
+  {
+   "id": "travel_notification",
+   "name": "Travel notification",
+   "description": "Assistant action that handles travel notification requests.",
+   "keywords": [
+    "notification",
+    "travel"
+   ],
+   "examples": [
+    "alert my bank and let them know that i'm travelling to madrid",
+    "i will be in uruguay from january to august, please let me bank know",
+    "i'm traveling to belgium soon and want to inform my bank",
+    "i am going to asia in a bit, i should tell the bank"
+   ]
+  },
+  {
+   "id": "travel_suggestion",
+   "name": "Travel suggestion",
+   "description": "Assistant action that handles travel suggestion requests.",
+   "keywords": [
+    "suggestion",
+    "travel"
+   ],
+   "examples": [
+    "where should i travel if i want to go to a nice beach",
+    "what things are there to do in kentucky",
+    "i need help with some fun tourist things to do in tokyo",
+    "is there anything fun to do in berlin"
+   ]
+  },
+  {
+   "id": "uber",
+   "name": "Uber",
+   "description": "Assistant action that handles uber requests.",
+   "keywords": [
+    "uber"
+   ],
+   "examples": [
+    "i need an uber pool from home in the morning at seven to the capitol building",
+    "i need to get an uber for three people to go to the zoo",
+    "can i get an uber to union station for 3 riders",
+    "i'm going to the movies book an uber for 6 people"
+   ]
+  },
+  {
+   "id": "update_playlist",
+   "name": "Update playlist",
+   "description": "Assistant action that handles update playlist requests.",
+   "keywords": [
+    "playlist",
+    "update"
+   ],
+   "examples": [
+    "what did you add to my playlist - broken by evanescence",
+    "add this song to shared playlist",
+    "add one by metallica to my playlist",
+    "put mambo #5 by lou bega on my playlist, please"
+   ]
+  },
+  {
+   "id": "user_name",
+   "name": "User name",
+   "description": "Assistant action that handles user name requests.",
+   "keywords": [
+    "name",
+    "user"
+   ],
+   "examples": [
+    "you have what name for me",
+    "what do you know me as",
+    "what do you refer to me as",
+    "if you were smart, would you know my name"
+   ]
+  },
+  {
+   "id": "vaccines",
+   "name": "Vaccines",
+   "description": "Assistant action that handles vaccines requests.",
+   "keywords": [
+    "vaccines"
+   ],
+   "examples": [
+    "if i am going to the uk are any specific shots needed",
+    "what are common vaccinations for someone travelling internationally",
+    "are there shots required before going to south africa",
+    "will i need vaccines for my trip"
+   ]
+  },
+  {
+   "id": "w2",
+   "name": "W2",
+   "description": "Assistant action that handles w2 requests.",
+   "keywords": [
+    "w2"
+   ],
+   "examples": [
+    "where do i get the form that shows my wages for the year for taxes",
+    "can you help me find my w-2",
+    "where would my w2 be found so i can do my taxes",
+    "i need help getting a w-2"
+   ]
+  },
+  {
+   "id": "weather",
+   "name": "Weather",
+   "description": "Assistant action that handles weather requests.",
+   "keywords": [
+    "weather"
+   ],
+   "examples": [
+    "how cold is it going to be tonight",
+    "what are the conditions like in orlando",
+    "what's the weather like right now",
+    "what kind of weather is there"
+   ]
+  },
+  {
+   "id": "what_are_your_hobbies",
+   "name": "What are your hobbies",
+   "description": "Assistant action that handles what are your hobbies requests.",
+   "keywords": [
+    "are",
+    "hobbies",
+    "what",
+    "your"
+   ],
+   "examples": [
+    "what types of hobbies do you enjoy",
+    "how do you like to spend your free time",
+    "i gotta know your hobbies",
+    "at free time what do you do"
+   ]
+  },
+  {
+   "id": "what_can_i_ask_you",
+   "name": "What can i ask you",
+   "description": "Assistant action that handles what can i ask you requests.",
+   "keywords": [
+    "ask",
+    "can",
+    "i",
+    "what",
+    "you"
+   ],
+   "examples": [
+    "what kind of questions do you accept",
+    "what types of questions do you have a response for",
+    "what sorts of things am i able to ask of you ai",
+    "what are the subject areas you are knowledgable in"
+   ]
+  },
+  {
+   "id": "what_is_your_name",
+   "name": "What is your name",
+   "description": "Assistant action that handles what is your name requests.",
+   "keywords": [
+    "is",
+    "name",
+    "what",
+    "your"
+   ],
+   "examples": [
+    "i want to know your name",
+    "who gave you your name",
+    "i would like to know your name",
+    "what is the name i should use to refer to you"
+   ]
+  },
+  {
+   "id": "what_song",
+   "name": "What song",
+   "description": "Assistant action that handles what song requests.",
+   "keywords": [
+    "song",
+    "what"
+   ],
+   "examples": [
+    "do you know what song this is",
+    "who sings this song",
+    "what tune is this",
+    "i need to know what song this is"
+   ]
+  },
+  {
+   "id": "where_are_you_from",
+   "name": "Where are you from",
+   "description": "Assistant action that handles where are you from requests.",
+   "keywords": [
+    "are",
+    "from",
+    "where",
+    "you"
+   ],
+   "examples": [
+    "do you know where you were born",
+    "what's your nationality",
+    "what location were you born in",
+    "are you from europe"
+   ]
+  },
+  {
+   "id": "whisper_mode",
+   "name": "Whisper mode",
+   "description": "Assistant action that handles whisper mode requests.",
+   "keywords": [
+    "mode",
+    "whisper"
+   ],
+   "examples": [
+    "can you switch out of whisper mode",
+    "switch to whisper mode, please",
+    "would you mind switching to whisper mode",
+    "can you whisper"
+   ]
+  },
+  {
+   "id": "who_do_you_work_for",
+   "name": "Who do you work for",
+   "description": "Assistant action that handles who do you work for requests.",
+   "keywords": [
+    "do",
+    "for",
+    "who",
+    "work",
+    "you"
+   ],
+   "examples": [
+    "is there someone else you work for",
+    "who or what association do you work for",
+    "do you work for me or is that wrong",
+    "who pay your salary"
+   ]
+  },
+  {
+   "id": "who_made_you",
+   "name": "Who made you",
+   "description": "Assistant action that handles who made you requests.",
+   "keywords": [
+    "made",
+    "who",
+    "you"
+   ],
+   "examples": [
+    "will you tell me who made the ai",
+    "who developed your internal code",
+    "would you tell me who made the ai",
+    "who made you up"
+   ]
+  },
+  {
+   "id": "yes",
+   "name": "Yes",
+   "description": "Assistant action that handles yes requests.",
+   "keywords": [
+    "yes"
+   ],
+   "examples": [
+    "that statement was correct",
+    "that would be yes",
+    "yes you are right",
+    "yeah that's what i want"
+   ]
+  }
+ ],
+ "episodes": [
+  {
+   "query": "do you mnid if i ask yor name",
+   "actions": [
+    "accept_reservations",
+    "credit_score",
+    "freeze_account",
+    "how_busy",
+    "cancel",
+    "pto_request",
+    "what_is_your_name",
+    "exchange_rate",
+    "change_ai_name",
+    "change_user_name",
+    "direct_deposit",
+    "greeting",
+    "change_language",
+    "time",
+    "oil_change_how",
+    "next_holiday",
+    "tire_pressure",
+    "who_made_you",
+    "reset_settings",
+    "insurance",
+    "do_you_have_pets",
+    "how_old_are_you",
+    "user_name",
+    "alarm",
+    "spending_history"
+   ],
+   "gold": "what_is_your_name",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "are there international transaction fees associated wigh my td bank acrd",
+   "actions": [
+    "restaurant_reviews",
+    "order_status",
+    "rewards_balance",
+    "balance",
+    "calories",
+    "meeting_schedule",
+    "expiration_date",
+    "redeem_rewards",
+    "play_music",
+    "book_flight",
+    "maybe",
+    "pto_balance",
+    "alarm",
+    "smart_home",
+    "rollover_401k",
+    "application_status",
+    "plug_type",
+    "credit_limit",
+    "apr",
+    "next_holiday",
+    "international_fees",
+    "carry_on",
+    "card_declined",
+    "jump_start",
+    "gas"
+   ],
+   "gold": "international_fees",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "read me smoe different cat trivia ites",
+   "actions": [
+    "what_are_your_hobbies",
+    "calendar_update",
+    "change_accent",
+    "todo_list",
+    "car_rental",
+    "meaning_of_life",
+    "insurance",
+    "application_status",
+    "pto_balance",
+    "expiration_date",
+    "credit_score",
+    "apr",
+    "update_playlist",
+    "income",
+    "nutrition_info",
+    "replacement_card_duration",
+    "spelling",
+    "oil_change_how",
+    "tell_joke",
+    "restaurant_reviews",
+    "roll_dice",
+    "schedule_meeting",
+    "balance",
+    "fun_fact",
+    "book_hotel"
+   ],
+   "gold": "fun_fact",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "are there any rtavel alrets for seattle",
+   "actions": [
+    "food_last",
+    "change_ai_name",
+    "international_fees",
+    "redeem_rewards",
+    "user_name",
+    "replacement_card_duration",
+    "plug_type",
+    "schedule_meeting",
+    "calories",
+    "travel_alert",
+    "roll_dice",
+    "insurance",
+    "pto_used",
+    "application_status",
+    "meaning_of_life",
+    "international_visa",
+    "travel_suggestion",
+    "vaccines",
+    "freeze_account",
+    "restaurant_suggestion",
+    "timezone",
+    "account_blocked",
+    "do_you_have_pets",
+    "carry_on",
+    "todo_list_update"
+   ],
+   "gold": "travel_alert",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wnat is the limit on my victoria's secret crd",
+   "actions": [
+    "tell_joke",
+    "credit_limit_change",
+    "todo_list",
+    "min_payment",
+    "confirm_reservation",
+    "new_card",
+    "bill_balance",
+    "smart_home",
+    "expiration_date",
+    "what_is_your_name",
+    "bill_due",
+    "apr",
+    "interest_rate",
+    "direct_deposit",
+    "meeting_schedule",
+    "next_holiday",
+    "application_status",
+    "shopping_list",
+    "account_blocked",
+    "report_lost_card",
+    "routing",
+    "credit_limit",
+    "freeze_account",
+    "balance",
+    "rewards_balance"
+   ],
+   "gold": "credit_limit",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "do't conect to my phone anymore",
+   "actions": [
+    "date",
+    "cook_time",
+    "todo_list",
+    "change_speed",
+    "bill_balance",
+    "accept_reservations",
+    "pay_bill",
+    "mpg",
+    "roll_dice",
+    "timer",
+    "improve_credit_score",
+    "next_song",
+    "flip_coin",
+    "order",
+    "insurance_change",
+    "change_ai_name",
+    "distance",
+    "whisper_mode",
+    "car_rental",
+    "report_fraud",
+    "sync_device",
+    "translate",
+    "definition",
+    "change_accent",
+    "alarm"
+   ],
+   "gold": "sync_device",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "will my 401k careyover",
+   "actions": [
+    "roll_dice",
+    "credit_score",
+    "rollover_401k",
+    "repeat",
+    "current_location",
+    "tire_change",
+    "card_declined",
+    "jump_start",
+    "change_speed",
+    "travel_notification",
+    "pin_change",
+    "redeem_rewards",
+    "pto_request",
+    "oil_change_how",
+    "damaged_card",
+    "new_card",
+    "pto_request_status",
+    "schedule_maintenance",
+    "insurance_change",
+    "what_are_your_hobbies",
+    "interest_rate",
+    "balance",
+    "car_rental",
+    "fun_fact",
+    "translate"
+   ],
+   "gold": "rollover_401k",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "set a remidner to pay my tqxes",
+   "actions": [
+    "bill_balance",
+    "schedule_maintenance",
+    "accept_reservations",
+    "uber",
+    "how_old_are_you",
+    "greeting",
+    "confirm_reservation",
+    "meal_suggestion",
+    "reminder_update",
+    "jump_start",
+    "change_user_name",
+    "taxes",
+    "flip_coin",
+    "cancel",
+    "fun_fact",
+    "change_ai_name",
+    "current_location",
+    "make_call",
+    "payday",
+    "gas_type",
+    "do_you_have_pets",
+    "expiration_date",
+    "alarm",
+    "shopping_list_update",
+    "income"
+   ],
+   "gold": "reminder_update",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "hwen did i get my hceck last",
+   "actions": [
+    "meaning_of_life",
+    "next_holiday",
+    "income",
+    "direct_deposit",
+    "credit_limit",
+    "expiration_date",
+    "weather",
+    "oil_change_when",
+    "calculator",
+    "what_are_your_hobbies",
+    "pto_request_status",
+    "bill_due",
+    "card_declined",
+    "routing",
+    "restaurant_suggestion",
+    "flight_status",
+    "directions",
+    "payday",
+    "tire_change",
+    "repeat",
+    "replacement_card_duration",
+    "change_volume",
+    "last_maintenance",
+    "date",
+    "tire_pressure"
+   ],
+   "gold": "payday",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "whzt time is it in frqnce",
+   "actions": [
+    "balance",
+    "min_payment",
+    "credit_score",
+    "change_ai_name",
+    "roll_dice",
+    "travel_alert",
+    "payday",
+    "book_flight",
+    "time",
+    "pto_request_status",
+    "date",
+    "tire_pressure",
+    "timezone",
+    "change_accent",
+    "gas",
+    "distance",
+    "apr",
+    "credit_limit",
+    "last_maintenance",
+    "how_old_are_you",
+    "who_made_you",
+    "current_location",
+    "what_song",
+    "calendar",
+    "next_song"
+   ],
+   "gold": "time",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "set all doors to lcked",
+   "actions": [
+    "food_last",
+    "book_hotel",
+    "change_user_name",
+    "change_volume",
+    "reminder",
+    "mpg",
+    "freeze_account",
+    "tire_pressure",
+    "what_song",
+    "schedule_maintenance",
+    "restaurant_reservation",
+    "payday",
+    "timer",
+    "change_ai_name",
+    "smart_home",
+    "balance",
+    "pay_bill",
+    "insurance_change",
+    "order",
+    "cancel_reservation",
+    "reset_settings",
+    "current_location",
+    "change_language",
+    "maybe",
+    "share_location"
+   ],
+   "gold": "smart_home",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i ned to kow my tax rate",
+   "actions": [
+    "income",
+    "vaccines",
+    "balance",
+    "recipe",
+    "taxes",
+    "expiration_date",
+    "replacement_card_duration",
+    "apr",
+    "no",
+    "pto_balance",
+    "yes",
+    "next_holiday",
+    "flight_status",
+    "tire_pressure",
+    "flip_coin",
+    "date",
+    "spelling",
+    "pto_used",
+    "bill_due",
+    "credit_limit_change",
+    "what_song",
+    "bill_balance",
+    "w2",
+    "min_payment",
+    "calories"
+   ],
+   "gold": "taxes",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "plase flip a coin",
+   "actions": [
+    "flip_coin",
+    "sync_device",
+    "roll_dice",
+    "pto_request",
+    "who_made_you",
+    "user_name",
+    "change_ai_name",
+    "oil_change_how",
+    "ingredients_list",
+    "change_speed",
+    "uber",
+    "date",
+    "shopping_list_update",
+    "change_language",
+    "new_card",
+    "weather",
+    "bill_balance",
+    "restaurant_suggestion",
+    "text",
+    "maybe",
+    "pto_request_status",
+    "restaurant_reservation",
+    "car_rental",
+    "bill_due",
+    "cancel_reservation"
+   ],
+   "gold": "flip_coin",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "waht was the date of my last payhceck",
+   "actions": [
+    "replacement_card_duration",
+    "reminder_update",
+    "oil_change_when",
+    "report_lost_card",
+    "order_checks",
+    "tire_change",
+    "what_is_your_name",
+    "plug_type",
+    "greeting",
+    "payday",
+    "bill_due",
+    "last_maintenance",
+    "next_holiday",
+    "pto_request_status",
+    "change_language",
+    "card_declined",
+    "rollover_401k",
+    "change_user_name",
+    "are_you_a_bot",
+    "flight_status",
+    "date",
+    "expiration_date",
+    "alarm",
+    "repeat",
+    "how_old_are_you"
+   ],
+   "gold": "payday",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "is dan awae of any meetings with me tdoay",
+   "actions": [
+    "calendar",
+    "card_declined",
+    "nutrition_info",
+    "plug_type",
+    "text",
+    "carry_on",
+    "traffic",
+    "balance",
+    "how_old_are_you",
+    "schedule_meeting",
+    "taxes",
+    "next_holiday",
+    "bill_balance",
+    "insurance",
+    "date",
+    "fun_fact",
+    "pto_request_status",
+    "direct_deposit",
+    "recipe",
+    "meeting_schedule",
+    "pto_balance",
+    "tell_joke",
+    "min_payment",
+    "international_visa",
+    "calories"
+   ],
+   "gold": "meeting_schedule",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "will you check to see if i am stil reserved for 6:30 pm at gsto handcrafted pasta & pizza",
+   "actions": [
+    "restaurant_reservation",
+    "goodbye",
+    "what_can_i_ask_you",
+    "cancel_reservation",
+    "current_location",
+    "confirm_reservation",
+    "weather",
+    "uber",
+    "pto_request",
+    "date",
+    "car_rental",
+    "directions",
+    "bill_due",
+    "insurance",
+    "apr",
+    "calories",
+    "next_song",
+    "nutrition_info",
+    "timer",
+    "order",
+    "alarm",
+    "change_ai_name",
+    "improve_credit_score",
+    "transactions",
+    "insurance_change"
+   ],
+   "gold": "confirm_reservation",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what's the cock say",
+   "actions": [
+    "improve_credit_score",
+    "current_location",
+    "apr",
+    "plug_type",
+    "where_are_you_from",
+    "restaurant_suggestion",
+    "exchange_rate",
+    "calendar_update",
+    "what_song",
+    "freeze_account",
+    "calculator",
+    "tire_pressure",
+    "how_old_are_you",
+    "credit_score",
+    "recipe",
+    "pto_request_status",
+    "balance",
+    "time",
+    "card_declined",
+    "timezone",
+    "date",
+    "uber",
+    "bill_due",
+    "change_ai_name",
+    "credit_limit"
+   ],
+   "gold": "time",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what is the year taht weee you born",
+   "actions": [
+    "insurance",
+    "damaged_card",
+    "tire_pressure",
+    "travel_suggestion",
+    "pto_balance",
+    "next_holiday",
+    "what_is_your_name",
+    "last_maintenance",
+    "pto_request_status",
+    "balance",
+    "user_name",
+    "taxes",
+    "distance",
+    "repeat",
+    "freeze_account",
+    "how_old_are_you",
+    "do_you_have_pets",
+    "meal_suggestion",
+    "expiration_date",
+    "restaurant_suggestion",
+    "meaning_of_life",
+    "goodbye",
+    "lost_luggage",
+    "report_fraud",
+    "where_are_you_from"
+   ],
+   "gold": "how_old_are_you",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how is my insuance coverage",
+   "actions": [
+    "definition",
+    "timezone",
+    "income",
+    "current_location",
+    "direct_deposit",
+    "w2",
+    "tell_joke",
+    "fun_fact",
+    "shopping_list",
+    "calendar_update",
+    "what_can_i_ask_you",
+    "calendar",
+    "credit_score",
+    "change_user_name",
+    "date",
+    "expiration_date",
+    "schedule_maintenance",
+    "international_fees",
+    "apr",
+    "what_are_your_hobbies",
+    "transactions",
+    "insurance",
+    "what_is_your_name",
+    "insurance_change",
+    "gas"
+   ],
+   "gold": "insurance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "waht",
+   "actions": [
+    "next_song",
+    "do_you_have_pets",
+    "direct_deposit",
+    "what_is_your_name",
+    "pto_request_status",
+    "are_you_a_bot",
+    "payday",
+    "roll_dice",
+    "tire_pressure",
+    "pto_used",
+    "repeat",
+    "last_maintenance",
+    "meeting_schedule",
+    "ingredient_substitution",
+    "apr",
+    "change_accent",
+    "flip_coin",
+    "exchange_rate",
+    "reminder",
+    "user_name",
+    "order",
+    "pto_request",
+    "insurance",
+    "tell_joke",
+    "find_phone"
+   ],
+   "gold": "repeat",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "pkease talk faster",
+   "actions": [
+    "pto_request_status",
+    "nutrition_info",
+    "cancel_reservation",
+    "what_is_your_name",
+    "change_accent",
+    "uber",
+    "reset_settings",
+    "oil_change_when",
+    "insurance_change",
+    "account_blocked",
+    "date",
+    "yes",
+    "shopping_list_update",
+    "cancel",
+    "apr",
+    "change_ai_name",
+    "change_language",
+    "change_speed",
+    "whisper_mode",
+    "pin_change",
+    "maybe",
+    "meaning_of_life",
+    "change_volume",
+    "oil_change_how",
+    "update_playlist"
+   ],
+   "gold": "change_speed",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wehn do i get my payfheck",
+   "actions": [
+    "bill_due",
+    "flight_status",
+    "expiration_date",
+    "meeting_schedule",
+    "change_ai_name",
+    "last_maintenance",
+    "change_accent",
+    "card_declined",
+    "goodbye",
+    "time",
+    "rollover_401k",
+    "oil_change_when",
+    "pto_used",
+    "next_song",
+    "pto_request_status",
+    "report_lost_card",
+    "tire_change",
+    "repeat",
+    "change_user_name",
+    "next_holiday",
+    "carry_on",
+    "payday",
+    "replacement_card_duration",
+    "rewards_balance",
+    "date"
+   ],
+   "gold": "payday",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "do you konw why my czrd was declined at target i can't figure out why",
+   "actions": [
+    "rollover_401k",
+    "interest_rate",
+    "bill_due",
+    "meeting_schedule",
+    "card_declined",
+    "traffic",
+    "change_language",
+    "spending_history",
+    "reminder",
+    "translate",
+    "oil_change_how",
+    "yes",
+    "application_status",
+    "expiration_date",
+    "confirm_reservation",
+    "timer",
+    "exchange_rate",
+    "transactions",
+    "payday",
+    "account_blocked",
+    "food_last",
+    "pto_balance",
+    "insurance",
+    "last_maintenance",
+    "credit_score"
+   ],
+   "gold": "card_declined",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "remind me to wash the dog, put on lkst of thnigs to do",
+   "actions": [
+    "greeting",
+    "pto_request_status",
+    "pay_bill",
+    "interest_rate",
+    "what_song",
+    "change_volume",
+    "bill_balance",
+    "sync_device",
+    "improve_credit_score",
+    "reminder_update",
+    "current_location",
+    "gas_type",
+    "shopping_list",
+    "transfer",
+    "car_rental",
+    "restaurant_suggestion",
+    "todo_list_update",
+    "timer",
+    "todo_list",
+    "pto_balance",
+    "jump_start",
+    "pto_request",
+    "shopping_list_update",
+    "order",
+    "calendar_update"
+   ],
+   "gold": "todo_list_update",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "who is yor bos by the way",
+   "actions": [
+    "insurance",
+    "replacement_card_duration",
+    "tire_change",
+    "reminder",
+    "ingredients_list",
+    "book_hotel",
+    "payday",
+    "do_you_have_pets",
+    "plug_type",
+    "what_is_your_name",
+    "apr",
+    "change_user_name",
+    "income",
+    "routing",
+    "user_name",
+    "timezone",
+    "sync_device",
+    "tell_joke",
+    "meeting_schedule",
+    "account_blocked",
+    "shopping_list",
+    "who_do_you_work_for",
+    "who_made_you",
+    "meaning_of_life",
+    "how_old_are_you"
+   ],
+   "gold": "who_do_you_work_for",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i want you to rlol a 5 sdied dice for me",
+   "actions": [
+    "roll_dice",
+    "insurance_change",
+    "replacement_card_duration",
+    "sync_device",
+    "transfer",
+    "who_made_you",
+    "tell_joke",
+    "restaurant_reviews",
+    "ingredient_substitution",
+    "order",
+    "translate",
+    "gas_type",
+    "change_ai_name",
+    "date",
+    "rollover_401k",
+    "uber",
+    "food_last",
+    "alarm",
+    "spending_history",
+    "credit_limit_change",
+    "redeem_rewards",
+    "flip_coin",
+    "insurance",
+    "pin_change",
+    "calendar"
+   ],
+   "gold": "roll_dice",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wat's my credit limkt for my visa card",
+   "actions": [
+    "new_card",
+    "credit_limit_change",
+    "interest_rate",
+    "bill_balance",
+    "credit_limit",
+    "oil_change_when",
+    "who_do_you_work_for",
+    "are_you_a_bot",
+    "order_status",
+    "no",
+    "bill_due",
+    "nutrition_info",
+    "min_payment",
+    "taxes",
+    "routing",
+    "expiration_date",
+    "order",
+    "greeting",
+    "meeting_schedule",
+    "traffic",
+    "report_lost_card",
+    "make_call",
+    "apr",
+    "rewards_balance",
+    "balance"
+   ],
+   "gold": "credit_limit",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how lnog bfeore my updated cc takes to arrive",
+   "actions": [
+    "reminder",
+    "travel_notification",
+    "distance",
+    "rollover_401k",
+    "next_holiday",
+    "tire_change",
+    "where_are_you_from",
+    "restaurant_reservation",
+    "taxes",
+    "how_busy",
+    "pto_balance",
+    "new_card",
+    "payday",
+    "pay_bill",
+    "last_maintenance",
+    "ingredient_substitution",
+    "uber",
+    "bill_due",
+    "cook_time",
+    "report_fraud",
+    "replacement_card_duration",
+    "application_status",
+    "expiration_date",
+    "oil_change_when",
+    "directions"
+   ],
+   "gold": "replacement_card_duration",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i need to knw my phon's location",
+   "actions": [
+    "w2",
+    "timer",
+    "travel_alert",
+    "income",
+    "change_language",
+    "who_made_you",
+    "credit_score",
+    "reminder_update",
+    "find_phone",
+    "lost_luggage",
+    "carry_on",
+    "accept_reservations",
+    "interest_rate",
+    "shopping_list",
+    "current_location",
+    "car_rental",
+    "no",
+    "oil_change_how",
+    "insurance_change",
+    "card_declined",
+    "spelling",
+    "date",
+    "replacement_card_duration",
+    "jump_start",
+    "make_call"
+   ],
+   "gold": "find_phone",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wen did i last get my car servced",
+   "actions": [
+    "traffic",
+    "pto_request_status",
+    "application_status",
+    "how_old_are_you",
+    "next_song",
+    "tire_change",
+    "what_can_i_ask_you",
+    "balance",
+    "account_blocked",
+    "expiration_date",
+    "how_busy",
+    "sync_device",
+    "pto_balance",
+    "interest_rate",
+    "payday",
+    "tell_joke",
+    "jump_start",
+    "oil_change_how",
+    "bill_due",
+    "card_declined",
+    "meal_suggestion",
+    "smart_home",
+    "oil_change_when",
+    "last_maintenance",
+    "current_location"
+   ],
+   "gold": "last_maintenance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i need to esnd my lofation to my friend steve",
+   "actions": [
+    "routing",
+    "credit_limit",
+    "apr",
+    "smart_home",
+    "greeting",
+    "credit_score",
+    "calories",
+    "how_busy",
+    "food_last",
+    "find_phone",
+    "replacement_card_duration",
+    "order_status",
+    "date",
+    "current_location",
+    "damaged_card",
+    "flip_coin",
+    "directions",
+    "international_fees",
+    "todo_list_update",
+    "international_visa",
+    "share_location",
+    "bill_balance",
+    "ingredients_list",
+    "oil_change_how",
+    "time"
+   ],
+   "gold": "share_location",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "scap reservation at 4 for red robn",
+   "actions": [
+    "pto_balance",
+    "oil_change_how",
+    "restaurant_suggestion",
+    "find_phone",
+    "meeting_schedule",
+    "cancel",
+    "order",
+    "damaged_card",
+    "car_rental",
+    "alarm",
+    "greeting",
+    "insurance",
+    "tire_change",
+    "cancel_reservation",
+    "flip_coin",
+    "calories",
+    "time",
+    "uber",
+    "travel_suggestion",
+    "repeat",
+    "sync_device",
+    "roll_dice",
+    "restaurant_reservation",
+    "confirm_reservation",
+    "rollover_401k"
+   ],
+   "gold": "cancel_reservation",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "who is respnosible for your dewign",
+   "actions": [
+    "what_is_your_name",
+    "reminder",
+    "tell_joke",
+    "who_made_you",
+    "travel_notification",
+    "how_old_are_you",
+    "shopping_list",
+    "credit_limit",
+    "goodbye",
+    "do_you_have_pets",
+    "where_are_you_from",
+    "restaurant_reservation",
+    "tire_pressure",
+    "timezone",
+    "plug_type",
+    "who_do_you_work_for",
+    "calories",
+    "cook_time",
+    "insurance",
+    "min_payment",
+    "traffic",
+    "change_ai_name",
+    "current_location",
+    "what_song",
+    "user_name"
+   ],
+   "gold": "who_made_you",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how many caloris are in mashed potates",
+   "actions": [
+    "credit_limit_change",
+    "rewards_balance",
+    "carry_on",
+    "income",
+    "nutrition_info",
+    "improve_credit_score",
+    "meeting_schedule",
+    "change_volume",
+    "ingredient_substitution",
+    "pto_used",
+    "expiration_date",
+    "calories",
+    "traffic",
+    "min_payment",
+    "taxes",
+    "change_speed",
+    "what_can_i_ask_you",
+    "balance",
+    "gas",
+    "confirm_reservation",
+    "distance",
+    "flight_status",
+    "user_name",
+    "pto_balance",
+    "bill_balance"
+   ],
+   "gold": "calories",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how mch do i have to pay on taxs and cable",
+   "actions": [
+    "pto_balance",
+    "goodbye",
+    "schedule_meeting",
+    "transactions",
+    "mpg",
+    "income",
+    "bill_due",
+    "current_location",
+    "find_phone",
+    "bill_balance",
+    "book_flight",
+    "jump_start",
+    "next_holiday",
+    "w2",
+    "fun_fact",
+    "pto_used",
+    "tire_pressure",
+    "measurement_conversion",
+    "balance",
+    "calories",
+    "min_payment",
+    "how_busy",
+    "taxes",
+    "spending_history",
+    "apr"
+   ],
+   "gold": "bill_balance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what is your dage of birh",
+   "actions": [
+    "what_is_your_name",
+    "rewards_balance",
+    "how_old_are_you",
+    "meaning_of_life",
+    "food_last",
+    "pto_request_status",
+    "are_you_a_bot",
+    "replacement_card_duration",
+    "where_are_you_from",
+    "user_name",
+    "card_declined",
+    "alarm",
+    "taxes",
+    "pto_balance",
+    "last_maintenance",
+    "play_music",
+    "application_status",
+    "tire_pressure",
+    "do_you_have_pets",
+    "restaurant_suggestion",
+    "next_holiday",
+    "traffic",
+    "next_song",
+    "weather",
+    "expiration_date"
+   ],
+   "gold": "how_old_are_you",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "do you have any ideas on the maening of lfie",
+   "actions": [
+    "pto_balance",
+    "expiration_date",
+    "tell_joke",
+    "damaged_card",
+    "meaning_of_life",
+    "flight_status",
+    "income",
+    "food_last",
+    "apr",
+    "report_lost_card",
+    "how_old_are_you",
+    "distance",
+    "change_user_name",
+    "account_blocked",
+    "order_status",
+    "next_holiday",
+    "are_you_a_bot",
+    "rewards_balance",
+    "change_ai_name",
+    "book_hotel",
+    "do_you_have_pets",
+    "user_name",
+    "insurance",
+    "shopping_list_update",
+    "what_is_your_name"
+   ],
+   "gold": "meaning_of_life",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "for under 700 i need a flight from denver interbational to new york internationzl on the 3rd",
+   "actions": [
+    "car_rental",
+    "international_fees",
+    "replacement_card_duration",
+    "oil_change_when",
+    "book_flight",
+    "current_location",
+    "ingredients_list",
+    "oil_change_how",
+    "calendar_update",
+    "confirm_reservation",
+    "insurance_change",
+    "maybe",
+    "rollover_401k",
+    "calendar",
+    "definition",
+    "change_language",
+    "w2",
+    "card_declined",
+    "gas",
+    "yes",
+    "pto_request",
+    "book_hotel",
+    "carry_on",
+    "lost_luggage",
+    "calories"
+   ],
+   "gold": "book_flight",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "please tell me the adress of my current locztion",
+   "actions": [
+    "plug_type",
+    "oil_change_how",
+    "current_location",
+    "spelling",
+    "vaccines",
+    "travel_notification",
+    "play_music",
+    "share_location",
+    "calendar",
+    "date",
+    "exchange_rate",
+    "tire_pressure",
+    "apr",
+    "find_phone",
+    "timezone",
+    "credit_score",
+    "routing",
+    "how_busy",
+    "w2",
+    "weather",
+    "bill_balance",
+    "who_do_you_work_for",
+    "accept_reservations",
+    "what_song",
+    "interest_rate"
+   ],
+   "gold": "current_location",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "get me nifo on my mpg",
+   "actions": [
+    "jump_start",
+    "current_location",
+    "gas_type",
+    "expiration_date",
+    "confirm_reservation",
+    "oil_change_how",
+    "oil_change_when",
+    "last_maintenance",
+    "apr",
+    "mpg",
+    "user_name",
+    "gas",
+    "freeze_account",
+    "income",
+    "what_is_your_name",
+    "bill_due",
+    "next_holiday",
+    "payday",
+    "pto_balance",
+    "new_card",
+    "pto_used",
+    "bill_balance",
+    "carry_on",
+    "yes",
+    "calories"
+   ],
+   "gold": "mpg",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wat is the correct spelling of the word: dewsert",
+   "actions": [
+    "improve_credit_score",
+    "oil_change_how",
+    "last_maintenance",
+    "bill_balance",
+    "meeting_schedule",
+    "calendar_update",
+    "smart_home",
+    "recipe",
+    "pto_used",
+    "jump_start",
+    "shopping_list",
+    "interest_rate",
+    "find_phone",
+    "nutrition_info",
+    "redeem_rewards",
+    "current_location",
+    "accept_reservations",
+    "repeat",
+    "bill_due",
+    "goodbye",
+    "routing",
+    "spelling",
+    "confirm_reservation",
+    "insurance",
+    "how_old_are_you"
+   ],
+   "gold": "spelling",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "uber rise available from here to dontown",
+   "actions": [
+    "sync_device",
+    "shopping_list",
+    "car_rental",
+    "reminder",
+    "credit_score",
+    "credit_limit_change",
+    "insurance_change",
+    "goodbye",
+    "pin_change",
+    "todo_list_update",
+    "damaged_card",
+    "schedule_meeting",
+    "what_are_your_hobbies",
+    "change_ai_name",
+    "order",
+    "insurance",
+    "measurement_conversion",
+    "alarm",
+    "timer",
+    "roll_dice",
+    "smart_home",
+    "pto_request",
+    "what_is_your_name",
+    "flip_coin",
+    "uber"
+   ],
+   "gold": "uber",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can you tell me how muh air are in my car tures",
+   "actions": [
+    "expiration_date",
+    "current_location",
+    "how_busy",
+    "taxes",
+    "direct_deposit",
+    "balance",
+    "mpg",
+    "time",
+    "nutrition_info",
+    "tire_pressure",
+    "whisper_mode",
+    "gas",
+    "change_language",
+    "credit_score",
+    "bill_balance",
+    "credit_limit",
+    "what_is_your_name",
+    "tire_change",
+    "credit_limit_change",
+    "date",
+    "translate",
+    "account_blocked",
+    "restaurant_suggestion",
+    "apr",
+    "tell_joke"
+   ],
+   "gold": "tire_pressure",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "tarck the status of my puchase",
+   "actions": [
+    "transactions",
+    "last_maintenance",
+    "apr",
+    "pto_request_status",
+    "flight_status",
+    "timer",
+    "exchange_rate",
+    "tire_change",
+    "report_fraud",
+    "w2",
+    "account_blocked",
+    "play_music",
+    "credit_score",
+    "card_declined",
+    "application_status",
+    "expiration_date",
+    "reminder",
+    "pto_balance",
+    "payday",
+    "gas_type",
+    "current_location",
+    "what_can_i_ask_you",
+    "order_status",
+    "nutrition_info",
+    "make_call"
+   ],
+   "gold": "order_status",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i need you to act swiftly and fredze all activity on my capitl one checking",
+   "actions": [
+    "tell_joke",
+    "order_checks",
+    "translate",
+    "meaning_of_life",
+    "next_song",
+    "transfer",
+    "sync_device",
+    "direct_deposit",
+    "spelling",
+    "order",
+    "freeze_account",
+    "pin_change",
+    "pto_request",
+    "change_language",
+    "change_accent",
+    "play_music",
+    "alarm",
+    "income",
+    "what_can_i_ask_you",
+    "change_ai_name",
+    "interest_rate",
+    "reset_settings",
+    "current_location",
+    "what_is_your_name",
+    "nutrition_info"
+   ],
+   "gold": "freeze_account",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "is it oging to rain tomrorow",
+   "actions": [
+    "bill_balance",
+    "direct_deposit",
+    "schedule_meeting",
+    "report_lost_card",
+    "nutrition_info",
+    "calendar",
+    "current_location",
+    "traffic",
+    "min_payment",
+    "change_ai_name",
+    "what_song",
+    "bill_due",
+    "greeting",
+    "yes",
+    "next_holiday",
+    "taxes",
+    "spelling",
+    "apr",
+    "car_rental",
+    "how_old_are_you",
+    "order_status",
+    "weather",
+    "tire_pressure",
+    "date",
+    "share_location"
+   ],
+   "gold": "weather",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how log would it take to get to hcicago by bus",
+   "actions": [
+    "international_visa",
+    "how_busy",
+    "directions",
+    "cook_time",
+    "interest_rate",
+    "oil_change_when",
+    "apr",
+    "confirm_reservation",
+    "restaurant_reservation",
+    "calculator",
+    "distance",
+    "international_fees",
+    "next_holiday",
+    "mpg",
+    "play_music",
+    "replacement_card_duration",
+    "rewards_balance",
+    "accept_reservations",
+    "food_last",
+    "change_user_name",
+    "last_maintenance",
+    "gas",
+    "sync_device",
+    "expiration_date",
+    "shopping_list_update"
+   ],
+   "gold": "distance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how many caories are found in abgels",
+   "actions": [
+    "time",
+    "shopping_list_update",
+    "distance",
+    "play_music",
+    "calendar_update",
+    "update_playlist",
+    "calories",
+    "income",
+    "spelling",
+    "report_fraud",
+    "carry_on",
+    "routing",
+    "nutrition_info",
+    "gas",
+    "mpg",
+    "payday",
+    "balance",
+    "taxes",
+    "pto_balance",
+    "oil_change_when",
+    "pto_used",
+    "expiration_date",
+    "bill_balance",
+    "meeting_schedule",
+    "rewards_balance"
+   ],
+   "gold": "calories",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "will i be chared if i use my crd in china",
+   "actions": [
+    "uber",
+    "lost_luggage",
+    "next_holiday",
+    "balance",
+    "yes",
+    "expiration_date",
+    "shopping_list_update",
+    "goodbye",
+    "carry_on",
+    "reminder_update",
+    "cook_time",
+    "schedule_maintenance",
+    "order_status",
+    "tire_change",
+    "plug_type",
+    "gas",
+    "apr",
+    "maybe",
+    "pto_balance",
+    "credit_limit",
+    "rewards_balance",
+    "play_music",
+    "international_fees",
+    "redeem_rewards",
+    "meeting_schedule"
+   ],
+   "gold": "international_fees",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "approevd",
+   "actions": [
+    "new_card",
+    "flip_coin",
+    "meal_suggestion",
+    "repeat",
+    "do_you_have_pets",
+    "goodbye",
+    "tire_pressure",
+    "tire_change",
+    "yes",
+    "fun_fact",
+    "travel_notification",
+    "no",
+    "uber",
+    "pay_bill",
+    "insurance",
+    "plug_type",
+    "spelling",
+    "redeem_rewards",
+    "who_made_you",
+    "what_is_your_name",
+    "user_name",
+    "current_location",
+    "what_song",
+    "pto_balance",
+    "direct_deposit"
+   ],
+   "gold": "yes",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "tell me how i can apply for a chse creit card",
+   "actions": [
+    "who_made_you",
+    "apr",
+    "rewards_balance",
+    "directions",
+    "last_maintenance",
+    "redeem_rewards",
+    "flip_coin",
+    "credit_score",
+    "meal_suggestion",
+    "new_card",
+    "distance",
+    "play_music",
+    "interest_rate",
+    "credit_limit",
+    "report_lost_card",
+    "pin_change",
+    "tire_pressure",
+    "date",
+    "direct_deposit",
+    "credit_limit_change",
+    "rollover_401k",
+    "translate",
+    "insurance_change",
+    "plug_type",
+    "balance"
+   ],
+   "gold": "new_card",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "plase request pto for mzrch 2 and 3",
+   "actions": [
+    "travel_notification",
+    "restaurant_reservation",
+    "pto_request_status",
+    "what_can_i_ask_you",
+    "date",
+    "car_rental",
+    "pto_balance",
+    "pto_request",
+    "insurance_change",
+    "book_flight",
+    "application_status",
+    "order_checks",
+    "change_language",
+    "how_busy",
+    "confirm_reservation",
+    "shopping_list_update",
+    "what_song",
+    "calendar_update",
+    "insurance",
+    "travel_suggestion",
+    "alarm",
+    "uber",
+    "change_ai_name",
+    "calculator",
+    "yes"
+   ],
+   "gold": "pto_request",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how old were you on yor most recnt birthday",
+   "actions": [
+    "taxes",
+    "expiration_date",
+    "meeting_schedule",
+    "definition",
+    "last_maintenance",
+    "rewards_balance",
+    "where_are_you_from",
+    "travel_alert",
+    "timer",
+    "meaning_of_life",
+    "do_you_have_pets",
+    "ingredients_list",
+    "pto_balance",
+    "international_fees",
+    "flip_coin",
+    "user_name",
+    "cancel_reservation",
+    "how_old_are_you",
+    "schedule_meeting",
+    "what_is_your_name",
+    "pto_request_status",
+    "next_holiday",
+    "change_language",
+    "pin_change",
+    "tire_pressure"
+   ],
+   "gold": "how_old_are_you",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "is there a routing number for wlels farho",
+   "actions": [
+    "routing",
+    "where_are_you_from",
+    "transactions",
+    "oil_change_when",
+    "shopping_list",
+    "order_checks",
+    "account_blocked",
+    "play_music",
+    "directions",
+    "credit_score",
+    "oil_change_how",
+    "tire_change",
+    "apr",
+    "user_name",
+    "pin_change",
+    "direct_deposit",
+    "interest_rate",
+    "balance",
+    "reminder_update",
+    "credit_limit",
+    "what_song",
+    "w2",
+    "plug_type",
+    "greeting",
+    "roll_dice"
+   ],
+   "gold": "routing",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "paece out!",
+   "actions": [
+    "who_made_you",
+    "w2",
+    "play_music",
+    "fun_fact",
+    "international_visa",
+    "rollover_401k",
+    "reminder",
+    "apr",
+    "where_are_you_from",
+    "cancel_reservation",
+    "how_busy",
+    "thank_you",
+    "are_you_a_bot",
+    "oil_change_how",
+    "last_maintenance",
+    "card_declined",
+    "current_location",
+    "shopping_list",
+    "text",
+    "goodbye",
+    "account_blocked",
+    "whisper_mode",
+    "greeting",
+    "change_language",
+    "nutrition_info"
+   ],
+   "gold": "goodbye",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "conveft 2 cups to liters",
+   "actions": [
+    "oil_change_when",
+    "fun_fact",
+    "next_holiday",
+    "carry_on",
+    "w2",
+    "bill_balance",
+    "tire_pressure",
+    "pto_request",
+    "schedule_meeting",
+    "current_location",
+    "international_visa",
+    "how_old_are_you",
+    "tire_change",
+    "rewards_balance",
+    "meeting_schedule",
+    "insurance_change",
+    "restaurant_suggestion",
+    "credit_limit",
+    "measurement_conversion",
+    "calendar_update",
+    "translate",
+    "spelling",
+    "text",
+    "find_phone",
+    "exchange_rate"
+   ],
+   "gold": "measurement_conversion",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can you find the exact address for whee i am currently",
+   "actions": [
+    "cook_time",
+    "spelling",
+    "text",
+    "measurement_conversion",
+    "current_location",
+    "yes",
+    "weather",
+    "replacement_card_duration",
+    "car_rental",
+    "credit_score",
+    "interest_rate",
+    "oil_change_how",
+    "calendar",
+    "apr",
+    "who_made_you",
+    "order",
+    "tire_pressure",
+    "bill_balance",
+    "pto_used",
+    "directions",
+    "find_phone",
+    "w2",
+    "date",
+    "share_location",
+    "what_song"
+   ],
+   "gold": "current_location",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can you play msic by the beatels",
+   "actions": [
+    "change_volume",
+    "update_playlist",
+    "flip_coin",
+    "confirm_reservation",
+    "meeting_schedule",
+    "cancel_reservation",
+    "redeem_rewards",
+    "play_music",
+    "cook_time",
+    "pto_request",
+    "tell_joke",
+    "car_rental",
+    "meaning_of_life",
+    "next_song",
+    "pay_bill",
+    "repeat",
+    "insurance_change",
+    "alarm",
+    "account_blocked",
+    "timer",
+    "change_ai_name",
+    "todo_list_update",
+    "order",
+    "freeze_account",
+    "rewards_balance"
+   ],
+   "gold": "play_music",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i ened to get an appointmemt for car maintenance",
+   "actions": [
+    "taxes",
+    "alarm",
+    "whisper_mode",
+    "current_location",
+    "play_music",
+    "find_phone",
+    "min_payment",
+    "report_fraud",
+    "new_card",
+    "card_declined",
+    "change_accent",
+    "car_rental",
+    "schedule_maintenance",
+    "w2",
+    "account_blocked",
+    "routing",
+    "oil_change_when",
+    "change_user_name",
+    "credit_score",
+    "order",
+    "sync_device",
+    "how_busy",
+    "insurance_change",
+    "last_maintenance",
+    "oil_change_how"
+   ],
+   "gold": "schedule_maintenance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "do i have pans on 12/03/2019",
+   "actions": [
+    "next_song",
+    "interest_rate",
+    "sync_device",
+    "last_maintenance",
+    "timezone",
+    "calendar_update",
+    "meaning_of_life",
+    "book_hotel",
+    "are_you_a_bot",
+    "shopping_list",
+    "nutrition_info",
+    "gas",
+    "next_holiday",
+    "pto_request_status",
+    "restaurant_reviews",
+    "who_made_you",
+    "traffic",
+    "insurance",
+    "calendar",
+    "pto_request",
+    "travel_alert",
+    "new_card",
+    "credit_limit_change",
+    "meeting_schedule",
+    "damaged_card"
+   ],
+   "gold": "calendar",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can you asisst with my utility boll payment",
+   "actions": [
+    "international_visa",
+    "bill_balance",
+    "min_payment",
+    "change_volume",
+    "flip_coin",
+    "car_rental",
+    "freeze_account",
+    "bill_due",
+    "direct_deposit",
+    "pay_bill",
+    "pto_request_status",
+    "interest_rate",
+    "pto_request",
+    "sync_device",
+    "what_are_your_hobbies",
+    "carry_on",
+    "whisper_mode",
+    "change_ai_name",
+    "oil_change_how",
+    "pin_change",
+    "damaged_card",
+    "what_can_i_ask_you",
+    "book_hotel",
+    "insurance_change",
+    "share_location"
+   ],
+   "gold": "pay_bill",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "would it be a rpoblem to sub chils instead of fries",
+   "actions": [
+    "gas_type",
+    "direct_deposit",
+    "pay_bill",
+    "distance",
+    "oil_change_how",
+    "shopping_list_update",
+    "report_lost_card",
+    "calories",
+    "calculator",
+    "shopping_list",
+    "recipe",
+    "bill_balance",
+    "make_call",
+    "book_flight",
+    "freeze_account",
+    "change_accent",
+    "new_card",
+    "redeem_rewards",
+    "ingredient_substitution",
+    "insurance_change",
+    "fun_fact",
+    "smart_home",
+    "whisper_mode",
+    "carry_on",
+    "change_user_name"
+   ],
+   "gold": "ingredient_substitution",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "read my shopping ilst",
+   "actions": [
+    "todo_list",
+    "transactions",
+    "bill_due",
+    "exchange_rate",
+    "update_playlist",
+    "shopping_list_update",
+    "play_music",
+    "spending_history",
+    "travel_suggestion",
+    "insurance",
+    "gas",
+    "current_location",
+    "find_phone",
+    "no",
+    "shopping_list",
+    "travel_alert",
+    "schedule_maintenance",
+    "order",
+    "application_status",
+    "confirm_reservation",
+    "reminder",
+    "direct_deposit",
+    "min_payment",
+    "last_maintenance",
+    "pto_request_status"
+   ],
+   "gold": "shopping_list",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i am reauesting pto for marh 2 and 3",
+   "actions": [
+    "book_hotel",
+    "pto_balance",
+    "greeting",
+    "card_declined",
+    "uber",
+    "meaning_of_life",
+    "calendar_update",
+    "pto_request_status",
+    "todo_list",
+    "travel_notification",
+    "cancel",
+    "shopping_list_update",
+    "freeze_account",
+    "insurance_change",
+    "change_ai_name",
+    "apr",
+    "pto_request",
+    "repeat",
+    "confirm_reservation",
+    "book_flight",
+    "spelling",
+    "alarm",
+    "car_rental",
+    "last_maintenance",
+    "date"
+   ],
+   "gold": "pto_request",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "whst's the amount due on my vet and vehicle rgeistration bills",
+   "actions": [
+    "cancel",
+    "change_user_name",
+    "fun_fact",
+    "what_is_your_name",
+    "calendar",
+    "damaged_card",
+    "insurance_change",
+    "spending_history",
+    "income",
+    "traffic",
+    "pto_balance",
+    "bill_due",
+    "travel_notification",
+    "next_holiday",
+    "apr",
+    "credit_limit",
+    "tire_pressure",
+    "pto_used",
+    "bill_balance",
+    "min_payment",
+    "balance",
+    "taxes",
+    "gas_type",
+    "calories",
+    "routing"
+   ],
+   "gold": "bill_balance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "whch electrical plug type should i bring iwth me to finland",
+   "actions": [
+    "expiration_date",
+    "application_status",
+    "taxes",
+    "change_language",
+    "international_visa",
+    "cook_time",
+    "direct_deposit",
+    "do_you_have_pets",
+    "change_user_name",
+    "travel_alert",
+    "oil_change_when",
+    "gas_type",
+    "insurance_change",
+    "replacement_card_duration",
+    "vaccines",
+    "carry_on",
+    "restaurant_reviews",
+    "how_busy",
+    "oil_change_how",
+    "next_holiday",
+    "shopping_list",
+    "plug_type",
+    "greeting",
+    "no",
+    "international_fees"
+   ],
+   "gold": "plug_type",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "my day ofgs history",
+   "actions": [
+    "calculator",
+    "pto_balance",
+    "bill_due",
+    "pto_request_status",
+    "pto_used",
+    "current_location",
+    "distance",
+    "next_holiday",
+    "directions",
+    "credit_score",
+    "last_maintenance",
+    "report_lost_card",
+    "spending_history",
+    "nutrition_info",
+    "taxes",
+    "calories",
+    "schedule_maintenance",
+    "gas",
+    "how_old_are_you",
+    "recipe",
+    "balance",
+    "bill_balance",
+    "income",
+    "reset_settings",
+    "restaurant_reviews"
+   ],
+   "gold": "pto_used",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wat is the rtae for 500 cad in usd",
+   "actions": [
+    "cancel_reservation",
+    "bill_balance",
+    "apr",
+    "gas",
+    "balance",
+    "meeting_schedule",
+    "oil_change_how",
+    "exchange_rate",
+    "calendar",
+    "tire_change",
+    "play_music",
+    "cook_time",
+    "date",
+    "next_holiday",
+    "sync_device",
+    "mpg",
+    "pto_balance",
+    "pto_request",
+    "calories",
+    "confirm_reservation",
+    "calculator",
+    "measurement_conversion",
+    "vaccines",
+    "car_rental",
+    "do_you_have_pets"
+   ],
+   "gold": "exchange_rate",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "thank you for yor help",
+   "actions": [
+    "goodbye",
+    "cancel_reservation",
+    "book_hotel",
+    "car_rental",
+    "how_old_are_you",
+    "international_fees",
+    "ingredient_substitution",
+    "are_you_a_bot",
+    "spending_history",
+    "alarm",
+    "reminder",
+    "flight_status",
+    "income",
+    "apr",
+    "gas",
+    "application_status",
+    "insurance",
+    "gas_type",
+    "change_ai_name",
+    "vaccines",
+    "restaurant_reservation",
+    "rollover_401k",
+    "thank_you",
+    "accept_reservations",
+    "last_maintenance"
+   ],
+   "gold": "thank_you",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "do i ahve soda on my shopping lst if not please add it",
+   "actions": [
+    "routing",
+    "car_rental",
+    "alarm",
+    "yes",
+    "order",
+    "transfer",
+    "w2",
+    "cancel_reservation",
+    "shopping_list",
+    "calendar_update",
+    "transactions",
+    "calories",
+    "reminder",
+    "maybe",
+    "shopping_list_update",
+    "todo_list_update",
+    "sync_device",
+    "confirm_reservation",
+    "todo_list",
+    "find_phone",
+    "food_last",
+    "application_status",
+    "pto_request",
+    "insurance",
+    "bill_balance"
+   ],
+   "gold": "shopping_list_update",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wat is the expiration dzte of my milk",
+   "actions": [
+    "ingredients_list",
+    "last_maintenance",
+    "cook_time",
+    "pto_request_status",
+    "expiration_date",
+    "application_status",
+    "oil_change_when",
+    "rewards_balance",
+    "what_are_your_hobbies",
+    "reminder_update",
+    "how_busy",
+    "tire_change",
+    "flip_coin",
+    "find_phone",
+    "calories",
+    "improve_credit_score",
+    "change_accent",
+    "next_song",
+    "food_last",
+    "are_you_a_bot",
+    "rollover_401k",
+    "apr",
+    "replacement_card_duration",
+    "carry_on",
+    "payday"
+   ],
+   "gold": "food_last",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "whiaper to me",
+   "actions": [
+    "schedule_meeting",
+    "find_phone",
+    "change_language",
+    "timer",
+    "whisper_mode",
+    "order_checks",
+    "tire_pressure",
+    "flight_status",
+    "accept_reservations",
+    "lost_luggage",
+    "change_speed",
+    "change_volume",
+    "what_is_your_name",
+    "change_ai_name",
+    "flip_coin",
+    "insurance_change",
+    "credit_limit_change",
+    "reset_settings",
+    "todo_list",
+    "sync_device",
+    "what_are_your_hobbies",
+    "change_accent",
+    "bill_due",
+    "cancel",
+    "freeze_account"
+   ],
+   "gold": "whisper_mode",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how long to wqit before dining in restaruant beta",
+   "actions": [
+    "redeem_rewards",
+    "user_name",
+    "next_holiday",
+    "directions",
+    "tire_change",
+    "cancel",
+    "pto_balance",
+    "recipe",
+    "gas",
+    "bill_due",
+    "tell_joke",
+    "report_lost_card",
+    "direct_deposit",
+    "oil_change_how",
+    "car_rental",
+    "pto_request_status",
+    "shopping_list_update",
+    "how_busy",
+    "transfer",
+    "credit_limit_change",
+    "payday",
+    "replacement_card_duration",
+    "oil_change_when",
+    "last_maintenance",
+    "apr"
+   ],
+   "gold": "how_busy",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "odes south kprea require an international visa",
+   "actions": [
+    "international_fees",
+    "recipe",
+    "meeting_schedule",
+    "travel_alert",
+    "weather",
+    "new_card",
+    "tire_change",
+    "thank_you",
+    "order",
+    "alarm",
+    "expiration_date",
+    "play_music",
+    "rollover_401k",
+    "tell_joke",
+    "plug_type",
+    "international_visa",
+    "pto_request_status",
+    "calculator",
+    "oil_change_when",
+    "yes",
+    "rewards_balance",
+    "timezone",
+    "vaccines",
+    "interest_rate",
+    "insurance"
+   ],
+   "gold": "international_visa",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "seve needs to knpw my location",
+   "actions": [
+    "routing",
+    "share_location",
+    "current_location",
+    "date",
+    "improve_credit_score",
+    "smart_home",
+    "transfer",
+    "recipe",
+    "directions",
+    "expiration_date",
+    "accept_reservations",
+    "apr",
+    "bill_balance",
+    "damaged_card",
+    "yes",
+    "credit_score",
+    "credit_limit",
+    "cook_time",
+    "oil_change_how",
+    "ingredients_list",
+    "find_phone",
+    "traffic",
+    "taxes",
+    "flip_coin",
+    "how_busy"
+   ],
+   "gold": "share_location",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "are htere deent seafood restaurants in portland",
+   "actions": [
+    "account_blocked",
+    "expiration_date",
+    "restaurant_suggestion",
+    "next_holiday",
+    "lost_luggage",
+    "pto_balance",
+    "tell_joke",
+    "what_is_your_name",
+    "credit_limit",
+    "play_music",
+    "pay_bill",
+    "recipe",
+    "oil_change_how",
+    "direct_deposit",
+    "jump_start",
+    "meal_suggestion",
+    "update_playlist",
+    "travel_alert",
+    "current_location",
+    "what_are_your_hobbies",
+    "reminder",
+    "spending_history",
+    "ingredients_list",
+    "travel_suggestion",
+    "credit_score"
+   ],
+   "gold": "restaurant_suggestion",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what's the gling arte between usd and cad",
+   "actions": [
+    "meeting_schedule",
+    "mpg",
+    "bill_balance",
+    "maybe",
+    "flip_coin",
+    "lost_luggage",
+    "balance",
+    "calories",
+    "insurance",
+    "w2",
+    "exchange_rate",
+    "change_volume",
+    "measurement_conversion",
+    "calculator",
+    "pto_used",
+    "next_holiday",
+    "new_card",
+    "apr",
+    "gas",
+    "accept_reservations",
+    "who_made_you",
+    "oil_change_how",
+    "translate",
+    "timer",
+    "pto_balance"
+   ],
+   "gold": "exchange_rate",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "do i hvae chese on my shopping list if not please add it",
+   "actions": [
+    "cancel_reservation",
+    "who_made_you",
+    "directions",
+    "order",
+    "cook_time",
+    "text",
+    "todo_list",
+    "nutrition_info",
+    "account_blocked",
+    "bill_balance",
+    "share_location",
+    "play_music",
+    "car_rental",
+    "shopping_list_update",
+    "pto_request",
+    "alarm",
+    "book_flight",
+    "todo_list_update",
+    "confirm_reservation",
+    "measurement_conversion",
+    "card_declined",
+    "shopping_list",
+    "calendar_update",
+    "improve_credit_score",
+    "sync_device"
+   ],
+   "gold": "shopping_list_update",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how can i jimp tsart a car",
+   "actions": [
+    "what_are_your_hobbies",
+    "order",
+    "calendar_update",
+    "change_volume",
+    "w2",
+    "insurance_change",
+    "interest_rate",
+    "what_can_i_ask_you",
+    "find_phone",
+    "oil_change_how",
+    "confirm_reservation",
+    "insurance",
+    "taxes",
+    "schedule_meeting",
+    "last_maintenance",
+    "new_card",
+    "spelling",
+    "credit_score",
+    "direct_deposit",
+    "jump_start",
+    "rollover_401k",
+    "recipe",
+    "calculator",
+    "transfer",
+    "report_lost_card"
+   ],
+   "gold": "jump_start",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how do i get to the corut hoyse on foot",
+   "actions": [
+    "credit_limit_change",
+    "food_last",
+    "how_busy",
+    "credit_score",
+    "insurance",
+    "travel_alert",
+    "direct_deposit",
+    "travel_notification",
+    "current_location",
+    "routing",
+    "directions",
+    "bill_due",
+    "shopping_list",
+    "what_song",
+    "credit_limit",
+    "oil_change_how",
+    "pin_change",
+    "gas",
+    "do_you_have_pets",
+    "new_card",
+    "timer",
+    "apr",
+    "interest_rate",
+    "text",
+    "pto_request_status"
+   ],
+   "gold": "directions",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "acll aj please",
+   "actions": [
+    "mpg",
+    "alarm",
+    "flip_coin",
+    "shopping_list",
+    "distance",
+    "sync_device",
+    "freeze_account",
+    "schedule_maintenance",
+    "change_ai_name",
+    "income",
+    "fun_fact",
+    "text",
+    "reminder_update",
+    "book_hotel",
+    "pay_bill",
+    "make_call",
+    "ingredient_substitution",
+    "share_location",
+    "roll_dice",
+    "order_status",
+    "timer",
+    "international_fees",
+    "cancel_reservation",
+    "definition",
+    "how_old_are_you"
+   ],
+   "gold": "make_call",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "tll me a fun fcat about the moon landing",
+   "actions": [
+    "international_visa",
+    "what_are_your_hobbies",
+    "balance",
+    "restaurant_suggestion",
+    "schedule_meeting",
+    "travel_suggestion",
+    "oil_change_how",
+    "apr",
+    "fun_fact",
+    "alarm",
+    "tell_joke",
+    "expiration_date",
+    "change_accent",
+    "pin_change",
+    "calendar_update",
+    "ingredient_substitution",
+    "income",
+    "nutrition_info",
+    "account_blocked",
+    "credit_score",
+    "meaning_of_life",
+    "todo_list",
+    "insurance",
+    "pto_balance",
+    "whisper_mode"
+   ],
+   "gold": "fun_fact",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how to hcange oil of a car",
+   "actions": [
+    "insurance_change",
+    "jump_start",
+    "directions",
+    "schedule_meeting",
+    "roll_dice",
+    "measurement_conversion",
+    "maybe",
+    "pin_change",
+    "card_declined",
+    "change_volume",
+    "pay_bill",
+    "current_location",
+    "gas_type",
+    "repeat",
+    "rollover_401k",
+    "recipe",
+    "oil_change_when",
+    "shopping_list_update",
+    "date",
+    "oil_change_how",
+    "sync_device",
+    "last_maintenance",
+    "travel_suggestion",
+    "routing",
+    "pto_request_status"
+   ],
+   "gold": "oil_change_how",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i wat to see transactions feom this month",
+   "actions": [
+    "payday",
+    "apr",
+    "shopping_list",
+    "reminder",
+    "maybe",
+    "food_last",
+    "card_declined",
+    "weather",
+    "last_maintenance",
+    "redeem_rewards",
+    "next_holiday",
+    "expiration_date",
+    "rollover_401k",
+    "roll_dice",
+    "do_you_have_pets",
+    "credit_limit",
+    "transactions",
+    "min_payment",
+    "income",
+    "date",
+    "cook_time",
+    "what_can_i_ask_you",
+    "restaurant_reviews",
+    "todo_list",
+    "replacement_card_duration"
+   ],
+   "gold": "transactions",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "am i giong to need a visa for traveling to csnada",
+   "actions": [
+    "cancel",
+    "plug_type",
+    "change_volume",
+    "timezone",
+    "expiration_date",
+    "pto_request_status",
+    "current_location",
+    "tire_change",
+    "jump_start",
+    "ingredients_list",
+    "new_card",
+    "uber",
+    "routing",
+    "update_playlist",
+    "order",
+    "international_fees",
+    "yes",
+    "travel_alert",
+    "pto_request",
+    "restaurant_reservation",
+    "vaccines",
+    "international_visa",
+    "min_payment",
+    "oil_change_when",
+    "insurance"
+   ],
+   "gold": "international_visa",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i need to pay my tme warnr cable bill",
+   "actions": [
+    "car_rental",
+    "min_payment",
+    "spelling",
+    "bill_due",
+    "bill_balance",
+    "exchange_rate",
+    "pto_request",
+    "international_fees",
+    "freeze_account",
+    "schedule_maintenance",
+    "pay_bill",
+    "flip_coin",
+    "change_ai_name",
+    "change_volume",
+    "uber",
+    "international_visa",
+    "todo_list_update",
+    "insurance_change",
+    "change_accent",
+    "find_phone",
+    "pin_change",
+    "sync_device",
+    "report_fraud",
+    "new_card",
+    "alarm"
+   ],
+   "gold": "pay_bill",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how high is my spending lmiit on my wells fargo crad",
+   "actions": [
+    "bill_balance",
+    "food_last",
+    "redeem_rewards",
+    "insurance_change",
+    "travel_suggestion",
+    "timer",
+    "new_card",
+    "interest_rate",
+    "balance",
+    "thank_you",
+    "credit_limit_change",
+    "bill_due",
+    "rewards_balance",
+    "routing",
+    "min_payment",
+    "who_do_you_work_for",
+    "apr",
+    "book_hotel",
+    "report_fraud",
+    "traffic",
+    "change_volume",
+    "expiration_date",
+    "report_lost_card",
+    "credit_limit",
+    "next_song"
+   ],
+   "gold": "credit_limit",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "send my curernt location to steve, pleawe",
+   "actions": [
+    "bill_balance",
+    "jump_start",
+    "directions",
+    "ingredient_substitution",
+    "car_rental",
+    "apr",
+    "translate",
+    "current_location",
+    "income",
+    "credit_limit",
+    "damaged_card",
+    "credit_score",
+    "oil_change_how",
+    "flip_coin",
+    "share_location",
+    "routing",
+    "credit_limit_change",
+    "change_ai_name",
+    "definition",
+    "date",
+    "gas",
+    "transactions",
+    "ingredients_list",
+    "update_playlist",
+    "find_phone"
+   ],
+   "gold": "share_location",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i'm looking for a back and foeth flight from lax to portland for w to sunday",
+   "actions": [
+    "rollover_401k",
+    "income",
+    "vaccines",
+    "taxes",
+    "calendar_update",
+    "change_volume",
+    "confirm_reservation",
+    "book_hotel",
+    "w2",
+    "card_declined",
+    "carry_on",
+    "smart_home",
+    "oil_change_how",
+    "pto_request",
+    "bill_balance",
+    "current_location",
+    "insurance_change",
+    "nutrition_info",
+    "application_status",
+    "how_old_are_you",
+    "lost_luggage",
+    "book_flight",
+    "improve_credit_score",
+    "international_visa",
+    "car_rental"
+   ],
+   "gold": "book_flight",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what kid of emal should i eat from thailand",
+   "actions": [
+    "order",
+    "date",
+    "recipe",
+    "jump_start",
+    "meal_suggestion",
+    "apr",
+    "meaning_of_life",
+    "new_card",
+    "insurance_change",
+    "timer",
+    "tire_pressure",
+    "flip_coin",
+    "shopping_list_update",
+    "oil_change_how",
+    "insurance",
+    "todo_list",
+    "income",
+    "restaurant_suggestion",
+    "pto_request",
+    "timezone",
+    "book_flight",
+    "account_blocked",
+    "roll_dice",
+    "change_ai_name",
+    "tell_joke"
+   ],
+   "gold": "meal_suggestion",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "etll me the meaning of live",
+   "actions": [
+    "update_playlist",
+    "account_blocked",
+    "how_old_are_you",
+    "tell_joke",
+    "play_music",
+    "what_is_your_name",
+    "user_name",
+    "are_you_a_bot",
+    "restaurant_reservation",
+    "income",
+    "next_holiday",
+    "insurance",
+    "reminder",
+    "todo_list",
+    "do_you_have_pets",
+    "time",
+    "shopping_list",
+    "interest_rate",
+    "taxes",
+    "meaning_of_life",
+    "apr",
+    "gas",
+    "fun_fact",
+    "todo_list_update",
+    "pto_balance"
+   ],
+   "gold": "meaning_of_life",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "make me a erservation in atmpa from may 2 to may 4",
+   "actions": [
+    "bill_due",
+    "interest_rate",
+    "goodbye",
+    "jump_start",
+    "schedule_maintenance",
+    "mpg",
+    "next_song",
+    "calendar_update",
+    "order",
+    "restaurant_reservation",
+    "measurement_conversion",
+    "freeze_account",
+    "rollover_401k",
+    "recipe",
+    "pin_change",
+    "maybe",
+    "insurance_change",
+    "car_rental",
+    "book_flight",
+    "redeem_rewards",
+    "calendar",
+    "income",
+    "book_hotel",
+    "lost_luggage",
+    "pto_request"
+   ],
+   "gold": "book_hotel",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how many days hqve i atken off",
+   "actions": [
+    "report_lost_card",
+    "meeting_schedule",
+    "definition",
+    "pto_request_status",
+    "next_holiday",
+    "spending_history",
+    "taxes",
+    "account_blocked",
+    "pto_used",
+    "maybe",
+    "bill_due",
+    "shopping_list",
+    "gas",
+    "food_last",
+    "balance",
+    "timer",
+    "how_old_are_you",
+    "last_maintenance",
+    "pay_bill",
+    "pto_balance",
+    "directions",
+    "bill_balance",
+    "income",
+    "direct_deposit",
+    "calories"
+   ],
+   "gold": "pto_used",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "will i be pemritted to take my vacstion",
+   "actions": [
+    "user_name",
+    "goodbye",
+    "confirm_reservation",
+    "application_status",
+    "pto_request_status",
+    "tire_pressure",
+    "oil_change_how",
+    "shopping_list_update",
+    "todo_list",
+    "directions",
+    "payday",
+    "mpg",
+    "ingredient_substitution",
+    "carry_on",
+    "pto_request",
+    "next_holiday",
+    "bill_due",
+    "report_fraud",
+    "balance",
+    "schedule_meeting",
+    "pto_balance",
+    "pto_used",
+    "credit_limit",
+    "last_maintenance",
+    "apr"
+   ],
+   "gold": "pto_request_status",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what are the ingredients used in cihcken crry",
+   "actions": [
+    "yes",
+    "account_blocked",
+    "do_you_have_pets",
+    "credit_score",
+    "next_holiday",
+    "next_song",
+    "cook_time",
+    "plug_type",
+    "shopping_list",
+    "flip_coin",
+    "todo_list",
+    "gas_type",
+    "nutrition_info",
+    "calories",
+    "car_rental",
+    "insurance",
+    "spelling",
+    "recipe",
+    "how_old_are_you",
+    "ingredients_list",
+    "card_declined",
+    "transactions",
+    "shopping_list_update",
+    "freeze_account",
+    "bill_balance"
+   ],
+   "gold": "ingredients_list",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "tell me the tirle of the song plahing",
+   "actions": [
+    "what_is_your_name",
+    "play_music",
+    "measurement_conversion",
+    "insurance",
+    "date",
+    "what_song",
+    "taxes",
+    "lost_luggage",
+    "do_you_have_pets",
+    "spelling",
+    "shopping_list",
+    "current_location",
+    "account_blocked",
+    "tire_pressure",
+    "direct_deposit",
+    "change_speed",
+    "time",
+    "timezone",
+    "credit_limit",
+    "meaning_of_life",
+    "who_made_you",
+    "goodbye",
+    "flight_status",
+    "vaccines",
+    "order_checks"
+   ],
+   "gold": "what_song",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "could you book me a hotel in afghaistan at the zoo for the 1t0h to the 15th",
+   "actions": [
+    "book_flight",
+    "whisper_mode",
+    "tire_change",
+    "jump_start",
+    "calendar",
+    "replacement_card_duration",
+    "gas_type",
+    "pto_request",
+    "car_rental",
+    "who_made_you",
+    "reminder",
+    "recipe",
+    "income",
+    "calendar_update",
+    "who_do_you_work_for",
+    "redeem_rewards",
+    "uber",
+    "insurance_change",
+    "what_are_your_hobbies",
+    "exchange_rate",
+    "interest_rate",
+    "restaurant_suggestion",
+    "book_hotel",
+    "lost_luggage",
+    "rollover_401k"
+   ],
+   "gold": "book_hotel",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "oredr all of my shopping lixt",
+   "actions": [
+    "shopping_list",
+    "order_checks",
+    "car_rental",
+    "todo_list_update",
+    "meaning_of_life",
+    "change_volume",
+    "rollover_401k",
+    "maybe",
+    "todo_list",
+    "order_status",
+    "spending_history",
+    "alarm",
+    "shopping_list_update",
+    "fun_fact",
+    "flip_coin",
+    "sync_device",
+    "freeze_account",
+    "gas_type",
+    "order",
+    "tell_joke",
+    "apr",
+    "greeting",
+    "insurance_change",
+    "roll_dice",
+    "insurance"
+   ],
+   "gold": "order",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wht is the total day off have i atken",
+   "actions": [
+    "pto_request_status",
+    "maybe",
+    "goodbye",
+    "cancel",
+    "insurance",
+    "bill_due",
+    "next_holiday",
+    "distance",
+    "calendar",
+    "last_maintenance",
+    "jump_start",
+    "measurement_conversion",
+    "calories",
+    "change_language",
+    "spending_history",
+    "pto_balance",
+    "pto_used",
+    "how_old_are_you",
+    "taxes",
+    "change_user_name",
+    "roll_dice",
+    "income",
+    "apr",
+    "gas",
+    "bill_balance"
+   ],
+   "gold": "pto_used",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wlil you pleae tell me my to do list",
+   "actions": [
+    "pto_request",
+    "last_maintenance",
+    "application_status",
+    "report_fraud",
+    "balance",
+    "order",
+    "taxes",
+    "alarm",
+    "next_holiday",
+    "bill_balance",
+    "transfer",
+    "todo_list_update",
+    "user_name",
+    "todo_list",
+    "reminder",
+    "ingredient_substitution",
+    "apr",
+    "credit_score",
+    "pto_request_status",
+    "insurance",
+    "transactions",
+    "gas_type",
+    "international_fees",
+    "who_do_you_work_for",
+    "shopping_list"
+   ],
+   "gold": "todo_list",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what is lief's purpose",
+   "actions": [
+    "goodbye",
+    "are_you_a_bot",
+    "calculator",
+    "apr",
+    "do_you_have_pets",
+    "account_blocked",
+    "restaurant_reviews",
+    "meaning_of_life",
+    "traffic",
+    "what_is_your_name",
+    "translate",
+    "schedule_meeting",
+    "transactions",
+    "travel_notification",
+    "next_holiday",
+    "how_old_are_you",
+    "ingredients_list",
+    "text",
+    "user_name",
+    "income",
+    "tell_joke",
+    "whisper_mode",
+    "pto_balance",
+    "insurance",
+    "taxes"
+   ],
+   "gold": "meaning_of_life",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how mny mles will i get for one gallon on this car",
+   "actions": [
+    "goodbye",
+    "expiration_date",
+    "weather",
+    "change_language",
+    "gas",
+    "next_holiday",
+    "restaurant_reservation",
+    "bill_balance",
+    "timer",
+    "what_are_your_hobbies",
+    "insurance",
+    "gas_type",
+    "last_maintenance",
+    "pto_used",
+    "oil_change_how",
+    "oil_change_when",
+    "report_fraud",
+    "apr",
+    "income",
+    "bill_due",
+    "mpg",
+    "shopping_list_update",
+    "order",
+    "pto_balance",
+    "lost_luggage"
+   ],
+   "gold": "mpg",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "hey sir, please acncel my reservation at the loft for 5",
+   "actions": [
+    "roll_dice",
+    "order",
+    "cancel",
+    "pto_balance",
+    "what_are_your_hobbies",
+    "flip_coin",
+    "update_playlist",
+    "damaged_card",
+    "cook_time",
+    "make_call",
+    "oil_change_how",
+    "insurance",
+    "shopping_list",
+    "rollover_401k",
+    "car_rental",
+    "uber",
+    "restaurant_reservation",
+    "reminder",
+    "sync_device",
+    "meal_suggestion",
+    "confirm_reservation",
+    "cancel_reservation",
+    "greeting",
+    "next_song",
+    "pto_request_status"
+   ],
+   "gold": "cancel_reservation",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wnat and when is the next holicay",
+   "actions": [
+    "meeting_schedule",
+    "bill_balance",
+    "bill_due",
+    "pto_request_status",
+    "oil_change_when",
+    "reset_settings",
+    "gas",
+    "direct_deposit",
+    "taxes",
+    "next_holiday",
+    "spelling",
+    "tire_change",
+    "payday",
+    "pay_bill",
+    "roll_dice",
+    "measurement_conversion",
+    "tell_joke",
+    "pto_used",
+    "carry_on",
+    "pto_balance",
+    "share_location",
+    "last_maintenance",
+    "change_user_name",
+    "expiration_date",
+    "travel_alert"
+   ],
+   "gold": "next_holiday",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i have no checs and ned to order new checks",
+   "actions": [
+    "thank_you",
+    "freeze_account",
+    "book_hotel",
+    "next_holiday",
+    "smart_home",
+    "update_playlist",
+    "new_card",
+    "direct_deposit",
+    "todo_list",
+    "redeem_rewards",
+    "insurance_change",
+    "what_is_your_name",
+    "bill_balance",
+    "pin_change",
+    "rollover_401k",
+    "balance",
+    "order",
+    "interest_rate",
+    "meaning_of_life",
+    "timer",
+    "order_checks",
+    "routing",
+    "insurance",
+    "last_maintenance",
+    "meal_suggestion"
+   ],
+   "gold": "order_checks",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "my card isn't workig because its destroyed",
+   "actions": [
+    "greeting",
+    "rollover_401k",
+    "calories",
+    "are_you_a_bot",
+    "card_declined",
+    "travel_notification",
+    "shopping_list_update",
+    "report_lost_card",
+    "credit_limit",
+    "payday",
+    "what_are_your_hobbies",
+    "interest_rate",
+    "update_playlist",
+    "expiration_date",
+    "share_location",
+    "application_status",
+    "text",
+    "apr",
+    "pin_change",
+    "pto_request_status",
+    "damaged_card",
+    "book_flight",
+    "what_song",
+    "redeem_rewards",
+    "spending_history"
+   ],
+   "gold": "damaged_card",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can you please pudate the status of flight d1l23",
+   "actions": [
+    "pto_request_status",
+    "bill_due",
+    "freeze_account",
+    "interest_rate",
+    "date",
+    "expiration_date",
+    "next_holiday",
+    "change_speed",
+    "jump_start",
+    "how_busy",
+    "fun_fact",
+    "text",
+    "vaccines",
+    "application_status",
+    "ingredient_substitution",
+    "carry_on",
+    "apr",
+    "what_is_your_name",
+    "flight_status",
+    "definition",
+    "payday",
+    "travel_suggestion",
+    "tire_change",
+    "oil_change_when",
+    "reminder"
+   ],
+   "gold": "flight_status",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how much have i spebt on groceries rcently",
+   "actions": [
+    "tire_change",
+    "text",
+    "greeting",
+    "restaurant_reservation",
+    "last_maintenance",
+    "balance",
+    "pto_used",
+    "calories",
+    "todo_list_update",
+    "income",
+    "pto_balance",
+    "bill_balance",
+    "pto_request_status",
+    "spending_history",
+    "transactions",
+    "accept_reservations",
+    "replacement_card_duration",
+    "improve_credit_score",
+    "routing",
+    "credit_limit",
+    "rewards_balance",
+    "taxes",
+    "book_flight",
+    "change_accent",
+    "application_status"
+   ],
+   "gold": "spending_history",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how long will it tqke to get to taclma",
+   "actions": [
+    "repeat",
+    "what_is_your_name",
+    "how_busy",
+    "directions",
+    "gas",
+    "next_holiday",
+    "next_song",
+    "todo_list_update",
+    "international_fees",
+    "accept_reservations",
+    "mpg",
+    "interest_rate",
+    "expiration_date",
+    "distance",
+    "calculator",
+    "exchange_rate",
+    "confirm_reservation",
+    "insurance_change",
+    "food_last",
+    "calendar_update",
+    "cook_time",
+    "change_speed",
+    "replacement_card_duration",
+    "share_location",
+    "oil_change_when"
+   ],
+   "gold": "distance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i know that is trye",
+   "actions": [
+    "what_are_your_hobbies",
+    "insurance",
+    "pto_balance",
+    "current_location",
+    "direct_deposit",
+    "what_is_your_name",
+    "who_made_you",
+    "apr",
+    "what_song",
+    "do_you_have_pets",
+    "where_are_you_from",
+    "no",
+    "user_name",
+    "uber",
+    "vaccines",
+    "bill_balance",
+    "yes",
+    "order",
+    "timezone",
+    "repeat",
+    "tire_pressure",
+    "pto_used",
+    "order_checks",
+    "greeting",
+    "expiration_date"
+   ],
+   "gold": "yes",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "why did you rfeeze my bank acconut",
+   "actions": [
+    "order",
+    "distance",
+    "application_status",
+    "routing",
+    "interest_rate",
+    "card_declined",
+    "maybe",
+    "apr",
+    "oil_change_when",
+    "transactions",
+    "balance",
+    "jump_start",
+    "insurance",
+    "ingredients_list",
+    "thank_you",
+    "last_maintenance",
+    "account_blocked",
+    "carry_on",
+    "how_busy",
+    "credit_score",
+    "meaning_of_life",
+    "reminder_update",
+    "direct_deposit",
+    "share_location",
+    "pay_bill"
+   ],
+   "gold": "account_blocked",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wht time is it now in mcihigan",
+   "actions": [
+    "date",
+    "roll_dice",
+    "current_location",
+    "timezone",
+    "todo_list_update",
+    "time",
+    "accept_reservations",
+    "alarm",
+    "credit_limit",
+    "no",
+    "income",
+    "car_rental",
+    "expiration_date",
+    "what_song",
+    "todo_list",
+    "min_payment",
+    "pay_bill",
+    "shopping_list_update",
+    "credit_score",
+    "tire_pressure",
+    "balance",
+    "apr",
+    "change_ai_name",
+    "how_old_are_you",
+    "pto_request_status"
+   ],
+   "gold": "time",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "will i have enough to get a new roku wth my savings acconut",
+   "actions": [
+    "apr",
+    "interest_rate",
+    "pto_balance",
+    "distance",
+    "order_checks",
+    "balance",
+    "rollover_401k",
+    "gas",
+    "tell_joke",
+    "bill_balance",
+    "flip_coin",
+    "pin_change",
+    "oil_change_how",
+    "routing",
+    "min_payment",
+    "direct_deposit",
+    "income",
+    "meal_suggestion",
+    "where_are_you_from",
+    "spending_history",
+    "weather",
+    "insurance",
+    "rewards_balance",
+    "credit_limit",
+    "traffic"
+   ],
+   "gold": "balance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "share my loation with google",
+   "actions": [
+    "share_location",
+    "credit_score",
+    "taxes",
+    "current_location",
+    "shopping_list",
+    "date",
+    "routing",
+    "alarm",
+    "damaged_card",
+    "expiration_date",
+    "text",
+    "insurance_change",
+    "find_phone",
+    "credit_limit",
+    "flip_coin",
+    "directions",
+    "apr",
+    "bill_balance",
+    "spelling",
+    "report_lost_card",
+    "oil_change_how",
+    "ingredient_substitution",
+    "schedule_maintenance",
+    "change_accent",
+    "transactions"
+   ],
+   "gold": "share_location",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i awnt to know whqt the purpose of life is",
+   "actions": [
+    "income",
+    "what_is_your_name",
+    "pto_balance",
+    "next_holiday",
+    "mpg",
+    "min_payment",
+    "insurance",
+    "improve_credit_score",
+    "account_blocked",
+    "do_you_have_pets",
+    "cook_time",
+    "apr",
+    "redeem_rewards",
+    "cancel",
+    "who_made_you",
+    "direct_deposit",
+    "whisper_mode",
+    "user_name",
+    "insurance_change",
+    "tell_joke",
+    "how_old_are_you",
+    "change_user_name",
+    "flip_coin",
+    "meaning_of_life",
+    "are_you_a_bot"
+   ],
+   "gold": "meaning_of_life",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i do not hzve that informaton",
+   "actions": [
+    "do_you_have_pets",
+    "timezone",
+    "cancel_reservation",
+    "travel_alert",
+    "repeat",
+    "apr",
+    "freeze_account",
+    "pin_change",
+    "calories",
+    "income",
+    "redeem_rewards",
+    "tell_joke",
+    "maybe",
+    "no",
+    "flip_coin",
+    "application_status",
+    "insurance",
+    "account_blocked",
+    "calculator",
+    "meaning_of_life",
+    "user_name",
+    "play_music",
+    "exchange_rate",
+    "schedule_meeting",
+    "are_you_a_bot"
+   ],
+   "gold": "maybe",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "make your nane steve",
+   "actions": [
+    "flip_coin",
+    "todo_list",
+    "date",
+    "roll_dice",
+    "change_volume",
+    "pto_request",
+    "measurement_conversion",
+    "restaurant_suggestion",
+    "account_blocked",
+    "timer",
+    "change_language",
+    "insurance_change",
+    "reset_settings",
+    "change_user_name",
+    "time",
+    "reminder",
+    "accept_reservations",
+    "change_accent",
+    "credit_limit_change",
+    "change_ai_name",
+    "pin_change",
+    "who_do_you_work_for",
+    "spending_history",
+    "user_name",
+    "travel_notification"
+   ],
+   "gold": "change_ai_name",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "whn do i need to pay my car insurance blil by",
+   "actions": [
+    "payday",
+    "gas_type",
+    "min_payment",
+    "income",
+    "card_declined",
+    "credit_limit",
+    "tire_change",
+    "pay_bill",
+    "apr",
+    "change_volume",
+    "last_maintenance",
+    "change_ai_name",
+    "bill_due",
+    "oil_change_when",
+    "expiration_date",
+    "greeting",
+    "weather",
+    "restaurant_reservation",
+    "next_holiday",
+    "calories",
+    "bill_balance",
+    "replacement_card_duration",
+    "lost_luggage",
+    "flight_status",
+    "text"
+   ],
+   "gold": "bill_due",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "allow me to tufn on the lights",
+   "actions": [
+    "credit_limit",
+    "restaurant_reviews",
+    "meal_suggestion",
+    "maybe",
+    "application_status",
+    "alarm",
+    "recipe",
+    "pto_request_status",
+    "confirm_reservation",
+    "accept_reservations",
+    "restaurant_reservation",
+    "change_ai_name",
+    "car_rental",
+    "insurance_change",
+    "change_user_name",
+    "uber",
+    "cancel_reservation",
+    "date",
+    "sync_device",
+    "travel_alert",
+    "insurance",
+    "change_speed",
+    "timer",
+    "book_hotel",
+    "change_accent"
+   ],
+   "gold": "restaurant_reservation",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what kind of traffic is on hwy 1 going to the downtown aea riht now",
+   "actions": [
+    "meeting_schedule",
+    "nutrition_info",
+    "user_name",
+    "order",
+    "restaurant_reservation",
+    "gas",
+    "next_holiday",
+    "taxes",
+    "schedule_maintenance",
+    "vaccines",
+    "measurement_conversion",
+    "date",
+    "calendar_update",
+    "alarm",
+    "do_you_have_pets",
+    "accept_reservations",
+    "spelling",
+    "credit_score",
+    "directions",
+    "travel_notification",
+    "current_location",
+    "calendar",
+    "traffic",
+    "schedule_meeting",
+    "share_location"
+   ],
+   "gold": "traffic",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wgat do you go by",
+   "actions": [
+    "schedule_meeting",
+    "change_ai_name",
+    "application_status",
+    "are_you_a_bot",
+    "credit_score",
+    "change_user_name",
+    "user_name",
+    "what_is_your_name",
+    "order",
+    "yes",
+    "rewards_balance",
+    "what_can_i_ask_you",
+    "pto_used",
+    "insurance",
+    "next_holiday",
+    "shopping_list",
+    "who_made_you",
+    "meaning_of_life",
+    "direct_deposit",
+    "oil_change_how",
+    "how_old_are_you",
+    "do_you_have_pets",
+    "flip_coin",
+    "timer",
+    "tire_pressure"
+   ],
+   "gold": "what_is_your_name",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how llng since my oil had a refrsh",
+   "actions": [
+    "bill_due",
+    "pto_request_status",
+    "expiration_date",
+    "change_user_name",
+    "how_old_are_you",
+    "gas_type",
+    "last_maintenance",
+    "update_playlist",
+    "account_blocked",
+    "definition",
+    "calendar_update",
+    "shopping_list",
+    "application_status",
+    "jump_start",
+    "payday",
+    "order_status",
+    "oil_change_when",
+    "lost_luggage",
+    "flight_status",
+    "insurance",
+    "oil_change_how",
+    "cook_time",
+    "card_declined",
+    "schedule_maintenance",
+    "tire_change"
+   ],
+   "gold": "last_maintenance",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "that's defimitely true",
+   "actions": [
+    "direct_deposit",
+    "transactions",
+    "yes",
+    "what_is_your_name",
+    "current_location",
+    "account_blocked",
+    "no",
+    "distance",
+    "report_lost_card",
+    "calories",
+    "what_song",
+    "change_accent",
+    "new_card",
+    "who_do_you_work_for",
+    "do_you_have_pets",
+    "tire_pressure",
+    "insurance",
+    "user_name",
+    "next_song",
+    "order",
+    "improve_credit_score",
+    "who_made_you",
+    "uber",
+    "repeat",
+    "traffic"
+   ],
+   "gold": "yes",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i am cutious to kjow if you are a bot",
+   "actions": [
+    "next_holiday",
+    "todo_list",
+    "insurance",
+    "tire_pressure",
+    "account_blocked",
+    "do_you_have_pets",
+    "international_visa",
+    "meaning_of_life",
+    "apr",
+    "where_are_you_from",
+    "schedule_meeting",
+    "damaged_card",
+    "restaurant_suggestion",
+    "what_is_your_name",
+    "update_playlist",
+    "share_location",
+    "are_you_a_bot",
+    "balance",
+    "shopping_list_update",
+    "routing",
+    "cancel",
+    "recipe",
+    "bill_balance",
+    "taxes",
+    "current_location"
+   ],
+   "gold": "are_you_a_bot",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can you put the ucrrently playing teack on my zen playlist",
+   "actions": [
+    "gas_type",
+    "balance",
+    "restaurant_suggestion",
+    "what_song",
+    "exchange_rate",
+    "freeze_account",
+    "bill_due",
+    "rewards_balance",
+    "interest_rate",
+    "next_song",
+    "update_playlist",
+    "car_rental",
+    "expiration_date",
+    "transfer",
+    "flip_coin",
+    "distance",
+    "play_music",
+    "insurance",
+    "apr",
+    "no",
+    "text",
+    "change_ai_name",
+    "improve_credit_score",
+    "repeat",
+    "traffic"
+   ],
+   "gold": "update_playlist",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "the tiker is calculated for 10 mnutes",
+   "actions": [
+    "change_ai_name",
+    "reminder_update",
+    "directions",
+    "last_maintenance",
+    "sync_device",
+    "order_status",
+    "definition",
+    "direct_deposit",
+    "who_made_you",
+    "what_song",
+    "timer",
+    "oil_change_when",
+    "share_location",
+    "car_rental",
+    "alarm",
+    "change_language",
+    "order_checks",
+    "cook_time",
+    "insurance_change",
+    "are_you_a_bot",
+    "pin_change",
+    "order",
+    "reset_settings",
+    "new_card",
+    "redeem_rewards"
+   ],
+   "gold": "timer",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "please use a mlae voice",
+   "actions": [
+    "freeze_account",
+    "insurance_change",
+    "change_ai_name",
+    "tell_joke",
+    "text",
+    "smart_home",
+    "reset_settings",
+    "change_speed",
+    "todo_list",
+    "pay_bill",
+    "apr",
+    "whisper_mode",
+    "restaurant_reviews",
+    "do_you_have_pets",
+    "roll_dice",
+    "next_song",
+    "alarm",
+    "ingredients_list",
+    "report_fraud",
+    "change_volume",
+    "cancel_reservation",
+    "change_language",
+    "change_accent",
+    "sync_device",
+    "food_last"
+   ],
+   "gold": "change_accent",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "shuold i a gas refill for my car at the nxt gas station",
+   "actions": [
+    "credit_score",
+    "bill_balance",
+    "reminder",
+    "rewards_balance",
+    "gas",
+    "gas_type",
+    "todo_list",
+    "routing",
+    "recipe",
+    "income",
+    "cancel_reservation",
+    "international_visa",
+    "next_holiday",
+    "pto_used",
+    "carry_on",
+    "taxes",
+    "pto_balance",
+    "balance",
+    "mpg",
+    "cook_time",
+    "insurance",
+    "tire_pressure",
+    "nutrition_info",
+    "meeting_schedule",
+    "jump_start"
+   ],
+   "gold": "gas",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i need to chane my acclunt",
+   "actions": [
+    "freeze_account",
+    "change_speed",
+    "cook_time",
+    "credit_score",
+    "whisper_mode",
+    "gas",
+    "next_holiday",
+    "calendar",
+    "improve_credit_score",
+    "insurance_change",
+    "rewards_balance",
+    "change_language",
+    "roll_dice",
+    "tell_joke",
+    "reset_settings",
+    "travel_notification",
+    "change_ai_name",
+    "measurement_conversion",
+    "change_volume",
+    "next_song",
+    "translate",
+    "account_blocked",
+    "sync_device",
+    "travel_suggestion",
+    "change_accent"
+   ],
+   "gold": "change_accent",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can i rent a car frm dfw airport fom march 1st to march 8th",
+   "actions": [
+    "travel_alert",
+    "new_card",
+    "do_you_have_pets",
+    "maybe",
+    "timezone",
+    "travel_notification",
+    "book_flight",
+    "pay_bill",
+    "change_ai_name",
+    "order",
+    "yes",
+    "food_last",
+    "make_call",
+    "pin_change",
+    "repeat",
+    "rollover_401k",
+    "fun_fact",
+    "book_hotel",
+    "calendar_update",
+    "uber",
+    "insurance_change",
+    "jump_start",
+    "car_rental",
+    "pto_request",
+    "expiration_date"
+   ],
+   "gold": "car_rental",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i ned your acecnt to be changed",
+   "actions": [
+    "no",
+    "calories",
+    "schedule_meeting",
+    "car_rental",
+    "distance",
+    "whisper_mode",
+    "last_maintenance",
+    "freeze_account",
+    "pto_request_status",
+    "tire_pressure",
+    "reminder_update",
+    "change_language",
+    "timezone",
+    "sync_device",
+    "roll_dice",
+    "recipe",
+    "change_speed",
+    "change_ai_name",
+    "change_volume",
+    "next_song",
+    "insurance_change",
+    "tell_joke",
+    "insurance",
+    "change_accent",
+    "reset_settings"
+   ],
+   "gold": "change_accent",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wat is on my to do lixt",
+   "actions": [
+    "roll_dice",
+    "accept_reservations",
+    "international_fees",
+    "meal_suggestion",
+    "application_status",
+    "expiration_date",
+    "transactions",
+    "plug_type",
+    "insurance",
+    "user_name",
+    "pto_request_status",
+    "how_old_are_you",
+    "direct_deposit",
+    "reminder",
+    "cancel",
+    "book_hotel",
+    "payday",
+    "what_are_your_hobbies",
+    "gas_type",
+    "restaurant_reservation",
+    "todo_list",
+    "shopping_list",
+    "card_declined",
+    "redeem_rewards",
+    "balance"
+   ],
+   "gold": "reminder",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wnere is your favorite erstaurant to eat",
+   "actions": [
+    "tell_joke",
+    "tire_pressure",
+    "oil_change_how",
+    "travel_suggestion",
+    "what_is_your_name",
+    "mpg",
+    "how_busy",
+    "reminder",
+    "jump_start",
+    "restaurant_suggestion",
+    "carry_on",
+    "user_name",
+    "pto_balance",
+    "credit_score",
+    "current_location",
+    "meal_suggestion",
+    "account_blocked",
+    "reset_settings",
+    "play_music",
+    "new_card",
+    "smart_home",
+    "travel_alert",
+    "recipe",
+    "spending_history",
+    "nutrition_info"
+   ],
+   "gold": "restaurant_suggestion",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "tell me wyen i should cahnge me oil",
+   "actions": [
+    "pay_bill",
+    "next_holiday",
+    "gas",
+    "change_ai_name",
+    "tire_change",
+    "freeze_account",
+    "credit_limit",
+    "reminder_update",
+    "cook_time",
+    "expiration_date",
+    "directions",
+    "flight_status",
+    "make_call",
+    "carry_on",
+    "yes",
+    "oil_change_how",
+    "payday",
+    "credit_limit_change",
+    "mpg",
+    "schedule_meeting",
+    "bill_due",
+    "last_maintenance",
+    "report_fraud",
+    "oil_change_when",
+    "replacement_card_duration"
+   ],
+   "gold": "oil_change_when",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i would like to know carry-on inrormation for dela",
+   "actions": [
+    "traffic",
+    "gas",
+    "update_playlist",
+    "whisper_mode",
+    "how_old_are_you",
+    "next_holiday",
+    "pto_request_status",
+    "credit_limit",
+    "carry_on",
+    "change_ai_name",
+    "calories",
+    "play_music",
+    "distance",
+    "who_do_you_work_for",
+    "replacement_card_duration",
+    "international_visa",
+    "oil_change_when",
+    "cancel",
+    "balance",
+    "car_rental",
+    "insurance",
+    "expiration_date",
+    "meeting_schedule",
+    "shopping_list_update",
+    "bill_balance"
+   ],
+   "gold": "carry_on",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "do you nkow london's timezone",
+   "actions": [
+    "insurance",
+    "damaged_card",
+    "routing",
+    "gas_type",
+    "change_speed",
+    "time",
+    "direct_deposit",
+    "car_rental",
+    "international_fees",
+    "who_made_you",
+    "date",
+    "calories",
+    "bill_due",
+    "shopping_list",
+    "shopping_list_update",
+    "sync_device",
+    "share_location",
+    "freeze_account",
+    "flight_status",
+    "gas",
+    "do_you_have_pets",
+    "tire_pressure",
+    "apr",
+    "timezone",
+    "expiration_date"
+   ],
+   "gold": "timezone",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what's is the ucrrent weater forecast",
+   "actions": [
+    "spelling",
+    "whisper_mode",
+    "report_lost_card",
+    "spending_history",
+    "tire_change",
+    "exchange_rate",
+    "weather",
+    "order_status",
+    "tire_pressure",
+    "bill_balance",
+    "who_do_you_work_for",
+    "taxes",
+    "rollover_401k",
+    "reminder",
+    "cancel_reservation",
+    "who_made_you",
+    "next_holiday",
+    "greeting",
+    "date",
+    "bill_due",
+    "what_song",
+    "change_ai_name",
+    "direct_deposit",
+    "cancel",
+    "current_location"
+   ],
+   "gold": "weather",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "what is the status of my credit cad aoplication looking like",
+   "actions": [
+    "account_blocked",
+    "taxes",
+    "last_maintenance",
+    "gas",
+    "lost_luggage",
+    "change_ai_name",
+    "bill_due",
+    "traffic",
+    "oil_change_when",
+    "expiration_date",
+    "mpg",
+    "interest_rate",
+    "card_declined",
+    "new_card",
+    "credit_limit",
+    "application_status",
+    "apr",
+    "insurance",
+    "flight_status",
+    "pto_balance",
+    "order_status",
+    "pto_request_status",
+    "calories",
+    "cancel",
+    "book_flight"
+   ],
+   "gold": "application_status",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can you hrlp me change my credit liit",
+   "actions": [
+    "new_card",
+    "order_checks",
+    "damaged_card",
+    "application_status",
+    "apr",
+    "translate",
+    "credit_limit",
+    "insurance",
+    "balance",
+    "international_fees",
+    "interest_rate",
+    "who_do_you_work_for",
+    "nutrition_info",
+    "report_lost_card",
+    "plug_type",
+    "pin_change",
+    "recipe",
+    "insurance_change",
+    "credit_limit_change",
+    "shopping_list_update",
+    "expiration_date",
+    "roll_dice",
+    "calendar",
+    "redeem_rewards",
+    "oil_change_how"
+   ],
+   "gold": "credit_limit_change",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i am bred and need new idnner recommendations",
+   "actions": [
+    "lost_luggage",
+    "income",
+    "meal_suggestion",
+    "insurance_change",
+    "whisper_mode",
+    "insurance",
+    "timer",
+    "date",
+    "roll_dice",
+    "apr",
+    "pto_request",
+    "tell_joke",
+    "travel_alert",
+    "calculator",
+    "change_ai_name",
+    "how_busy",
+    "who_made_you",
+    "oil_change_how",
+    "order",
+    "reminder",
+    "flight_status",
+    "plug_type",
+    "do_you_have_pets",
+    "are_you_a_bot",
+    "restaurant_suggestion"
+   ],
+   "gold": "meal_suggestion",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "i would really like to know if my capital one credit card have intrrnational transaction feds",
+   "actions": [
+    "goodbye",
+    "next_holiday",
+    "meeting_schedule",
+    "order",
+    "credit_limit",
+    "roll_dice",
+    "redeem_rewards",
+    "plug_type",
+    "measurement_conversion",
+    "timer",
+    "rewards_balance",
+    "balance",
+    "book_flight",
+    "international_fees",
+    "apr",
+    "last_maintenance",
+    "schedule_meeting",
+    "carry_on",
+    "gas",
+    "freeze_account",
+    "pto_balance",
+    "thank_you",
+    "oil_change_when",
+    "current_location",
+    "expiration_date"
+   ],
+   "gold": "international_fees",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "name tis song",
+   "actions": [
+    "repeat",
+    "who_made_you",
+    "taxes",
+    "directions",
+    "international_fees",
+    "current_location",
+    "do_you_have_pets",
+    "exchange_rate",
+    "time",
+    "timezone",
+    "are_you_a_bot",
+    "shopping_list",
+    "spelling",
+    "date",
+    "todo_list_update",
+    "insurance",
+    "what_is_your_name",
+    "what_song",
+    "shopping_list_update",
+    "share_location",
+    "flight_status",
+    "pto_used",
+    "tire_pressure",
+    "pay_bill",
+    "lost_luggage"
+   ],
+   "gold": "what_song",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how many day off i hage tsken",
+   "actions": [
+    "pto_used",
+    "bill_balance",
+    "next_holiday",
+    "weather",
+    "what_song",
+    "pto_request_status",
+    "taxes",
+    "thank_you",
+    "translate",
+    "spending_history",
+    "interest_rate",
+    "traffic",
+    "how_old_are_you",
+    "insurance",
+    "calories",
+    "carry_on",
+    "gas",
+    "who_do_you_work_for",
+    "pto_balance",
+    "calendar",
+    "pto_request",
+    "last_maintenance",
+    "income",
+    "change_language",
+    "bill_due"
+   ],
+   "gold": "pto_used",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wnere do i go to get a ofrm for w2s",
+   "actions": [
+    "current_location",
+    "taxes",
+    "insurance_change",
+    "credit_limit_change",
+    "change_language",
+    "flip_coin",
+    "insurance",
+    "credit_score",
+    "lost_luggage",
+    "change_accent",
+    "direct_deposit",
+    "flight_status",
+    "find_phone",
+    "smart_home",
+    "jump_start",
+    "w2",
+    "routing",
+    "reminder_update",
+    "interest_rate",
+    "new_card",
+    "change_volume",
+    "measurement_conversion",
+    "cook_time",
+    "bill_balance",
+    "greeting"
+   ],
+   "gold": "w2",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "when do i ned to cahnge my oil next",
+   "actions": [
+    "replacement_card_duration",
+    "text",
+    "payday",
+    "timezone",
+    "bill_due",
+    "reminder",
+    "carry_on",
+    "calendar",
+    "transactions",
+    "last_maintenance",
+    "tire_change",
+    "next_holiday",
+    "vaccines",
+    "pto_used",
+    "gas",
+    "oil_change_when",
+    "what_is_your_name",
+    "flight_status",
+    "cook_time",
+    "oil_change_how",
+    "expiration_date",
+    "transfer",
+    "order",
+    "measurement_conversion",
+    "pto_balance"
+   ],
+   "gold": "oil_change_when",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "can you add 5 and 89",
+   "actions": [
+    "tire_change",
+    "book_flight",
+    "where_are_you_from",
+    "current_location",
+    "order_checks",
+    "insurance_change",
+    "travel_suggestion",
+    "bill_balance",
+    "who_do_you_work_for",
+    "restaurant_reviews",
+    "oil_change_how",
+    "flip_coin",
+    "calculator",
+    "credit_score",
+    "w2",
+    "maybe",
+    "order_status",
+    "next_holiday",
+    "rollover_401k",
+    "carry_on",
+    "confirm_reservation",
+    "distance",
+    "insurance",
+    "expiration_date",
+    "gas"
+   ],
+   "gold": "calculator",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "yoir name is",
+   "actions": [
+    "do_you_have_pets",
+    "maybe",
+    "tire_change",
+    "how_old_are_you",
+    "tire_pressure",
+    "calendar_update",
+    "insurance",
+    "user_name",
+    "no",
+    "change_user_name",
+    "carry_on",
+    "next_holiday",
+    "who_made_you",
+    "oil_change_how",
+    "find_phone",
+    "change_ai_name",
+    "what_is_your_name",
+    "play_music",
+    "timezone",
+    "book_flight",
+    "reset_settings",
+    "credit_score",
+    "direct_deposit",
+    "time",
+    "yes"
+   ],
+   "gold": "what_is_your_name",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "how do i get to the fine arts cenyer by ofot",
+   "actions": [
+    "directions",
+    "apr",
+    "traffic",
+    "cook_time",
+    "book_hotel",
+    "insurance",
+    "flight_status",
+    "international_visa",
+    "pto_request_status",
+    "roll_dice",
+    "fun_fact",
+    "what_is_your_name",
+    "new_card",
+    "oil_change_how",
+    "current_location",
+    "exchange_rate",
+    "smart_home",
+    "pin_change",
+    "direct_deposit",
+    "credit_score",
+    "how_busy",
+    "tire_pressure",
+    "gas",
+    "routing",
+    "meal_suggestion"
+   ],
+   "gold": "directions",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "please dfine erection for me",
+   "actions": [
+    "spelling",
+    "apr",
+    "current_location",
+    "income",
+    "travel_notification",
+    "insurance",
+    "next_song",
+    "credit_limit",
+    "report_lost_card",
+    "routing",
+    "date",
+    "share_location",
+    "do_you_have_pets",
+    "oil_change_how",
+    "definition",
+    "plug_type",
+    "restaurant_reviews",
+    "last_maintenance",
+    "expiration_date",
+    "shopping_list",
+    "card_declined",
+    "pin_change",
+    "pay_bill",
+    "credit_score",
+    "improve_credit_score"
+   ],
+   "gold": "definition",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  },
+  {
+   "query": "wht transactons do i have on my visa from the last 4 weeks",
+   "actions": [
+    "new_card",
+    "reminder",
+    "bill_due",
+    "meaning_of_life",
+    "user_name",
+    "shopping_list",
+    "insurance",
+    "spelling",
+    "todo_list",
+    "apr",
+    "income",
+    "todo_list_update",
+    "expiration_date",
+    "insurance_change",
+    "payday",
+    "card_declined",
+    "date",
+    "min_payment",
+    "bill_balance",
+    "order_checks",
+    "transactions",
+    "last_maintenance",
+    "directions",
+    "cancel",
+    "credit_limit"
+   ],
+   "gold": "transactions",
+   "language": "en",
+   "tags": [
+    "typo"
+   ]
+  }
+ ]
+}
