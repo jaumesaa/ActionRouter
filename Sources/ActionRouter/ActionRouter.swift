@@ -25,7 +25,7 @@ import os
 /// requests; if the provider fails (e.g. missing OS assets), the router
 /// degrades to lexical-only and records why in ``semanticStatus``.
 public actor ActionRouter {
-    private let configuration: RouterConfiguration
+    private var configuration: RouterConfiguration
     private let provider: (any EmbeddingProvider)?
     private let logger = Logger(subsystem: "dev.actionrouter", category: "router")
 
@@ -97,6 +97,24 @@ public actor ActionRouter {
     /// Availability of the semantic tier (see ``SemanticTierStatus``).
     public var semanticStatus: SemanticTierStatus {
         status
+    }
+
+    /// Applies a new configuration without losing registered actions.
+    ///
+    /// Lexical indexes are rebuilt with the new field weights and, when a
+    /// semantic provider is configured, action embeddings are recomputed —
+    /// the content-keyed embedding cache makes unchanged texts free, so
+    /// this is cheap enough for live tuning UIs.
+    public func updateConfiguration(_ newConfiguration: RouterConfiguration) async {
+        configuration = newConfiguration
+        let actions = registeredActions
+        for action in actions {
+            indexed[action.id] = IndexedAction(
+                action: action, configuration: configuration.lexical
+            )
+        }
+        rebuildCorpus()
+        await embedActions(actions)
     }
 
     /// Retries loading a previously failed embedding provider (e.g. after

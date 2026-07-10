@@ -33,6 +33,14 @@ let package = Package(
                 .product(name: "Tokenizers", package: "swift-transformers"),
             ]
         ),
+        // Live playground: type a query and watch signals, calibrated
+        // confidence and the abstention decision update in real time.
+        // Run with `swift run RouterPlayground` (macOS only).
+        .executableTarget(
+            name: "RouterPlayground",
+            dependencies: ["ActionRouter", "ActionRouterCoreML"],
+            path: "Examples/RouterPlayground"
+        ),
         .executableTarget(
             name: "ActionRouterCLI",
             dependencies: [

@@ -236,6 +236,30 @@ private func makeFileToolRouter() async -> ActionRouter {
     #expect(result.match?.action.id == "a")
 }
 
+@Test func updateConfigurationAppliesWithoutLosingActions() async throws {
+    let router = await makeFileToolRouter()
+    let before = try await router.route("convert audio to wav")
+    #expect(before.match != nil)
+
+    // Raise the abstention threshold to an impossible level, live.
+    var strict = RouterConfiguration.default
+    strict.abstention.minimumConfidence = 0.999999
+    await router.updateConfiguration(strict)
+
+    let after = try await router.route("convert audio to wav")
+    guard case .abstained(.insufficientConfidence) = after.decision else {
+        Issue.record("Expected abstention under strict threshold, got \(after.decision)")
+        return
+    }
+    let count = await router.registeredActions.count
+    #expect(count == 4, "actions must survive reconfiguration")
+
+    // And back: routing works again with the default configuration.
+    await router.updateConfiguration(.default)
+    let restored = try await router.route("convert audio to wav")
+    #expect(restored.match?.action.id == "audio-to-wav")
+}
+
 @Test func actionDecodesFromMinimalJSON() throws {
     let json = #"[{"id": "wav", "name": "Convert audio to WAV"}]"#
     let actions = try JSONDecoder().decode([Action].self, from: Data(json.utf8))

@@ -45,7 +45,7 @@ Pre-release, under active development. Current state:
 | Semantic tier: Apple `NLContextualEmbedding` provider (zero download) | Implemented — measured too weak for production, see `docs/architecture-decision.md` |
 | Reproducible benchmark harness (5,350 episodes from CLINC-150 / Banking77 / MASSIVE) | Implemented (`Benchmarks/`, `actionrouter eval`) |
 | Calibrated confidence (logistic fit on dev suites; ECE ≤ 0.033) | Implemented (`docs/benchmarks.md`) |
-| Playground app (live decision visualization) | Planned |
+| Playground app (live decision visualization) | Implemented (`swift run RouterPlayground`) |
 
 The public API may still change before `0.1.0`.
 
@@ -63,6 +63,17 @@ The package ships an `actionrouter` executable for experimentation:
 
 ```sh
 swift run actionrouter route --actions Examples/sample-actions.json "convertir a wav" --explain
+```
+
+## Playground
+
+A live macOS diagnostic app: type a request and watch the ranked actions,
+per-signal score bars, calibrated confidence and the abstention decision
+update on every keystroke. Backend, thresholds, semantic mapping and the
+available action set are all adjustable live.
+
+```sh
+swift run RouterPlayground   # run from the repo root so the e5 model is auto-detected
 ```
 
 ## Design
