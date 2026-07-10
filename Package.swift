@@ -41,6 +41,14 @@ let package = Package(
             dependencies: ["ActionRouter", "ActionRouterCoreML"],
             path: "Examples/RouterPlayground"
         ),
+        // Demonstration of how AnyAction (a macOS Finder-tools app) would
+        // adapt its ToolDefinition catalog to ActionRouter. Demo only; the
+        // core library knows nothing about AnyAction.
+        .executableTarget(
+            name: "AnyActionAdapterDemo",
+            dependencies: ["ActionRouter", "ActionRouterCoreML"],
+            path: "Examples/AnyActionAdapter"
+        ),
         .executableTarget(
             name: "ActionRouterCLI",
             dependencies: [
