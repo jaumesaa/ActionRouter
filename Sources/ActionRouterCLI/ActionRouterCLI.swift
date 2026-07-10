@@ -41,6 +41,21 @@ struct RouteOptions: ParsableArguments {
     var e5Dir: String?
 }
 
+/// Finds the model package inside a directory produced by `fetch-model` or
+/// `tools/convert` (any .mlpackage; the int8 variant is preferred).
+func resolveModelPackage(in directory: URL) throws -> URL {
+    let packages = (try? FileManager.default.contentsOfDirectory(
+        at: directory, includingPropertiesForKeys: nil
+    ))?.filter { $0.pathExtension == "mlpackage" } ?? []
+    if let int8 = packages.first(where: { $0.lastPathComponent.contains("Int8") }) {
+        return int8
+    }
+    guard let first = packages.sorted(by: { $0.lastPathComponent < $1.lastPathComponent }).first else {
+        throw ValidationError("No .mlpackage found in \(directory.path)")
+    }
+    return first
+}
+
 struct Route: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
         abstract: "Route a query against a JSON action set."
@@ -64,7 +79,7 @@ struct Route: AsyncParsableCommand {
             let directory = URL(fileURLWithPath: e5Dir, isDirectory: true)
             configuration.semantic = .e5
             provider = CoreMLEmbeddingProvider(
-                modelURL: directory.appendingPathComponent("MultilingualE5Small.mlpackage"),
+                modelURL: try resolveModelPackage(in: directory),
                 tokenizerDirectory: directory.appendingPathComponent("tokenizer")
             )
         } else if options.semantic {

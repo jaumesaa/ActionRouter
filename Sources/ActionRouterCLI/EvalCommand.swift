@@ -17,8 +17,8 @@ struct Eval: AsyncParsableCommand {
     @Option(name: .long, help: "Enable the semantic tier with a converted E5 Core ML model directory.")
     var e5Dir: String?
 
-    @Option(name: .long, help: "Model package filename inside --e5-dir (e.g. MultilingualE5Small-Int8.mlpackage).")
-    var e5Model = "MultilingualE5Small.mlpackage"
+    @Option(name: .long, help: "Model package filename inside --e5-dir (default: auto-detect, preferring the Int8 variant).")
+    var e5Model: String?
 
     @Option(name: .long, help: "Override the abstention confidence threshold.")
     var minConfidence: Double?
@@ -78,8 +78,10 @@ struct Eval: AsyncParsableCommand {
         if let e5Dir {
             let directory = URL(fileURLWithPath: e5Dir, isDirectory: true)
             configuration.semantic = .e5
+            let modelURL = try e5Model.map { directory.appendingPathComponent($0) }
+                ?? resolveModelPackage(in: directory)
             provider = CoreMLEmbeddingProvider(
-                modelURL: directory.appendingPathComponent(e5Model),
+                modelURL: modelURL,
                 tokenizerDirectory: directory.appendingPathComponent("tokenizer")
             )
         } else if semantic {
