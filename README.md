@@ -23,31 +23,28 @@ case .abstained(let reason):
 }
 ```
 
-- **Fully local.** No network, no telemetry, sandbox-friendly. Queries never
-  leave the device.
-- **Dynamic actions.** Register and remove actions at any time — from plugins,
-  user configuration, or app state. No training step, ever.
-- **Honest abstention.** The router says "none of these" instead of returning
-  the least-wrong option, with configurable thresholds.
-- **Interactive-fast.** Designed for as-you-type UI (Spotlight-style panels).
-- **Diagnosable.** Every result carries ranked candidates and per-signal score
-  breakdowns.
+Everything runs in-process and offline: no server, no telemetry, and
+queries never leave the device. Actions are plain data that you register
+and remove at runtime (plugins, user settings, app state) — there is no
+training step, so previously unseen actions route immediately. When
+nothing fits, the router abstains with a reason instead of returning the
+least-wrong option, and every result carries the full ranked list with
+per-signal scores so you can see exactly why it decided what it did.
 
-## Status
+Routing is fast enough to run on every keystroke of a Spotlight-style
+panel: about 1 ms per query with the lexical tier, about 9 ms with the
+multilingual semantic tier enabled (Apple Silicon, 150 registered
+actions).
 
-Pre-release, under active development. Current state:
+Confidence values are calibrated probabilities, not raw similarity
+scores — a match with `confidence == 0.7` is right about 70% of the time
+on the benchmark suites. Accuracy, abstention behaviour, latency and the
+measured limitations are documented in [docs/benchmarks.md](docs/benchmarks.md);
+the reasoning behind the architecture (and what was tried and rejected)
+is in [docs/architecture-decision.md](docs/architecture-decision.md).
 
-| Piece | Status |
-| --- | --- |
-| Core API (`Action`, `ActionRouter`, abstention, context) | Implemented |
-| Lexical tier (exact / prefix / fuzzy / BM25 / keywords) | Implemented |
-| Semantic tier: Core ML `multilingual-e5-small` provider + conversion tooling | Implemented — recommended (int8, 113 MB; `ActionRouterCoreML`, `tools/convert`) |
-| Semantic tier: Apple `NLContextualEmbedding` provider (zero download) | Implemented — measured too weak for production, see `docs/architecture-decision.md` |
-| Reproducible benchmark harness (5,350 episodes from CLINC-150 / Banking77 / MASSIVE) | Implemented (`Benchmarks/`, `actionrouter eval`) |
-| Calibrated confidence (logistic fit on dev suites; ECE ≤ 0.033) | Implemented (`docs/benchmarks.md`) |
-| Playground app (live decision visualization) | Implemented (`swift run RouterPlayground`) |
-
-The public API may still change before `0.1.0`.
+The API will keep moving until 1.0; breaking changes are listed in the
+[changelog](CHANGELOG.md).
 
 ## Installation
 
