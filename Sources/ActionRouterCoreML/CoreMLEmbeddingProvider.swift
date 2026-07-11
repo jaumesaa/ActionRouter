@@ -72,7 +72,11 @@ public actor CoreMLEmbeddingProvider: EmbeddingProvider {
                 compiledURL = (try? FileManager.default.replaceItemAt(cached, withItemAt: temporary)) ?? temporary
             }
         }
-        model = try await MLModel.load(contentsOf: compiledURL, configuration: configuration)
+        // Synchronous load: the async MLModel.load(contentsOf:) returns a
+        // non-Sendable MLModel across an isolation boundary, which older
+        // compilers (Xcode 16.x) reject under strict concurrency. Blocking
+        // the provider actor during prepare() is fine.
+        model = try MLModel(contentsOf: compiledURL, configuration: configuration)
         tokenizer = try await AutoTokenizer.from(modelFolder: tokenizerDirectory)
     }
 
